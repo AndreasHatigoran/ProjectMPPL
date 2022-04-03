@@ -11,7 +11,7 @@
                         <form action="/comments/{{$comment->id}}" method="POST">
                             @csrf
                             @method('PUT')
-                            <x-ckeditor field="subject" label="Subject" value="{{$forum->subject}}"/>
+                            <x-ckeditor field="subject" label="Subject" value="{{$comment->subject}}"/>
 
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
