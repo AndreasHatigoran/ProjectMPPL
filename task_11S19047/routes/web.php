@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +24,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('forum', ForumController::class)->except(['index', 'show'])
+            ->middleware('auth');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('users', 'UserController@index' );
 /*Route::get('users/profile/{id}', [UsersController::class, 'showprofile']);*/
@@ -33,3 +39,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('@{username}', [UsersController::class, 'showprofile']);
     Route::put('/user/{username}', [UsersController::class, 'update']);
 });
+
+Route::resource('forum', ForumController::class)->only(['index', 'show']);
+
+Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.image-upload')->middleware('auth');
+
+// nested resource
+Route::resource('forum.comments', CommentController::class)->shallow()->middleware('auth');
