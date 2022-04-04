@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Forum;
 use App\Models\ForumComment;
+use App\Models\CommentReport;
 
 class User extends Authenticatable
 {
@@ -57,5 +58,10 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany(ForumComment::class);
+    }
+
+    public function commentReports()
+    {
+        return $this->hasMany(CommentReport::class);
     }
 }
