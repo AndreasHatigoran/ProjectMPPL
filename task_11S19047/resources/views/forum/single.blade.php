@@ -39,6 +39,7 @@
                         @if (Auth::user()->id == $comment->user_id)
                             <a href="/comments/{{$comment->id}}/edit" class="btn btn-info mb-1">Edit</a>
                         @endif
+                        <a href="/lapor" class="btn btn-danger btn-sm">Lapor Pelanggaran</a>
                     @endif
                     <hr>
                 @endforeach
