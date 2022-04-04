@@ -1,12 +1,17 @@
 <?php
 
-use App\Http\Controllers\CKEditorController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\ForumController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ReportCommentController;
-use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LabController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SoalController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\LabCategoryController;
+use App\Http\Controllers\ReportCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +55,26 @@ Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('cke
 
 // nested resource
 Route::resource('forum.comments', CommentController::class)->shallow()->middleware('auth');
+
+//Lab Coding
+Route::get('/dashboard', [FrontendController::class, 'index']);
+
+Route::get('categories', [CategoryController::class, 'index']);
+Route::get('add-categories', [CategoryController::class, 'add']);
+Route::post('insert-category', [CategoryController::class, 'insert']);
+Route::get('edit-category/{id}', [CategoryController::class, 'edit']);
+Route::put('update-category/{id}', [CategoryController::class, 'update']);
+Route::get('delete-category/{id}', [CategoryController::class, 'destroy']);
+
+
+Route::get('soal', [SoalController::class, 'index']);
+Route::get('add-soal', [SoalController::class, 'add']);
+Route::post('insert-soal', [SoalController::class, 'insert']);
+Route::get('edit-soal/{id}', [SoalController::class, 'edit']);
+Route::put('update-soal/{id}', [SoalController::class, 'update']);
+Route::get('delete-soal/{id}', [SoalController::class, 'destroy']);
+
+Route::get('/lab', [LabController::class, 'index']);
+Route::get('category', [LabCategoryController::class, 'index']);
+Route::get('view-language/{language}', [LabCategoryController::class, 'daftarsoal']);
+Route::get('view-exercise/{id}', [LabCategoryController::class, 'lab']);
