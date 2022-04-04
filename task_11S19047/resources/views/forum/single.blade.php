@@ -8,6 +8,10 @@
                 <h2>{{$forum->title}}</h2>
             </div>
             <div class="card-body">
+                <a href="/{{ '@' . $forum->user->username}}">
+                    <x-avatar :object="$forum->user" size="32"/>
+                    <a href="/">{{ $forum->user->username }}</a>
+                </a>
                 {!!$forum->subject!!}
                 <p>by: {{$forum->user->fullname}}</p>
                 @if (Auth::check())
