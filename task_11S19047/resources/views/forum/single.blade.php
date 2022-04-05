@@ -38,6 +38,10 @@
                     @if (Auth::check())
                         @if (Auth::user()->id == $comment->user_id)
                             <a href="/comments/{{$comment->id}}/edit" class="btn btn-info mb-1">Edit</a>
+                        @else
+                            @if (count(Auth::user()->commentReports->where('comment_id', $comment->id)) != 1)
+                            <a href="/comment/{{ $comment->id }}/report" class="btn btn-danger btn-sm">Lapor Pelanggaran</a>
+                            @endif
                         @endif
                     @endif
                     <hr>
