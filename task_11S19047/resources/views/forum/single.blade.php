@@ -35,6 +35,12 @@
             <div class="card-body">
                 <h4>Daftar Komentar</h4>
                 @forelse ($forum->comments as $comment)
+                    <div class="d-flex justify-content-end">
+                        @if($comment->is_solved == true)
+                        <i id="mark-{{ $comment->id }}" class="fa-solid fa-check fa-xl"></i>
+                        @endif
+                        <i id="mark-{{ $comment->id }}" class=""></i>
+                    </div> 
                     {!!$comment->subject!!}
                     <span class="d-block">by: {{$comment->user->username}}</span>
                     @if (Auth::check())
@@ -44,12 +50,40 @@
                             @if (count(Auth::user()->commentReports->where('comment_id', $comment->id)) != 1)
                             <a href="/comment/{{ $comment->id }}/report" class="btn btn-danger btn-sm">Lapor Pelanggaran</a>
                             @endif
+                            <button class="btn btn-warning btn-sm" onclick="mark({{ $comment->id }}, this)" id="solved-btn-{{ $comment->id }}">
+                                @if($comment->is_solved == true)
+                                    unmark
+                                @else
+                                    mark
+                                @endif
+                            </button>
                         @endif
                     @endif
                     <hr>
                     @empty
                     <p>Belom ada komentar</p>
                 @endforelse
+
+                <script>
+                    function mark(id, el){
+                        el = document.getElementById('solved-btn-' + id)
+                        sign = document.getElementById('mark-' + id)
+                        fetch('/mark/' + id)
+                            .then(response => response.json())
+                            .then(data => {
+                                if(data.status == 'mark'){
+                                    el.innerText = 'unmark'
+                                    sign.classList.add("fa-solid");
+                                    sign.classList.add("fa-check");
+                                    sign.classList.add("fa-xl");
+                                } else {
+                                    el.innerText = 'mark'
+                                    sign.classList.remove("fa-solid");
+                                    sign.classList.remove("fa-check");
+                                }
+                            })
+                    }
+                </script>
             </div>
         </div>
     </div>

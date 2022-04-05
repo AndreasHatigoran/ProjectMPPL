@@ -12,6 +12,7 @@ use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LabCategoryController;
 use App\Http\Controllers\ReportCommentController;
+use App\Http\Controllers\ForumCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/user/{username}', [UsersController::class, 'update']);
     Route::resource('forum', ForumController::class);
     Route::get('/comment/{id}/report', [ReportCommentController::class, 'reportComment']);
+    Route::get('/mark/{id}', [ForumCommentController::class, 'markcomment']);
 });
 
 Route::resource('forum', ForumController::class)->only(['index', 'show']);
