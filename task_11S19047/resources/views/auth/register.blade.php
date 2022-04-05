@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="idrole" class="col-md-4 col-form-label text-md-end">{{ __('idrole') }}</label>
+                            <label for="idrole" class="col-md-4 col-form-label text-md-end">NIM/NIDN/NIP</label>
 
                             <div class="col-md-6">
                                 <input id="idrole" type="text" class="form-control @error('idrole') is-invalid @enderror" name="idrole" value="{{ old('idrole') }}" required autocomplete="idrole" autofocus>
