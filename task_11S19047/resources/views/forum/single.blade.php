@@ -21,18 +21,20 @@
                 @endif
             </div>
             <div class="card-body">
-                <h4>Komentar</h4>
-                <form action="/forum/{{$forum->id}}/comments" method="POST">
-                    @csrf
-                    
-                    <x-ckeditor field="subject" label="Subject"/>
+                @if (Auth::check())
+                    <h4>Komentar</h4>
+                    <form action="/forum/{{$forum->id}}/comments" method="POST">
+                        @csrf
+                        
+                        <x-ckeditor field="subject" label="Subject"/>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                @endif
             </div>
             <div class="card-body">
                 <h4>Daftar Komentar</h4>
-                @foreach ($forum->comments as $comment)
+                @forelse ($forum->comments as $comment)
                     {!!$comment->subject!!}
                     <span class="d-block">by: {{$comment->user->username}}</span>
                     @if (Auth::check())
@@ -45,7 +47,9 @@
                         @endif
                     @endif
                     <hr>
-                @endforeach
+                    @empty
+                    <p>Belom ada komentar</p>
+                @endforelse
             </div>
         </div>
     </div>

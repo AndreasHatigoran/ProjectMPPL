@@ -46,6 +46,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/comment/{id}/report', [ReportCommentController::class, 'reportComment']);
 });
 
+Route::resource('forum', ForumController::class)->only(['index', 'show']);
+
 // Route::middleware(['isVerify'])->group(function () {
 //     Route::resource('forum', ForumController::class);
 // });

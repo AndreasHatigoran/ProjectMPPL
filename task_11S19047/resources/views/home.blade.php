@@ -15,7 +15,14 @@
                     @endif
 
                   Hi {{ Auth::User()->fullname }} {{ __('You are logged in!') }}
-                  <img width = "200px" src="{{ asset('image/buktiss/'.Auth::User()->screenshoot )}}" alt="Pic">
+                  {{-- <img width = "200px" src="{{ asset('image/buktiss/'.Auth::User()->screenshoot )}}" alt="Pic"> --}}
+                  <br>
+                  <p>Daftar forum: </p>
+                    @forelse ($user->forums as $forum)
+                        <li><a href="/forum/{{$forum->title}}">{{$forum->title}}</a></li>
+                        @empty
+                        <p>Kamu belum pernah buat forum. Buat di <a href="/forum/create">sini</a></p> 
+                    @endforelse
                 </div>
             </div>
         </div>
