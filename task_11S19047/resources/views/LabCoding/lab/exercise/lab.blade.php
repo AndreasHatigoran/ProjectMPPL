@@ -7,7 +7,7 @@
     </div>
     <br>
     <div class="row">
-        <div class="col">
+        <div class="col" id="answer" style="visibility: visible;">
             <label>Your Answer : </label>
             <input type="text" class="editablesection">
         </div>
@@ -52,6 +52,7 @@
         function changeVisibility() {
             document.getElementById("showAnswer").style.visibility = "hidden";
             document.getElementById("showans").style.visibility = "visible";
+            document.getElementById("answer").style.visibility = "hidden";
             document.getElementById("hideanswerbutton").style.visibility = "visible";
             document.getElementById("submitbutton").style.visibility = "hidden";
         }
@@ -59,6 +60,7 @@
         function changeVisibilityHide() {
             document.getElementById("showAnswer").style.visibility = "visible";
             document.getElementById("showans").style.visibility = "hidden";
+            document.getElementById("answer").style.visibility = "visible";
             document.getElementById("hideanswerbutton").style.visibility = "hidden";
             document.getElementById("submitbutton").style.visibility = "visible";
         }
