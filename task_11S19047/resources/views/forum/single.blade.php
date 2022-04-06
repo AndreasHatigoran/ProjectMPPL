@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    
+
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -25,7 +25,7 @@
                     <h4>Komentar</h4>
                     <form action="/forum/{{$forum->id}}/comments" method="POST">
                         @csrf
-                        
+
                         <x-ckeditor field="subject" label="Subject"/>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -40,7 +40,7 @@
                         <i id="mark-{{ $comment->id }}" class="fa-solid fa-check fa-xl"></i>
                         @endif
                         <i id="mark-{{ $comment->id }}" class=""></i>
-                    </div> 
+                    </div>
                     {!!$comment->subject!!}
                     <span class="d-block">by: {{$comment->user->username}}</span>
                     @if (Auth::check())
