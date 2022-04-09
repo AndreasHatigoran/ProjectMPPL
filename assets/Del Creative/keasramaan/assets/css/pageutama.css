@@ -1,0 +1,189 @@
+.top{
+    padding-top: 10.5rem;
+    padding-bottom: 4rem;
+    width: 1262.67px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-shrink: 1;
+    border-color: transparent;
+      }
+.body{
+    width: 1262px;
+    height: 1025px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 1435px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 1);
+}
+.left{
+  top: 0px;
+  bottom: 100px;
+  left: 0px;
+  width: 344px;
+  height: 90px;
+  position: absolute;
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.delcr{
+    top: 5px;
+    left: 10px;
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    border-color: transparent;
+}
+
+.delc{
+    top: 20px;
+    left: 130px;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    border-color: transparent;
+}
+.right{
+    top: 0px;
+    bottom: 100px;
+    right: 0px;
+    width: 344px;
+    height: 90px;
+    position: absolute;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .text{
+    top: 10px;
+  right: 24px;
+  color: rgba(196, 196, 196, 1);
+  cursor: pointer;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 131.40000104904175%;
+  font-stretch: normal;
+  text-decoration: none;
+  }
+  
+  .logout{
+    top: 15px;
+    right: 90px;
+    width: 19px;
+    height: 15px;
+    position: absolute;
+    object-fit: cover;
+    border-color: transparent;
+  }
+  .lonceng{
+    top: 15px;
+    right: 120px;
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    object-fit: cover;
+    border-color: transparent;
+  }
+
+  .judul{
+position: absolute;
+width: 1440px;
+height: 453.51px;
+left: 0px;
+top: 60px;
+background: #626B6D;
+ }
+
+ .textatas{
+position: absolute;
+width: 533.97px;
+height: 121.42px;
+left: 450px;
+top: 10px;
+
+font-family: 'Montserrat';
+font-style: bold;
+font-weight: 800;
+font-size: 60px;
+line-height: 117px;
+
+color: #FFFFFF;
+ }
+ .textdua{
+
+position: absolute;
+width: 486.7px;
+height: 45.66px;
+left: 457px;
+top: 120px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 44px;
+
+color: #FFFFFF;
+ }
+ .but{
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    left: 447px;
+    top: 300px;
+    color: white;
+    font-size: 40px;
+    background: #24695C;
+    border-radius: 48px;
+    cursor: pointer;
+    }
+.grid{
+
+position: absolute;
+width: 1440px;
+height: 590px;
+left: 0px;
+top: 510px;
+
+background: white;
+
+}
+
+.grid-text{
+    /* Learn with us build your own code and be Developer of future! */
+
+position: absolute;
+width: 538.52px;
+height: 247.04px;
+left: 149.83px;
+top: 200.16px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+
+.gambar{
+    position: absolute;
+width: 400.52px;
+height: 247.04px;
+right: 190px;
+top: 200.16px;
+}
