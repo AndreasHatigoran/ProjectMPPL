@@ -1,25 +1,51 @@
 @extends('LabCoding.lab.index')
 
 @section('start')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/lab') }}">Lab Coding</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('category') }}">Start Here</a>
-                    </li>
-            </div>
-        </div>
-    </nav>
-    <div class="card">
-        <div class="card-body">
-            <img src="{{ asset('assets/labcoding.png') }}" width="100%" alt="Image here">
+    <!-- Container-fluid starts-->
+    <div class="ws-black w3-center" style="padding-top:90px;padding-bottom:90px;background-color:#626B6D;">
+        <div class="w3-content learntocodecontent" style="max-width:1400px">
+            <center>
+                <h1 style="color:white;font-size: 70px;font-weight: bold;"><b>LAB CODE</b></h1>
+                <h3 style="color: white;font-size: 25px;">Learn how to code</h3>
+            </center>
+            <br>
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:500px">
+                <center><a href={{ 'category' }} class="btn btn-primary btn-lg" tabindex="-1" role="button">
+                        <h4 style="font-size:15px; color: white;">Click here</h4>
+                    </a></center>
         </div>
     </div>
-    </body>
+    <script>
+        (
+            function setThemeMode() {
+                var x = localStorage.getItem("preferredmode");
+                var y = localStorage.getItem("preferredpagemode");
+                if (x == "dark") {
+                    document.body.className += " darktheme";
+                    document.getElementById("radio_darkcode").checked = true;
+
+                }
+                if (y == "dark") {
+                    document.body.className += " darkpagetheme";
+                    document.getElementById("wavepath").style.fill = "rgb(13,23,33)";
+                    document.getElementById("radio_darkpage").checked = true;
+
+                }
+            })();
+    </script>
+    <div class="w3-row w3-padding-32" style="margin-top:-10px;background-color: white;">
+        <div class="w3-content" style="max-width:1400px">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="w3-col l6 w3-center" style="padding:3%;">
+                        <p style="font-size:25px;color:black;font-weight: 600; margin-top: 60px;margin-right: 80px;">
+                            Learn with usbuild your own code and be Developer of future!</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img src="../image/welcome/1.png" style="height: 200px;width: 220;margin: 30px;margin-left: 80px;">
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
