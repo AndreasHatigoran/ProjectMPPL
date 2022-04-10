@@ -16,7 +16,7 @@
       <!-- Font Awesome-->
       <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/fontawesome.css') }}">
       <!-- ico-font-->
-      <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/icofont.css') }}>
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/icofont.css') }}">
       <!-- Themify icon-->
       <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/themify.css') }}">
       <!-- Flag icon-->
