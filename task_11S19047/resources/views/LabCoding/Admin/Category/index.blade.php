@@ -11,8 +11,10 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Language</th>
-                        <th>Image</th>
+                        <th>Bahasa Pemrograman</th>
+                        <th>Gambar</th>
+                        <th scope="col">Aksi 1</th>
+                        <th scope="col">Aksi 2</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +28,8 @@
                             </td>
                             <td>
                                 <a href="{{ url('edit-category/' . $item->id) }}" class="btn btn-primary">Edit</a>
+                            </td>
+                            <td>
                                 <a href="{{ url('delete-category/' . $item->id) }}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
