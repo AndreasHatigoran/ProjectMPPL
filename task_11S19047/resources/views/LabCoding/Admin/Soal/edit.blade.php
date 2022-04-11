@@ -1,6 +1,6 @@
 {{-- @extends('LabCoding.Admin.index') --}}
 
-@extends('users.indexMain') //kevinUpdate
+@extends('layouts.main')
 
 @section('content')
     <div class="card">

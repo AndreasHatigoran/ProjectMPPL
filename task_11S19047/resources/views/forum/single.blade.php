@@ -1,6 +1,6 @@
 {{-- @extends('layouts.app') --}}
 
-@extends('users.indexMain') //kevinUpdate
+@extends('layouts.main')
 
 @section('content')
 
@@ -20,7 +20,7 @@
                 @if (Auth::check())
                     @if (Auth::user()->id == $forum->user_id)
                         <a href="/forum/{{ $forum->id }}/edit" class="btn btn-primary ml-1">Edit</a>
-                        <form action="/forum/{{$forum->id}}" method="post">
+                        <form action="/forum/{{ $forum->id }}" method="post">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger ml-1 mt-2">Hapus</button>
@@ -56,7 +56,7 @@
                     @if (Auth::check())
                         @if (Auth::user()->id == $comment->user_id)
                             <a href="/comments/{{ $comment->id }}/edit" class="btn btn-info mb-1">Edit</a>
-                            <form action="/comments/{{$comment->id}}" method="post">
+                            <form action="/comments/{{ $comment->id }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger ml-1 mt-2">Hapus</button>
