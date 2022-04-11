@@ -51,11 +51,11 @@
                         </div>
                         <div class="col-sm-2">
                             <p align="right"><a href="{{ url('add-soal') }}" button class="btn btn-light btn-sm"
-                                    type="button">Add Soal</button></a></p>
+                                    type="button">Tambah Soal</button></a></p>
                         </div>
                         <div class="col-sm-3">
                             <p align="right"><a href="{{ url('add-categories') }}" button class="btn btn-light btn-sm"
-                                    type="button">Add Category</button></a></p>
+                                    type="button">Tambah Bahasa</button></a></p>
                         </div>
                     </div>
                     <table class="display" id="basic-key-table">
@@ -66,11 +66,11 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Bahasa Pemrograman</th>
-                                        <th scope="col">Exercise</th>
-                                        <th scope="col">Code</th>
-                                        <th scope="col">Answer Key</th>
-                                        <th scope="col">Aksi 1</th>
-                                        <th scope="col">Aksi 2</th>
+                                        <th scope="col">Latihan</th>
+                                        <th scope="col">Kode</th>
+                                        <th scope="col">Lunci Jawaban</th>
+                                        <th scope="col">Ubah</th>
+                                        <th scope="col">Hapus</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,11 +86,11 @@
                                             <td align="center">
                                                 <a href="{{ url('edit-soal/' . $item->id) }}"><button
                                                         class="btn btn-outline-light btn-sm txt-dark"
-                                                        type="button">Edit</button></a>
+                                                        type="button">Ubah</button></a>
                                             </td>
                                             <td align="center"><a href="{{ url('delete-soal/' . $item->id) }}"><button
                                                         class="btn btn-outline-danger btn-sm"
-                                                        type="button">Delete</button></a>
+                                                        type="button">Hapus</button></a>
                                             </td>
                                         </tr>
                                     @endforeach

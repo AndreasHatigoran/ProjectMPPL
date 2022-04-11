@@ -11,10 +11,10 @@
                 @method('PUT')
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="">language</label>
+                        <label for="">Bahasa Pemrograman</label>
                         <input type="text" value="{{ $category->language }}" class="form-control" name="language">
                     </div>
-                    <label for="">Image</label>
+                    <label for="">Gambar</label>
                     @if ($category->image)
                         <img src="{{ asset('assets/uploads/category/' . $category->image) }}" class="w-25"
                             alt="category-image">
@@ -23,7 +23,7 @@
                         <input type="file" name="image" class="form-control">
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </div>
             </form>

@@ -60,7 +60,7 @@
 
 
                                 <div class="form-group">
-                                    <label class="d-block"><b>Exercise<font color="ff0000">(*required)
+                                    <label class="d-block"><b>Latihan<font color="ff0000">(*required)
                                             </font>
                                         </b></label>
                                     <input type="text" name="exercise" rows="3" class="form-control">
@@ -83,7 +83,7 @@
                                     <input type="text" name="answer" rows="3" class="form-control">
                                 </div>
                                 <div class="btn-showcase">
-                                    <button class="btn btn-primary" type="submit">Upload</button>
+                                    <button class="btn btn-primary" type="submit">Simpan</button>
                                     <input class="btn btn-light" type="reset" value="Cancel">
                                 </div>
                             </div>

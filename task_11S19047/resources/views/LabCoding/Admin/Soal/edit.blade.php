@@ -18,10 +18,10 @@
                         </select>
                     </div>
                     <div class="col-md-12">
-                        <label for="">Excrcise</label>
+                        <label for="">Latihan</label>
                         <input type="text" value="{{ $soal->exercise }}" class="form-control" name="exercise">
                     </div>
-                    <label for="">Image</label>
+                    <label for="">Kode</label>
                     @if ($soal->image)
                         <img src="{{ asset('assets/uploads/soal/' . $soal->image) }}" class="w-25"
                             alt="soal-image">
@@ -30,11 +30,11 @@
                         <input type="file" name="image" class="form-control">
                     </div>
                     <div class="col-md-12">
-                        <label for="">Answer</label>
+                        <label for="">Kunci Jawaban</label>
                         <input type="text" value="{{ $soal->answer }}" class="form-control" name="answer">
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </div>
             </form>
