@@ -4,7 +4,7 @@
     <div class="ws-black w3-center" style="padding-top:30px;padding-bottom:30px;background-color:#24695C;">
         <div class="w3-content learntocodecontent" style="max-width:1400px">
             <center>
-                <h1 style="color:white;font-size: 40px;font-weight: bold;"><b>All Exercise</b></h1>
+                <h1 style="color:white;font-size: 40px;font-weight: bold;"><b>Ayo Latihan</b></h1>
             </center>
         </div>
     </div>

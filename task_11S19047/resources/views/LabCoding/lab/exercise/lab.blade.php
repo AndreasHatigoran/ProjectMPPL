@@ -85,7 +85,7 @@
     <div class="ws-black w3-center" style="padding-top:30px;padding-bottom:30px;background-color:#24695C;">
         <div class="w3-content learntocodecontent" style="max-width:1400px">
             <center>
-                <h1 style="color:white;font-size: 40px;font-weight: bold;"><b>Exercise {{ $soal->exercise }}</b></h1>
+                <h1 style="color:white;font-size: 40px;font-weight: bold;"><b>Latihan {{ $soal->exercise }}</b></h1>
             </center>
         </div>
     </div>
@@ -145,27 +145,23 @@
                             </div>
                         </div>
                         <div class="btn-showcase">
-                            <button class="btn btn-pill btn-primary btn-lg" type="button">Submit Answer</button>
+                            <button class="btn btn-pill btn-primary btn-lg" type="button">Kirim Jawaban</button>
                             <label class="text-end" style="float: right;"><button
                                     class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
-                                    onclick="changeVisibility();" style="visibility: visible;">Show Answer</button></label>
-                        </div>
-                        <div class="btn-showcase">
-                            <button class="btn btn-pill btn-primary btn-lg" id="hideanswerbutton" type="button"
-                                style="visibility: hidden;" onclick="changeVisibilityHide()">Hide
-                                Answer</button></label>
+                                    onclick="changeVisibility();" style="visibility: visible;">Tunjukkan
+                                    Jawaban</button></label>
                         </div>
                         <div id="showans" onclick="" style="visibility:hidden">
                             <label>Answer : <b>{{ $soal->answer }}</b></label>
                         </div>
                         <div class="card-body row"></div>
-                        <div class="btn-showcase">
+                        {{-- <div class="btn-showcase">
                             <button class="btn btn-pill btn-primary btn-lg" type="button">
                                 Close
                                 <a href={{ 'lab' }}></a></button>
                             <label class="text-end" style="float: right;"><button
                                     class="btn btn-pill btn-primary btn-lg" type="button">Next</button></label>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

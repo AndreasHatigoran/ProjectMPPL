@@ -183,7 +183,7 @@
                                     </div>
                                 </li>
                                 <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                        href={{ 'lab' }}><svg aria-hidden="true" weidth="24" height="24"
+                                        href={{ '/lab' }}><svg aria-hidden="true" weidth="24" height="24"
                                             viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
                                             class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
                                             <path fill-rule="evenodd"

@@ -11,7 +11,7 @@
             <br>
             <form class="example" action="/action_page.php" style="margin:auto;max-width:500px">
                 <center><a href={{ 'category' }} class="btn btn-primary btn-lg" tabindex="-1" role="button">
-                        <h4 style="font-size:15px; color: white;">Click here</h4>
+                        <h4 style="font-size:15px; color: white;">Mulai</h4>
                     </a></center>
         </div>
     </div>

@@ -240,10 +240,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <br>
-                                    <br><a href="faq.html" style="color: white;">FAQ</a>
-                                    <br>
-                                    <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a>
-                                    <br>
                                     <br><a href="about.html" style="color: white;">About</a>
                                 </div>
                             </div>
