@@ -106,7 +106,7 @@
                 <div class="col-sm-6" style="background: url(../assets/images/bg_1_1.png);">
                   <br><br><br><br><br>
                   <h3 style="margin-left: 50px;"><b>Forum Tanya Jawab</b></h3>
-                  <p style="margin-left: 50px;">Del Creative is a platform discussion forum with an Up and Down system. Have a coding lab forum with an API system that can assess the accuracy of students in solving program code problems provided by the application. Also has a leaderboard system which will rank the students who have accumulated the most income points among the many students who are actively studying at the Institution.</p>
+                  <p style="margin-left: 50px;">Del Creative adalah forum diskusi platform dengan sistem Up and Down. Memiliki forum tanya jawab sehingga diharapkan mahasiswa, dosen, keasramaan dapat bertukar pikiran untuk terciptanya proses belajar mengajar dengan baik</p>
                 </div>
                 <div class="col-sm-6">
                 <img src="{{ asset('image/welcome/_2.png') }}" style="width: 600px; height: 443px;">
@@ -116,7 +116,7 @@
                 <div class="col-sm-6" style="background: url(../assets/images/bg_1_1.png);">
                   <br><br><br><br><br>
                   <h3 style="margin-left: 50px;"><b>LAB CODE</b></h3>
-                  <p style="margin-left: 50px;">Del Creative is a platform discussion forum with an Up and Down system. Have a coding lab forum with an API system that can assess the accuracy of students in solving program code problems provided by the application. Also has a leaderboard system which will rank the students who have accumulated the most income points among the many students who are actively studying at the Institution.</p>
+                  <p style="margin-left: 50px;">Del Creative memiliki forum lab code dengan sistem API yang dapat menilai ketepatan siswa dalam menyelesaikan masalah kode program yang disediakan oleh aplikasi. Del Creative juga memiliki sistem papan peringkat yang akan memberi peringkat siswa yang telah mengumpulkan poin pendapatan terbanyak di antara banyak siswa yang aktif belajar di Institut Teknologi Del</p>
                 </div>
                 <div class="col-sm-6" style="background: url(../assets/images/bg_1_1.png);">
                 <img src="{{ asset('image/welcome/bg_1 11.png') }}">
