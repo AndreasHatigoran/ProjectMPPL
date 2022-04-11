@@ -124,6 +124,7 @@ class ForumController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Forum::find($id)->delete();
+        return redirect('/forum');
     }
 }

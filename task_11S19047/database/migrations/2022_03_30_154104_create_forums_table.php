@@ -21,6 +21,7 @@ class CreateForumsTable extends Migration
             // $table->string('category');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->softDeletes('deleted_at', 0);
 
             $table->foreign('user_id')->references('id')->on('users');
         });

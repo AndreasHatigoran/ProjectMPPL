@@ -17,6 +17,9 @@
                 </div>
             </div>
         @endforeach 
+        <div>
+            {{$forums->links()}}
+        </div>
     </div>    
 
 @endsection
