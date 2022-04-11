@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->boolean('isverify')->default(false);
             $table->string('idrole');
             $table->enum('role', ['student', 'dorm', 'dosen', 'null'])->default('null');
+            $table->bigInteger('point')->default(0);
             $table->string('screenshoot');
             $table->string('avatar')->nullable();
             $table->rememberToken();
