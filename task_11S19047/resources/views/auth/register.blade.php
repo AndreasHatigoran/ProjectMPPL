@@ -134,7 +134,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  
+
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -169,21 +169,21 @@
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/style.css') }}">
     <link id="color" rel="stylesheet" href="{{ asset('css/welcome/color-1.css') }}" media="screen">
-   
+
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/responsive.css') }}">
   </head>
   <body>
-    
+
     <!-- Loader starts-->
     <div class="loader-wrapper">
-      <div class="theme-loader">    
+      <div class="theme-loader">
         <div class="loader-p"></div>
       </div>
     </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
-    <section>         
+    <section>
       <div class="container-fluid p-0" style="background-image: url('{{ asset('image/background/bglogin.png') }}');">
         <div class="row">
           <div class="col-12">
@@ -208,7 +208,7 @@
                         <option value="dosen">Dosen</option>
                       </select>
                  </div>
-              
+
                 <div class="form-group">
                   <label>NIM/NIDN/NIP</label>
                   <div class="input-group"><span class="input-group-text"><i class=""></i></span>
@@ -230,9 +230,9 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                         @enderror
-                        </div> 
+                        </div>
                     </div>
-                </div>           
+                </div>
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm-6">
@@ -268,14 +268,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                     @enderror
-                    <div class="show-hide"><span class="show">                         </span></div>
+                    {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Ulang kata sandi</label>
                   <div class="input-group"><span class="input-group-text"><i class=""></i></span>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="********">
-                    <div class="show-hide"><span class="show">                         </span></div>
+                    {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
                   </div>
                 </div>
                 <div class="form-group">

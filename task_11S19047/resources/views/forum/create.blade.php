@@ -1,4 +1,6 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+
+@extends('users.indexMain') //kevinUpdate
 
 @section('content')
     <div class="container">
@@ -12,7 +14,7 @@
                             @csrf
 
                             <x-input field="title" label="Judul" type="text"/>
-                            
+
                             <x-ckeditor field="subject" label="Subject"/>
 
                             {{-- <x-input field="category" label="Kategori" type="text"/> --}}
@@ -23,5 +25,5 @@
                 </div>
             </div>
         </div>
-    </div>        
+    </div>
 @endsection

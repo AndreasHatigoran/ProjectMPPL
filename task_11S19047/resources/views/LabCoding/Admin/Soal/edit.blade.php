@@ -1,4 +1,6 @@
-@extends('LabCoding.Admin.index')
+{{-- @extends('LabCoding.Admin.index') --}}
+
+@extends('users.indexMain') //kevinUpdate
 
 @section('content')
     <div class="card">

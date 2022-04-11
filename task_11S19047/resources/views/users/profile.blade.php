@@ -1,4 +1,6 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+
+@extends('users.indexMain') //kevinUpdate
 
 @section('content')
 <div class="container">

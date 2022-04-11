@@ -79,11 +79,11 @@
                             @endif
                             {{-- <b><a href="Register.html">| Register</a></b> --}}
                         </li>
-                        
+
                     @endauth
                 </div>
                @endif
-             
+
           </div>
           <div class="d-lg-none mobile-toggle pull-right w-auto"><i data-feather="more-horizontal"></i></div>
         </div>
@@ -96,7 +96,7 @@
                 <div class="col-sm-6" style="background: url({{ asset('image/welcome/bg_1_1.png') }});">
                   <br><br><br><br><br>
                   <h1 style="margin-top: 180px; margin-left: 50px;"><b>Del Creative</b></h1>
-                  <h3 style="margin-left: 50px;"><b>Your's Explore Your Solution</b></h3>
+                  <h3 style="margin-left: 50px;"><b>Your Explore's Your Solution</b></h3>
                 </div>
                 <div class="col-sm-6">
                 <img src="{{ asset('image/welcome/_1.png') }}" style="width: 600px; height: 443px; margin-top: 110px;">
@@ -124,7 +124,7 @@
               </div>
               <div class="row" style="margin-top: 50px;">
                 <div clas="col-lg-12">
-                  <hr><h3 style="text-align: center; margin-top: 50px;"><b>About Us</b></h3>
+                  <hr><h3 style="text-align: center; margin-top: 50px;"><b>--- About Us ---</b></h3>
                   <p style="text-align: center; margin-top: 30px;">Aplikasi berbasis web ini bertujuan untuk mengembangkan pengetahuan dan pengalaman bagi mahasiswa, dosen, dan asrama. UI yang baik akan membuat pengguna nyaman dalam menggunakan aplikasi ini. Kami dari kelompok 2 telah merancang website ini menjadi sebuah unit yang baik dan berkualitas dalam penggunaannya di Del Institute of Technology. Harapannya adalah pengguna dapat menggunakan aplikasi ini untuk menjadi pengalaman yang baik.
                   Terima kasih</p>
                 </div>
@@ -145,9 +145,9 @@
                     </div>
                     <div class="col-md-3">
                       <br>
-                      <br><a href="faq.html" style="color: white;">FAQ</a>
+                      {{-- <br><a href="faq.html" style="color: white;">FAQ</a> --}}
                       <br>
-                      <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a>
+                      {{-- <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a> --}}
                       <br>
                       <br><a href="about.html" style="color: white;">About</a>
                     </div>
@@ -156,9 +156,9 @@
               </footer>
           </div>
         </div>
-        
-      
-      
+
+
+
 
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.5.1.min.js"></script>

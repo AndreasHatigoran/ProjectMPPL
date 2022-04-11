@@ -74,7 +74,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  
+
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -106,20 +106,20 @@
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/style.css') }}">
     <link id="color" rel="stylesheet" href="{{ asset('css/welcome/color-1.css') }}" media="screen">
-   
+
       <!-- Responsive css-->
       <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/responsive.css') }}">
   </head>
   <body>
     <!-- Loader starts-->
     <div class="loader-wrapper">
-      <div class="theme-loader">    
+      <div class="theme-loader">
         <div class="loader-p"></div>
       </div>
     </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
-    <section>         
+    <section>
       <div class="container-fluid p-0" style="background-image: url('{{ asset('image/background/bglogin.png') }}');">
         <div class="row">
           <div class="col-12">
@@ -162,7 +162,7 @@
                 <div class="form-group">
                   <button class="btn btn-primary w-100" type="submit">Sign in</button>
                 </div>
-                <div class="login-social-title">                
+                <div class="login-social-title">
                   <h5>Sign in with</h5>
                 </div>
                 <p>Don't have account?<a class="ms-2" href="{{ route('register') }}">Create Account</a></p>
