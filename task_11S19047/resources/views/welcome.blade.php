@@ -125,9 +125,8 @@
               <div class="row" style="margin-top: 50px;">
                 <div clas="col-lg-12">
                   <hr><h3 style="text-align: center; margin-top: 50px;"><b>About Us</b></h3>
-                  <p style="text-align: center; margin-top: 30px;">This web-based application aims to develop knowledge and experience for students, lecturers, and hostels. A good UI will make users comfortable in using this application. We from group 2 have designed this website into a good and quality unit in its use in Del Institute of Technology. 
-                    Hope is that users can use this application to be a good experience. 
-                    Thank you.</p>
+                  <p style="text-align: center; margin-top: 30px;">Aplikasi berbasis web ini bertujuan untuk mengembangkan pengetahuan dan pengalaman bagi mahasiswa, dosen, dan asrama. UI yang baik akan membuat pengguna nyaman dalam menggunakan aplikasi ini. Kami dari kelompok 2 telah merancang website ini menjadi sebuah unit yang baik dan berkualitas dalam penggunaannya di Del Institute of Technology. Harapannya adalah pengguna dapat menggunakan aplikasi ini untuk menjadi pengalaman yang baik.
+                  Terima kasih</p>
                 </div>
               </div>
               </div>
