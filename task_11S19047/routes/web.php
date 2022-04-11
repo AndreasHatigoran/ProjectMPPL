@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
 use App\Http\Controllers\HomeController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LabCategoryController;
 use App\Http\Controllers\ReportCommentController;
 use App\Http\Controllers\ForumCommentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -82,3 +84,6 @@ Route::get('/lab', [LabController::class, 'index']);
 Route::get('category', [LabCategoryController::class, 'index']);
 Route::get('view-language/{language}', [LabCategoryController::class, 'daftarsoal']);
 Route::get('view-exercise/{id}', [LabCategoryController::class, 'lab']);
+
+
+Route::get('/admin/listpelanggaran', [AdminController::class, 'listpelanggaran']);
