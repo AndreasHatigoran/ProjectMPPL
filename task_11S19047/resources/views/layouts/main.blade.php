@@ -264,7 +264,7 @@
                                                     Diskusi</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../admin/listpelanggaran"><i data-feather="file"></i><span>List
+                                                href="../listpelanggaran"><i data-feather="file"></i><span>List
                                                     Pelanggaran</span></a>
                                         </li>
                                     @endif
