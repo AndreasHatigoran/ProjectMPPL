@@ -11,6 +11,6 @@ class FrontendController extends Controller
     {
         $soal = Soal::all();
         // return view('LabCoding.Admin.Soal.index', compact('soal'));
-        return view('users.indexMain', compact('soal')); //kevinUpdate
+        return view('layouts.main', compact('soal')); //kevinUpdate
     }
 }

@@ -183,29 +183,43 @@
                                         <h6>Features </h6>
                                     </div>
                                 </li>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav" href="../soal"><svg
-                                            aria-hidden="true" weidth="24" height="24" viewBox="0 0 16 16" version="1.1"
-                                            width="16" data-view-component="true"
-                                            class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
-                                            <path fill-rule="evenodd"
-                                                d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z">
-                                            </path>
-                                        </svg><span>Lab Coding</span></a></li>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                        href="../listpelanggaran04.html"><i data-feather="file"></i><span>List
-                                            Pelanggaran</span></a>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                        href="../leaderboardforum04.html"><i
-                                            data-feather="briefcase"></i><span>LeaderBoard</span></a>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav" href="/forum"><i
-                                            data-feather="list"></i><span>Forum
-                                            Diskusi</span></a></li>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                        href="../listakun04.html"><i data-feather="layers"></i></i><span>List
-                                            Akun</span></a>
-                                <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                        href="../konversipoint04.html"><i data-feather="package"></i><span>Konversi
-                                            Point</span></a>
+                                @if (Auth::user()->isVerify == true)
+                                    @if (Auth::user()->role == 'dosen' || Auth::user()->role == 'dorm' || Auth::user()->role == 'student')
+                                        {
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../soal"><svg aria-hidden="true" weidth="24" height="24"
+                                                    viewBox="0 0 16 16" version="1.1" width="16"
+                                                    data-view-component="true"
+                                                    class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z">
+                                                    </path>
+                                                </svg><span>Lab Coding</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../listpelanggaran04.html"><i data-feather="file"></i><span>List
+                                                    Pelanggaran</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../leaderboardforum04.html"><i
+                                                    data-feather="briefcase"></i><span>LeaderBoard</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="/forum"><i data-feather="list"></i><span>Forum
+                                                    Diskusi</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../listakun04.html"><i data-feather="layers"></i></i><span>List
+                                                    Akun</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../konversipoint04.html"><i
+                                                    data-feather="package"></i><span>Konversi
+                                                    Point</span></a>
+                                        </li>
+                                        }
+                                    @endif
+                                @endif
 
                 </nav>
             </header>
@@ -228,6 +242,24 @@
                     </div>
                     <!-- Container-fluid starts-->
                     <div>
+                        @if (Auth::user()->isVerify == false)
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-8 ">
+                                    <div class="card m-5">
+                                        <div class="card-body">
+                                            <p>
+                                                Terima kasih telah mendaftarkan diri anda untuk begabung bersama Del
+                                                Creative.
+                                                Mohon menunggu akun akan di verifikasi 1X24 untuk bergabung dengan
+                                                dengan Del
+                                                Creative.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
                         @yield('home')
                         @yield('content')
                     </div>
