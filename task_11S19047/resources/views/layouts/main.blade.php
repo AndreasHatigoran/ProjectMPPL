@@ -167,7 +167,25 @@
                     <a href="{{ \Request::url() . '/../../../@' . Auth::user()->username }}" class="setting-primary"
                         href="javascript:void(0)"><i data-feather="settings"></i></a>
                     <x-avatar :object="Auth::user()" size="128" />
-                    <h3 class="mt-3 f-14 f-w-600">{{ Auth::user()->fullname }}</h6>
+                    @if (Auth::user()->isadmin)
+                        <h3 class="mt-3 f-14 f-w-600">{{ Auth::user()->fullname }}</h6>
+                        @else
+                            <a href="user-profile.html">
+                                <h6 class="mt-3 f-14 f-w-600">
+                                    {{ Auth::user()->idrole }}/{{ Auth::user()->fullname }}
+                                </h6>
+                            </a>
+                            @if (Auth::user()->role == 'student')
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <span class="counter">{{ Auth::user()->point }}</span>
+                                            pt
+                                        </span>
+                                    </li>
+                                </ul>
+                            @endif
+                    @endif
                 </div>
                 <nav>
                     <div class="main-navbar">
@@ -184,8 +202,7 @@
                                     </div>
                                 </li>
                                 @if (Auth::user()->isverify == true)
-                                    @if (Auth::user()->role == 'dosen' || Auth::user()->role == 'dorm' || Auth::user()->role == 'student')
-                                        {
+                                    @if (Auth::user()->isadmin == true)
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../soal"><svg aria-hidden="true" weidth="24" height="24"
                                                     viewBox="0 0 16 16" version="1.1" width="16"
@@ -197,7 +214,7 @@
                                                 </svg><span>Lab Coding</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../listpelanggaran04.html"><i data-feather="file"></i><span>List
+                                                href="../admin/listpelanggaran"><i data-feather="file"></i><span>List
                                                     Pelanggaran</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
@@ -217,7 +234,39 @@
                                                     data-feather="package"></i><span>Konversi
                                                     Point</span></a>
                                         </li>
-                                        }
+                                    @elseif(Auth::user()->role == 'student')
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href={{ '/lab' }}><svg aria-hidden="true" weidth="24"
+                                                    height="24" viewBox="0 0 16 16" version="1.1" width="16"
+                                                    data-view-component="true"
+                                                    class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z">
+                                                    </path>
+                                                </svg><span>Lab Code</span></a></li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href={{ 'forum' }}><i data-feather="list"></i><span>Forum
+                                                    Diskusi</span></a></li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="konversipoint01.html"><i data-feather="package"></i><span>Konversi
+                                                    Point</span></a>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="leaderboardforum01.html"><i
+                                                    data-feather="server"></i><span>LeaderBoard</span></a>
+                                        <li class="sidebar-main-title">
+                                            <div>
+                                                <h6>Ask</h6>
+                                            </div>
+                                        </li>
+                                    @else
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="/forum"><i data-feather="list"></i><span>Forum
+                                                    Diskusi</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../admin/listpelanggaran"><i data-feather="file"></i><span>List
+                                                    Pelanggaran</span></a>
+                                        </li>
                                     @endif
                                 @endif
 

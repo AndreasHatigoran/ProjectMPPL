@@ -61,12 +61,12 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit-soal/{id}', [SoalController::class, 'edit']);
             Route::put('update-soal/{id}', [SoalController::class, 'update']);
             Route::get('delete-soal/{id}', [SoalController::class, 'destroy']);
-
-            Route::get('/lab', [LabController::class, 'index']);
-            Route::get('category', [LabCategoryController::class, 'index']);
-            Route::get('view-language/{language}', [LabCategoryController::class, 'daftarsoal']);
-            Route::get('view-exercise/{id}', [LabCategoryController::class, 'lab']);
         });
+
+        Route::get('/lab', [LabController::class, 'index']);
+        Route::get('category', [LabCategoryController::class, 'index']);
+        Route::get('view-language/{language}', [LabCategoryController::class, 'daftarsoal']);
+        Route::get('view-exercise/{id}', [LabCategoryController::class, 'lab']);
         // nested resource
         Route::resource('forum.comments', CommentController::class)->shallow();
         Route::resource('forum', ForumController::class);

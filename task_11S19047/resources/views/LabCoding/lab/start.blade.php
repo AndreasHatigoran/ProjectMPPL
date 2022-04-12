@@ -1,6 +1,6 @@
-@extends('LabCoding.lab.index')
+@extends('layouts.main')
 
-@section('start')
+@section('content')
     <!-- Container-fluid starts-->
     <div class="ws-black w3-center" style="padding-top:90px;padding-bottom:90px;background-color:#626B6D;">
         <div class="w3-content learntocodecontent" style="max-width:1400px">
