@@ -183,7 +183,7 @@
                                         <h6>Features </h6>
                                     </div>
                                 </li>
-                                @if (Auth::user()->isVerify == true)
+                                @if (Auth::user()->isverify == true)
                                     @if (Auth::user()->role == 'dosen' || Auth::user()->role == 'dorm' || Auth::user()->role == 'student')
                                         {
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
@@ -242,7 +242,7 @@
                     </div>
                     <!-- Container-fluid starts-->
                     <div>
-                        @if (Auth::user()->isVerify == false)
+                        @if (Auth::user()->isverify == false)
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
