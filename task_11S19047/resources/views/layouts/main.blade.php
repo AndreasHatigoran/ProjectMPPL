@@ -56,7 +56,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,7 +65,7 @@
     <meta name="keywords"
         content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="../image/welcome/dc.png.png" type="image/x-icon">
+    <link rel="icon" href="../image/icon/dc.png.png" type="image/x-icon">
     <link rel="shortcut icon" href="../image/welcome/dc.png.png" type="image/x-icon">
     <title>Del Creative</title>
     <!-- Google font-->
@@ -196,12 +195,12 @@
                                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
                                             aria-hidden="true"></i></div>
                                 </li>
-                                <li class="sidebar-main-title">
-                                    <div>
-                                        <h6>Features </h6>
-                                    </div>
-                                </li>
                                 @if (Auth::user()->isverify == true)
+                                    <li class="sidebar-main-title">
+                                        <div>
+                                            <h6>Features </h6>
+                                        </div>
+                                    </li>
                                     @if (Auth::user()->isadmin == true)
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../soal"><svg aria-hidden="true" weidth="24" height="24"
@@ -218,26 +217,21 @@
                                                     Pelanggaran</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../leaderboardforum04.html"><i
+                                                href="../leaderboard"><i
                                                     data-feather="briefcase"></i><span>LeaderBoard</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="/forum"><i data-feather="list"></i><span>Forum
+                                                href="../forum"><i data-feather="list"></i><span>Forum
                                                     Diskusi</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../listakun04.html"><i data-feather="layers"></i></i><span>List
+                                                href="../akun"><i data-feather="layers"></i></i><span>List
                                                     Akun</span></a>
-                                        </li>
-                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../konversipoint04.html"><i
-                                                    data-feather="package"></i><span>Konversi
-                                                    Point</span></a>
                                         </li>
                                     @elseif(Auth::user()->role == 'student')
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href={{ '/lab' }}><svg aria-hidden="true" weidth="24"
-                                                    height="24" viewBox="0 0 16 16" version="1.1" width="16"
+                                                href="../lab"><svg aria-hidden="true" weidth="24" height="24"
+                                                    viewBox="0 0 16 16" version="1.1" width="16"
                                                     data-view-component="true"
                                                     class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
                                                     <path fill-rule="evenodd"
@@ -245,20 +239,21 @@
                                                     </path>
                                                 </svg><span>Lab Code</span></a></li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href={{ 'forum' }}><i data-feather="list"></i><span>Forum
+                                                href="../forum"><i data-feather="list"></i><span>Forum
                                                     Diskusi</span></a></li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="konversipoint01.html"><i data-feather="package"></i><span>Konversi
+                                                href="../konversi"><i
+                                                    data-feather="package"></i><span>Konversi
                                                     Point</span></a>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="leaderboardforum01.html"><i
+                                                href="../leaderboard"><i
                                                     data-feather="server"></i><span>LeaderBoard</span></a>
-                                        <li class="sidebar-main-title">
+                                            {{-- <li class="sidebar-main-title">
                                             <div>
                                                 <h6>Ask</h6>
                                             </div>
-                                        </li>
-                                    @else
+                                        </li> --}}
+                                        @else
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="/forum"><i data-feather="list"></i><span>Forum
                                                     Diskusi</span></a>
@@ -266,6 +261,11 @@
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../listpelanggaran"><i data-feather="file"></i><span>List
                                                     Pelanggaran</span></a>
+                                        </li>
+                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../konversi"><i
+                                                    data-feather="package"></i><span>Konversi
+                                                    Point</span></a>
                                         </li>
                                     @endif
                                 @endif
@@ -295,13 +295,11 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
-                                        <div class="card-body">
-                                            <p>
+                                        <div class="card-body" style="background-color: #24695c;">
+                                            <p class="text-center font-weight-bolder">
                                                 Terima kasih telah mendaftarkan diri anda untuk begabung bersama Del
-                                                Creative.
-                                                Mohon menunggu akun akan di verifikasi 1X24 untuk bergabung dengan
-                                                dengan Del
-                                                Creative.
+                                                Creative. Mohon menunggu akun akan di verifikasi 1X24 untuk bergabung
+                                                dengan dengan Del Creative.
                                             </p>
                                         </div>
                                     </div>
@@ -330,7 +328,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <br>
-                                    <br><a href="about.html" style="color: white;">About</a>
+                                    <br><a href="{{ url('/') }}" style="color: white;">About</a>
                                 </div>
                             </div>
                         </div>

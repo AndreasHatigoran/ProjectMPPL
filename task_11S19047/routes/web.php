@@ -61,6 +61,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit-soal/{id}', [SoalController::class, 'edit']);
             Route::put('update-soal/{id}', [SoalController::class, 'update']);
             Route::get('delete-soal/{id}', [SoalController::class, 'destroy']);
+            Route::get('akun', [AdminController::class, 'akun']);
         });
 
         Route::get('/lab', [LabController::class, 'index']);
@@ -72,6 +73,12 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('forum', ForumController::class);
         Route::get('/comment/{id}/report', [ReportCommentController::class, 'reportComment']);
         Route::get('/mark/{id}', [ForumCommentController::class, 'markcomment']);
+
+
+
+        //dummy
+        Route::get('/leaderboard', [ForumController::class, 'leaderboard']);
+        Route::get('/konversi', [ForumController::class, 'konversi']);
     });
 });
 

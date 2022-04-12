@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="pixelstrap">
-      <link rel="icon" href="../assets/images/dc.png.png" type="image/x-icon">
+      <link rel="icon" href="../image/icon/dc.png.png" type="image/x-icon">
       <link rel="shortcut icon" href="../assets/images/dc.png.png" type="image/x-icon">
       <title>Del Creative</title>
       <!-- Google font-->
@@ -55,27 +55,24 @@
             <ul class="nav-menus">
                 @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="about.html">About</a></b>
+                        <li class="onhover-dropdown p-0 ikan">
+                            <b><a class="text-dark" href="{{ url('/') }}">About</a></b>
                         </li>
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="information.html">Information</a></b>
+                        <li class="onhover-dropdown p-0 ikan">
+                            <b><a class="text-dark" href="information.html">Information</a></b>
                         </li>
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="contact.html">Contact</a></b>
+                        <li class="onhover-dropdown p-0 ikan">
+                            <b><a class="text-dark" href="contact.html">Contact</a></b>
                         </li>
                     @auth
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="{{ url('/forum') }}">Forum</a></b>
-                        </li>
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="{{ url('/forum') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
+                        <li class="onhover-dropdown p-0 ikan">
+                            <b><a class="text-dark" href="{{ url('/dashboard') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
                         </li>
                     @else
-                        <li class="onhover-dropdown p-0">
-                            <b><a href="{{ route('login') }}">Login</a></b>
+                        <li class="onhover-dropdown p-0 ikan">
+                            <b><a class="text-dark" href="{{ route('login') }}">Login</a></b>
                             @if (Route::has('register'))
-                            <b><a href="{{ route('register') }}">| Register</a></b>
+                            <b><a class="text-dark" href="{{ route('register') }}">| Register</a></b>
                             @endif
                             {{-- <b><a href="Register.html">| Register</a></b> --}}
                         </li>
@@ -149,7 +146,7 @@
                       <br>
                       {{-- <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a> --}}
                       <br>
-                      <br><a href="about.html" style="color: white;">About</a>
+                      <br><a href="{{ url('/') }}" style="color: white;">About</a>
                     </div>
                   </div>
                 </div>

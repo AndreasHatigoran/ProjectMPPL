@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,7 +39,7 @@
   <body>
     <!-- Loader starts-->
     <div class="loader-wrapper">
-      <div class="theme-loader">    
+      <div class="theme-loader">
         <div class="loader-p"></div>
       </div>
     </div>
@@ -110,13 +110,13 @@
                 <a href="profile04.html">
                   <h3 class="mt-3 f-14 f-w-600">ADMIN</h6>
                   </a>
-                  
-                  
+
+
           </div>
           <nav>
             <div class="main-navbar">
               <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-              <div id="mainnav">           
+              <div id="mainnav">
                 <ul class="nav-menu custom-scrollbar">
                   <li class="back-btn">
                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
@@ -135,24 +135,30 @@
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="listakun04.html"><i data-feather="layers"></i></i><span>List Akun</span></a>
                     <li class="dropdown"><a class="nav-link menu-title link-nav" href="konversipoint04.html"><i data-feather="package"></i><span>Konversi Point</span></a>
                     <div>
-                     
+
                         <div class="according-menu">
                           <i class="fa fa-angle-right"></i>
                         </div>
                       <div class="according-menu"><i class="fa fa-angle-right"></i>
                       </div>
                     </a>
-                  </li>  
+                  </li>
           </nav>
         </header>
+ --}}
+
+{{-- @extends('LabCoding.Admin.index') --}}
+
+@extends('layouts.main')
+
+@section('content')
         <!-- Page Sidebar Ends-->
-        <div class="page-body">
           <div class="container-fluid">
             <div class="page-header">
               <div class="row">
                 <div class="col-sm-12">
                   <h1>List Pelanggaran </h1>
-                </div>     
+                </div>
               </div>
             </div>
           </div>
@@ -205,7 +211,7 @@
                           <td>Antonio Nababan</td>
                           <td>12S19010</td>
                           <td>20</td>
-                          <td>Fuck you man</td>
+                          <td>ikan teri nakal</td>
                           <td><button class="btn btn-light btn-xs" type="button">Terima</button></td>
                           <td><button class="btn btn-danger btn-xs" type="button">Tolak</button></td>
                         </tr>
@@ -238,9 +244,13 @@
             </center>
             </div>
           </div>
-          </div>
              <!-- Container-fluid Ends-->
-        
+
+@endsection
+
+
+
+{{--
         <!-- footer start-->
         <footer class="footer" style="margin-left: -12px; margin-right: -15px; background: url('{{ asset('image/footer/coming_soon_bg_1.png') }}'); margin-top: 100px;">
           <div class="container-fluid">
@@ -282,4 +292,4 @@
   </body>
 
 
-</html>
+</html> --}}

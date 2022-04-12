@@ -1,4 +1,6 @@
-@extends('LabCoding.lab.index')
+{{-- @extends('LabCoding.lab.index') --}}
+
+@extends('layouts.main')
 
 @section('content')
     <div class="ws-black w3-center" style="padding-top:30px;padding-bottom:30px;background-color:#24695C;">

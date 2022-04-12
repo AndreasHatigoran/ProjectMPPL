@@ -46,7 +46,7 @@ class ForumController extends Controller
 
         Forum::create([
             'user_id' => Auth::user()->id,
-            'title' => $request->title, 
+            'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'subject' => $request->subject,
         ]);
@@ -109,7 +109,7 @@ class ForumController extends Controller
         }
 
         $forum->update([
-            'title' => $request->title, 
+            'title' => $request->title,
             'subject' => $request->subject,
         ]);
 
@@ -126,5 +126,13 @@ class ForumController extends Controller
     {
         Forum::find($id)->delete();
         return redirect('/forum');
+    }
+
+    public function leaderboard(){
+        return view('forum.leaderboardforum');
+    }
+
+    public function konversi(){
+        return view('forum.konversipoint');
     }
 }

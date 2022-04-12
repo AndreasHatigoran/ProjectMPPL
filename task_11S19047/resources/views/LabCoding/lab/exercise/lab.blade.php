@@ -1,4 +1,6 @@
-@extends('LabCoding.lab.index')
+{{-- @extends('LabCoding.lab.index') --}}
+
+@extends('layouts.main')
 
 @section('content')
     {{-- <h2>Exercise {{ $soal->exercise }}:</h2>

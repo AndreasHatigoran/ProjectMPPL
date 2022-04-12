@@ -12,4 +12,9 @@ class AdminController extends Controller
     {
         return view('administrator.listpelanggaran');
     }
+
+    public function akun()
+    {
+        return view('administrator.listakun');
+    }
 }
