@@ -172,17 +172,21 @@
             <div class="card">
                 <div class="card-header">
                     <h1><b>List Akun</b></h1>
+                    @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                    @endif
                 </div>
                 <div class="card-body">
+                    @if($users->count()>0)
                     <table class="display" id="basic-key-table">
-                        <div class="form-group">
 
-                        </div>
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead style="text-align: center;">
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">No</th>
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">NIM/NIDN/NIP</th>
                                         <th scope="col">Role</th>
@@ -193,63 +197,41 @@
                                     </tr>
                                 </thead>
                                 <tbody style="text-align: center; align-items: center;">
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Samuel Ferdi Rajagukguk</td>
-                                        <td>Mahasiswa</td>
-                                        <td>11S21008</td>
-                                        <td>ifs21008@students.del.ac.id</td>
-                                        <td></td>
-                                        <td><button class="btn btn-light btn-xs" type="button">Validasi</button>
-                                        </td>
-                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button>
-                                        </td>
-                                    </tr>
 
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Puan Maharani Sirait</td>
-                                        <td>11S19059</td>
-                                        <td>Mahasiswa</td>
-                                        <td>ifs19059@students.del.ac.id</td>
-                                        <td></td>
-                                        <td><button class="btn btn-light btn-xs" type="button">Validasi</button>
-                                        </td>
-                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button>
-                                        </td>
-                                    </tr>
+                                    @php
+                                    $i = 1;
+                                    @endphp
 
+                                    @foreach ($users as $user)
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Aldi Jeremy Simamora</td>
-                                        <td>12S21011</td>
-                                        <td>Mahasiswa</td>
-                                        <td>iss21011@students.del.ac.id</td>
-                                        <td></td>
-                                        <td><button class="btn btn-light btn-xs" type="button">Validasi</button>
+                                        <td scope="row"> {{ $i++; }} </td>
+                                        <td>{{ $user->fullname }}</td>
+                                        <td>{{ $user->idrole }}</td>
+                                        <td>{{ $user->role }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td><img width = "110px" src="{{ asset('image/buktiss/'.$user->screenshoot )}}" alt="Pic"></td>
+                                        <td>
+                                            <form action="{{ route('administrator.make-verify',$user->id) }}" method="POST">
+                                                @csrf
+                                            <button type="submit" class="btn btn-light btn-xs">Verifikasi</button>
+                                            </form>
                                         </td>
-                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Dr. Arlinta Christy Barus, ST., M.InfoTech.</td>
-                                        <td>0117027901</td>
-                                        <td>Dosen</td>
-                                        <td>arlinta@del.ac.id</td>
-                                        <td></td>
-                                        <td><button class="btn btn-light btn-xs" type="button">Validasi</button>
-                                        </td>
-                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button>
-                                        </td>
-                                    </tr>
 
+                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                 </tbody>
-                            </table>
                         </div>
+                    </table>
+                    @else
+                    <h3 class="text-center"> Tidak ada akun yang harus diverifikasi</h3>
+                    @endif
                 </div>
             </div>
         </div>
+@endsection
+        {{--
         <div class="row">
             <div class="col-sm-12">
                 <ul>
@@ -275,7 +257,7 @@
             </div>
         </div>
         <!-- Container-fluid Ends-->
-    @endsection
+
     {{-- <!-- footer start-->
                     <footer class="footer"
                         style="margin-left: -12px; margin-right: -15px; background: url(../assets/images/coming_soon_bg_1.png); margin-top: 100px;">

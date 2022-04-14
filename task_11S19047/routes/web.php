@@ -47,6 +47,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [FrontendController::class, 'index']);
     Route::middleware(['verify'])->group(function () {
         Route::middleware(['admin'])->group(function () {
+            Route::get('/admin', [App\Http\Controllers\AdminController::class, 'akun'])->name('administrator.listakun');
+            Route::post('/admin/{user}/make-verify', [App\Http\Controllers\AdminController::class, 'makeVerify'])->name('administrator.make-verify');
             Route::get('/admin/listpelanggaran', [AdminController::class, 'listpelanggaran']);
             Route::get('categories', [CategoryController::class, 'index']);
             Route::get('add-categories', [CategoryController::class, 'add']);

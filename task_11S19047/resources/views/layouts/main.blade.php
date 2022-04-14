@@ -225,7 +225,7 @@
                                                     Diskusi</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../akun"><i data-feather="layers"></i></i><span>List
+                                                href="{{ route('administrator.listakun') }}"><i data-feather="layers"></i></i><span>List
                                                     Akun</span></a>
                                         </li>
                                     @elseif(Auth::user()->role == 'student')
