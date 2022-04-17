@@ -12,7 +12,7 @@ class CommentReport extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -20,6 +20,6 @@ class CommentReport extends Model
 
     public function forumcomment()
     {
-        return $this->belongsTo(ForumComment::class);
+        return $this->belongsTo(ForumComment::class, 'comment_id');
     }
 }

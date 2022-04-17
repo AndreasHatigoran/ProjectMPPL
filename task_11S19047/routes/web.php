@@ -14,7 +14,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LabCategoryController;
 use App\Http\Controllers\ReportCommentController;
 use App\Http\Controllers\ForumCommentController;
-
+use App\Http\Controllers\ListPelanggaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +81,8 @@ Route::middleware(['auth'])->group(function () {
         //dummy
         Route::get('/leaderboard', [ForumController::class, 'leaderboard']);
         Route::get('/konversi', [ForumController::class, 'konversi']);
+        // List pelanggaran dosen dan asrama
+        Route::get('/listpelanggaran', [ListPelanggaranController::class, 'listpelanggaran']);
     });
 });
 
