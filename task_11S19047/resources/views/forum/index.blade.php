@@ -46,7 +46,7 @@
                             </div>
                             <hr />
                         @endforeach
-                        {{ $forums->links('vendor.pagination.custome') }}
+                        {{ $forums->links('vendor.pagination.costume') }}
                     </div>
                 </div>
             </div>

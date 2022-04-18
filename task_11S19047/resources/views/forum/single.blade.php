@@ -55,7 +55,7 @@
                     {!! $comment->subject !!}
                     @if (Auth::check())
                         @if (Auth::user()->id == $comment->user_id)
-                            <a href="/comments/{{ $comment->id }}/edit" class="btn btn-info mb-1">Edit</a>
+                            <a href="/comments/{{ $comment->id }}/edit" class="btn btn-info mb-1">Ubah</a>
                             <form action="/comments/{{ $comment->id }}" method="post">
                                 @csrf
                                 @method('DELETE')
