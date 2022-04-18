@@ -51,7 +51,7 @@
                                         @isset($user->idrole) value="{{ old('idrole') ? old('idrole') : $user->idrole }}")
                             @else
                                 value="{{ old('idrole') }}" @endisset
-                                        required autocomplete="idrole" autofocus>
+                                        required autocomplete="idrole" autofocus disabled>
 
                                     @error('idrole')
                                         <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
                                         @isset($user->email) value="{{ old('email') ? old('email') : $user->email }}")
                             @else
                                 value="{{ old('email') }}" @endisset
-                                        required autocomplete="email" autofocus>
+                                        required autocomplete="email" autofocus disabled>
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -112,7 +112,7 @@
                                         @isset($user->username) value="{{ old('username') ? old('username') : $user->username }}")
                             @else
                                 value="{{ old('username') }}" @endisset
-                                        required autocomplete="username" autofocus>
+                                        required autocomplete="username" autofocus disabled>
 
                                     @error('username')
                                         <span class="invalid-feedback" role="alert">
