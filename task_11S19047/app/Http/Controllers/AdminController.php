@@ -11,7 +11,7 @@ class AdminController extends Controller
     // Show all pelanggaran
     public function listpelanggaran()
     {
-        return view('administrator.listpelanggaran');
+        return view('administrator.listpelanggaran', compact('reports'));
     }
     //list akun yang akan di verifikasi
     public function akun()
@@ -21,10 +21,11 @@ class AdminController extends Controller
     }
 
     //membuat akun terverifikasi
-    public function makeVerify(User $user){
-        $user->isverify =true;
+    public function makeVerify(User $user)
+    {
+        $user->isverify = true;
         $user->save();
-        session()->flash('success', $user->fullname.' Berhasil verifikasi');
+        session()->flash('success', $user->fullname . ' Berhasil verifikasi');
         return redirect(route('administrator.listakun'));
     }
 }
