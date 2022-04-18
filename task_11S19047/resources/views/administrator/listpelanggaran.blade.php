@@ -39,16 +39,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($reports as $report)
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Samuel Ferdi Rajagukguk</td>
-                                        <td>11S21008</td>
-                                        <td>10</td>
-                                        <td>{{ $report->forumcomment->subject }}</td>
-                                        <td><button class="btn btn-light btn-xs" type="button">Terima</button></td>
-                                        <td><button class="btn btn-danger btn-xs" type="button">Tolak</button></td>
-                                    </tr>
+                                @php
+                                    $i = 1;
+                                @endphp
+                                @foreach ($reports as $report => $reportlist)
+                                    {{-- <p>{{ $reportlist[0][1]['fullname'] }}</p> --}}
+                                    @foreach ($reportlist as $rep)
+                                        <tr>
+                                            <th scope="row">{{ $i++ }}</th>
+                                            <td>{{ $rep->forumcomment->user->fullname }}</td>
+                                            <td>{{ $rep->forumcomment->user->idrole }}</td>
+                                            <td>{{ $reportlist->count() }}</td>
+                                            <td>{!! $rep->forumcomment->subject !!}</td>
+                                            <td><button class="btn btn-light btn-xs" type="button">Terima</button></td>
+                                            <td><button class="btn btn-danger btn-xs" type="button">Tolak</button></td>
+                                        </tr>
+                                    @endforeach
                                 @endforeach
                             </tbody>
                         </table>

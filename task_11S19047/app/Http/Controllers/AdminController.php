@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CommentReport;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,8 @@ class AdminController extends Controller
     // Show all pelanggaran
     public function listpelanggaran()
     {
+        $reports = CommentReport::get()->groupBy('comment_id');
+        // dd($reports);
         return view('administrator.listpelanggaran', compact('reports'));
     }
     //list akun yang akan di verifikasi
