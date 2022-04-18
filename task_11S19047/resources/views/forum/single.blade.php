@@ -63,8 +63,10 @@
                             </form>
                         @else
                             @if (count(Auth::user()->commentReports->where('comment_id', $comment->id)) != 1)
-                                <a href="/comment/{{ $comment->id }}/report" class="btn btn-danger btn-sm">Lapor
-                                    Pelanggaran</a>
+                                @if (Auth::user()->role == 'dorm' || Auth::user()->role == 'dosen')
+                                    <a href="/comment/{{ $comment->id }}/report" class="btn btn-danger btn-sm">Lapor
+                                        Pelanggaran</a>
+                                @endif
                             @endif
                             @if (Auth::user()->id == $comment->forum->user_id)
                                 <button class="btn btn-warning btn-sm" onclick="mark({{ $comment->id }}, this)"
