@@ -21,6 +21,10 @@ class ReportCommentController extends Controller
             'user_id' => $user->id,
         ]);
 
-        return redirect('/forum/' . $comment->forum->slug);
+        if (($user->role == 'dorm' && $user->isadmin == false) || ($user->role = 'dosen' && $user->isadmin == false)) {
+            return redirect('/listpelanggaran');
+        } else if ($user->isadmin == true) {
+            return redirect('/admin/listpelanggaran');
+        }
     }
 }
