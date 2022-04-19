@@ -33,7 +33,7 @@ class LeaderboardController extends Controller
         if ($querySearch == null) {
             $students = User::where('role', 'student')->orderBy('point', 'desc')->paginate(10);
         } else {
-            $students = User::where('role', 'students')->where('fullname', 'like', '%' . $querySearch . '%')->orderBy('point', 'desc')->paginate(10);
+            $students = User::where('role', 'student')->where('fullname', 'like', '%' . $querySearch . '%')->orderBy('point', 'desc')->paginate(10);
         }
 
         return view('leaderboard.index', compact('students', 'querySearch'));
