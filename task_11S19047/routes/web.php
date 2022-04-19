@@ -83,6 +83,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/konversi', [ForumController::class, 'konversi']);
         // List pelanggaran dosen dan asrama
         Route::get('/listpelanggaran', [ListPelanggaranController::class, 'listpelanggaran']);
+        //Upvoted & Downvote
+        Route::get('/upvote/{id}', [UpvoteController::class, 'upvotecomment']);
     });
 });
 
