@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -9,18 +10,20 @@ use Symfony\Component\VarDumper\Caster\RedisCaster;
 class UsersController extends Controller
 {
 
-    public function showprofile($username){
+    public function showprofile($username)
+    {
         $user = User::where('username', $username)->first();
         /*dd ($user);*/
 
         return view('users.profile', compact('user'));
     }
 
-    public function update(Request $request, $username){
+    public function update(Request $request, $username)
+    {
         $user = User::where('username', $username)->first();
 
         $request->validate([
-            'username' => 'required|alpha_dash|min:3|max:15|unique:users,username,' . $user->id,
+            'username' => 'alpha_dash|min:3|max:15|unique:users,username,' . $user->id,
             'fullname' => 'max:30',
             'avatar' => 'image|mimes:jpeg,jpg,png'
         ]);
@@ -37,11 +40,12 @@ class UsersController extends Controller
             'username' => $request->username,
             'fullname' => $request->fullname,
             'avatar' => $imageName
-         ]);
-         return redirect('/@' . $user->username);
+        ]);
+        return redirect('/@' . $user->username);
     }
 
-    public function edit(){
+    public function edit()
+    {
         return view('users.edit');
     }
 
