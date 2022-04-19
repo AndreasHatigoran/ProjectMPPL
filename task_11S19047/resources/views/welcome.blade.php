@@ -56,13 +56,13 @@
                 @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="{{ url('/') }}">About</a></b>
+                            <b><a class="text-dark" href="{{ url('/') }}">Tentang</a></b>
                         </li>
                         <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="information.html">Information</a></b>
+                            <b><a class="text-dark" href="information.html">Informasi</a></b>
                         </li>
                         <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="contact.html">Contact</a></b>
+                            <b><a class="text-dark" href="contact.html">Kontak</a></b>
                         </li>
                     @auth
                         <li class="onhover-dropdown p-0 ikan">
@@ -70,9 +70,9 @@
                         </li>
                     @else
                         <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="{{ route('login') }}">Login</a></b>
+                            <b><a class="text-dark" href="{{ route('login') }}">Masuk</a></b>
                             @if (Route::has('register'))
-                            <b><a class="text-dark" href="{{ route('register') }}">| Register</a></b>
+                            <b><a class="text-dark" href="{{ route('register') }}">| Daftar</a></b>
                             @endif
                             {{-- <b><a href="Register.html">| Register</a></b> --}}
                         </li>
@@ -93,7 +93,7 @@
                 <div class="col-sm-6" style="background: url({{ asset('image/welcome/bg_1_1.png') }});">
                   <br><br><br><br><br>
                   <h1 style="margin-top: 180px; margin-left: 50px;"><b>Del Creative</b></h1>
-                  <h3 style="margin-left: 50px;"><b>Your Explore's Your Solution</b></h3>
+                  <h3 style="margin-left: 50px;"><b>Solusi Eksplorasi Anda</b></h3>
                 </div>
                 <div class="col-sm-6">
                 <img src="{{ asset('image/welcome/_1.png') }}" style="width: 600px; height: 443px; margin-top: 110px;">
@@ -112,7 +112,7 @@
               <div class="row">
                 <div class="col-sm-6" style="background: url(../assets/images/bg_1_1.png);">
                   <br><br><br><br><br>
-                  <h3 style="margin-left: 50px;"><b>LAB CODE</b></h3>
+                  <h3 style="margin-left: 50px;"><b>LABCode</b></h3>
                   <p style="margin-left: 50px;">Del Creative memiliki forum lab code dengan sistem API yang dapat menilai ketepatan siswa dalam menyelesaikan masalah kode program yang disediakan oleh aplikasi. Del Creative juga memiliki sistem papan peringkat yang akan memberi peringkat siswa yang telah mengumpulkan poin pendapatan terbanyak di antara banyak siswa yang aktif belajar di Institut Teknologi Del</p>
                 </div>
                 <div class="col-sm-6" style="background: url(../assets/images/bg_1_1.png);">
@@ -146,7 +146,12 @@
                       <br>
                       {{-- <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a> --}}
                       <br>
-                      <br><a href="{{ url('/') }}" style="color: white;">About</a>
+                      <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <p>Copyright @ 2022</p>
                     </div>
                   </div>
                 </div>
