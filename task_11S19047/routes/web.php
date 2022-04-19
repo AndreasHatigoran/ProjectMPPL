@@ -15,6 +15,8 @@ use App\Http\Controllers\LabCategoryController;
 use App\Http\Controllers\ReportCommentController;
 use App\Http\Controllers\ForumCommentController;
 use App\Http\Controllers\ListPelanggaranController;
+use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\UpvoteController;
 
 /*
 |--------------------------------------------------------------------------
