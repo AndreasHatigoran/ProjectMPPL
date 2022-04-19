@@ -85,6 +85,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/listpelanggaran', [ListPelanggaranController::class, 'listpelanggaran']);
         //Upvoted & Downvote
         Route::get('/upvote/{id}', [UpvoteController::class, 'upvotecomment']);
+
+        //Leaderboard
+        Route::get('/leaderboard', [LeaderboardController::class, 'index']);
+        Route::get('/leaderboard/search', [LeaderboardController::class, 'search']);
+        // Route::post('/leaderboard/search', [LeaderboardController::class, 'searchStudents'])->name('student.search');
     });
 });
 

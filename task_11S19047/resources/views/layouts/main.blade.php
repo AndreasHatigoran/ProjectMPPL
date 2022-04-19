@@ -65,6 +65,7 @@
     <meta name="keywords"
         content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="icon" href="../image/icon/dc.png.png" type="image/x-icon">
     <link rel="shortcut icon" href="../image/welcome/dc.png.png" type="image/x-icon">
     <title>Del Creative</title>
@@ -90,8 +91,8 @@
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="../css/welcome/feather-icon.css">
     <!-- Plugins css start-->
-    <link rel="stylesheet" type="text/css" href="../css/welcome/select2.css">
-    <link rel="stylesheet" type="text/css" href="../css/welcome/dropzone.css">
+    {{-- <link rel="stylesheet" type="text/css" href="../css/welcome/select2.css">
+    <link rel="stylesheet" type="text/css" href="../css/welcome/dropzone.css"> --}}
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="../css/welcome/bootstrap.css">
@@ -225,7 +226,8 @@
                                                     Diskusi</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="{{ route('administrator.listakun') }}"><i data-feather="layers"></i></i><span>List
+                                                href="{{ route('administrator.listakun') }}"><i
+                                                    data-feather="layers"></i></i><span>List
                                                     Akun</span></a>
                                         </li>
                                     @elseif(Auth::user()->role == 'student')
@@ -242,8 +244,7 @@
                                                 href="../forum"><i data-feather="list"></i><span>Forum
                                                     Diskusi</span></a></li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../konversi"><i
-                                                    data-feather="package"></i><span>Konversi
+                                                href="../konversi"><i data-feather="package"></i><span>Konversi
                                                     Point</span></a>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../leaderboard"><i
@@ -263,8 +264,7 @@
                                                     Pelanggaran</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../konversi"><i
-                                                    data-feather="package"></i><span>Konversi
+                                                href="../konversi"><i data-feather="package"></i><span>Konversi
                                                     Point</span></a>
                                         </li>
                                     @endif
@@ -347,14 +347,14 @@
             <script src="../js/welcome/bootstrap/popper.min.js"></script>
             <script src="../js/welcome/bootstrap/bootstrap.min.js"></script>
             <!-- Plugins JS start-->
-            <script src="../js/welcome/editor/ckeditor/ckeditor.js"></script>
+            {{-- <script src="../js/welcome/editor/ckeditor/ckeditor.js"></script>
             <script src="../js/welcome/editor/ckeditor/adapters/jquery.js"></script>
             <script src="../js/welcome/dropzone/dropzone.js"></script>
             <script src="../js/welcome/dropzone/dropzone-script.js"></script>
             <script src="../js/welcome/select2/select2.full.min.js"></script>
             <script src="../js/welcome/select2/select2-custom.js"></script>
             <script src="../js/welcome/email-app.js"></script>
-            <script src="../js/welcome/form-validation-custom.js"></script>
+            <script src="../js/welcome/form-validation-custom.js"></script> --}}
             <!-- Plugins JS Ends-->
             <!-- Theme js-->
             <script src="../js/welcome/script.js"></script>
