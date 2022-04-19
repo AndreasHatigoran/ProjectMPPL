@@ -36,4 +36,19 @@ class ForumComment extends Model
     {
         return $this->commentReports->where('user_id', Auth::user()->id)->count();
     }
+
+    public function upvotes()
+    {
+        return $this->hasMany(Upvote::class);
+    }
+
+    public function downvotes()
+    {
+        return $this->hasMany(Downvote::class);
+    }
+
+    public function isUpvote()
+    {
+        return $this->upvotes->where('user_id', Auth::user()->id)->count();
+    }
 }
