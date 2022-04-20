@@ -263,10 +263,13 @@
                                                 href="../listpelanggaran"><i data-feather="file"></i><span>List
                                                     Pelanggaran</span></a>
                                         </li>
-                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../konversi"><i data-feather="package"></i><span>Konversi
+                                        @if (Auth::user()->role == 'dorm')
+                                            <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                                href="../asrama/konversi"><i data-feather="package"></i><span>Konversi
                                                     Point</span></a>
-                                        </li>
+                                            </li>
+                                        @endif
+                                        
                                     @endif
                                 @endif
 

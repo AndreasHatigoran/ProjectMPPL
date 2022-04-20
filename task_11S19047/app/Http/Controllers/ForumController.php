@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Forum;
+use App\Models\PointConversion;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -156,5 +157,21 @@ class ForumController extends Controller
         } else {
             return redirect('/konversi')->with(['error' => 'Poin anda tidak mencukupi']);
         }
+    }
+
+    public function conversionlist()
+    {
+        $conversionlists = PointConversion::orderBy('id', 'desc')->paginate(10);
+        return view('dosen_asrama.konversipoin', compact('conversionlists'));
+    }
+
+    public function validasi($id)
+    {
+        $conversion = PointConversion::findOrFail($id);
+        $conversion->update([
+            'status' => true,
+        ]);
+
+        return redirect('/asrama/konversi');
     }
 }

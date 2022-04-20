@@ -84,6 +84,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/leaderboard', [ForumController::class, 'leaderboard']);
         Route::get('/konversi', [ForumController::class, 'konversi']);
         Route::get('/konversi/{id}', [ForumController::class, 'doconversion']);
+        Route::get('/asrama/konversi', [ForumController::class, 'conversionlist']);
+        Route::get('/konversi/{id}/validasi', [ForumController::class, 'validasi']);
         // List pelanggaran dosen dan asrama
         Route::get('/listpelanggaran', [ListPelanggaranController::class, 'listpelanggaran']);
         //Upvoted & Downvote
