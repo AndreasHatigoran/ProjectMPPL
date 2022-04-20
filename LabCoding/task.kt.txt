@@ -1,0 +1,28 @@
+fun main() {
+    println(" [Hello World!] ")
+}
+
+fun main(args: Array<String>){
+    print("Inputkan nama: ")
+    val nama = readLine()
+
+    println("Nama saya $[nama] ")
+}
+
+fun main(){
+    var nama = "ucok"
+}
+
+fun main(){
+    println(10 % 6)
+}
+
+fun main(args: Array<String>){
+    val umur: Int = 17
+    if (umur >= 19){
+        println("Anda diperbolehkan masuk")
+    }
+            else{
+        println("Anda belum diperbolehkan masuk")
+    }
+}
