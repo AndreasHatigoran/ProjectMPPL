@@ -1,304 +1,81 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="pixelstrap">
-      <link rel="icon" href="../assets/images/dc.png.png" type="image/x-icon">
-      <link rel="shortcut icon" href="../assets/images/dc.png.png" type="image/x-icon">
-      <title>Del Creative</title>
-      <!-- Google font-->
-      <link rel="preconnect" href="https://fonts.gstatic.com/">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-      <!-- Font Awesome-->
-      <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
-      <!-- ico-font-->
-      <link rel="stylesheet" type="text/css" href="assets/css/icofont.css">
-      <!-- Themify icon-->
-      <link rel="stylesheet" type="text/css" href="assets/css/themify.css">
-      <!-- Flag icon-->
-      <link rel="stylesheet" type="text/css" href="assets/css/flag-icon.css">
-      <!-- Feather icon-->
-      <link rel="stylesheet" type="text/css" href="assets/css/feather-icon.css">
-      <!-- Plugins css start-->
-      <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/chartist.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/owlcarousel.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/prism.css">
-      <!-- Plugins css Ends-->
-      <!-- Bootstrap css-->
-      <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-      <!-- App css-->
-      <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-      <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
-      <!-- Responsive css-->
-      <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-
-  </head>
-  <body>
-    <!-- Loader starts-->
-
-    <!-- Loader ends-->
-    <!-- page-wrapper Start-->
-    <div class="page-wrapper null compact-wrapper" id="pageWrapper">
-      <!-- Page Header Start-->
-      <div class="page-main-header">
-        <div class="main-header-right row m-0">
-          <div class="main-header-left">
-            <div class="logo-wrapper">
-              <a href="dashboard01.html">
-                <img class="img-fluid" src="../assets/images/logo-del-creative.png.png" alt="">
-              </a>
-            </div>
-            <div class="dark-logo-wrapper">
-              <a href="dashboard01.html">
-                <img class="img-fluid" src="../assets/images/dc.png.png" alt="">
-              </a>
-            </div>
-            <div class="toggle-sidebar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-center status_toggle middle" id="sidebar-toggle" checked="true">
-                <line x1="18" y1="10" x2="6" y2="10"></line>
-                <line x1="21" y1="6" x2="3" y2="6"></line>
-                <line x1="21" y1="14" x2="3" y2="14"></line>
-                <line x1="18" y1="18" x2="6" y2="18"></line>
-              </svg>
-            </div>
-          </div>
-          <div class="nav-right col pull-right right-menu p-0">
-            <ul class="nav-menus">
-              <li class="onhover-dropdown">
-                <div class="notification-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
-                    <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
-                  </svg>
-                  <span class="dot-animated"></span>
-                </div>
-                <ul class="notification-dropdown onhover-show-div">
-                  <li>
-                    <p class="f-w-700 mb-0">Mandi makan gih sayang udah bau
-                      <span class="pull-right badge badge-primary badge-pill"></span>
-                    </p>
-                  </li>
-                  <li class="noti-primary">
-                    <div class="media">
-                    </div>
-                  </li>
-                  <li class="noti-secondary">
-                    <div class="media">
-                    </div>
-                  </li>
-                  <li class="noti-success">
-                    <div class="media">
-                    </div>
-                  </li>
-                  <li class="noti-danger">
-                    <div class="media">
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="onhover-dropdown p-0">
-                <button class="btn btn-primary-light" type="button">
-                  <a href="login.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
-                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                      <polyline points="16 17 21 12 16 7"></polyline>
-                      <line x1="21" y1="12" x2="9" y2="12"></line>
-                    </svg>Log out
-                  </a>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="d-lg-none mobile-toggle pull-right w-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
-              <circle cx="12" cy="12" r="1"></circle>
-              <circle cx="19" cy="12" r="1"></circle>
-              <circle cx="5" cy="12" r="1"></circle>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <!-- Page Header Ends                              -->
-      <!-- Page Body Start-->
-      <div class="page-body-wrapper null">
-
-
-        <!-- Page Sidebar Start-->
-        <header class="main-nav">
-          <div class="sidebar-user text-center">
-            <a href="../assets/profile01.html" class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><a href="dashboard01.html"><img class="img-90 rounded-circle" src="../assets/images/dashboard/1.png" alt="" href="dashboard01.html"></a>
-            <div class="badge-bottom"><span class="badge badge-primary">New</span></div><a href="dashboard01.html">
-                <a href="dashboard01.html">
-                    <h6 class="mt-3 f-14 f-w-600">11S19045/Pablo Escabor</h6>
-                  </a>
-                  <ul>
-                    <li>
-                      <span>
-                        <span class="counter">500</span>
-                        pt
-                      </span>
-                    </li>
-                  </ul>
-          </div>
-          <nav>
-            <div class="main-navbar">
-              <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-              <div id="mainnav">
-                <ul class="nav-menu custom-scrollbar">
-                  <li class="back-btn">
-                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                  </li>
-                  <li class="sidebar-main-title">
-                    <div>
-                      <h6>Features             </h6>
-                    </div>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title link-nav" href="labcoding01.html"><svg aria-hidden="true" weidth="24" height="24" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
-                    <path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path>
-                    </svg><span>Lab Coding</span></a></li>
-                  <li class="dropdown"><a class="nav-link menu-title link-nav" href="forumdiskusi01.html"><i data-feather="list"></i><span>Forum Diskusi</span></a></li>
-                  <li class="dropdown"><a class="nav-link menu-title link-nav" href="konversipoint01.html"><i data-feather="package"></i><span>Konversi Point</span></a>
-                    <li class="dropdown"><a class="nav-link menu-title link-nav" href="leaderboardforum01.html"><i data-feather="briefcase"></i><span>LeaderBoard</span></a>
-          </nav>
-        </header>
-        <!-- Page Sidebar Ends-->
-        <div class="page-body dashboard-2-main"> --}}
-
-            {{-- @extends('layouts.app') --}}
-
 @extends('layouts.main')
 
 @section('content')
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card">
-                  <div class="card-header pb-0">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header pb-0">
 
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="order-history table-responsive wishlist">
-                        <div class="row">
-                          <div class="col-2 text-end">
-                            <h7><b>Konversi point</b></h7>
-                          </div>
-                          <div class="col-10">
-                            <hr>
-                          </div>
-
-                        </div>
-
-                        <br><br>
-                        <div class="container d-grid gap-2 col-6 mx-auto table-responsive">
-                          <div class="row ">
-                            <div class="col-5">
-                              <label>Nama           </label><br>
-                              <label>Nim/NIDN/NIP   </label><br>
-                              <label>Email         </label><br>
-                              <label>Username       </label><br>
-                              <label>Point          </label><br>
-                            </div>
-                            <div class="col-7">
-                              <label>Pablo Escobar</label><br>
-                              <label>11S19045</label><br>
-                              <label>Pabloescobar72@gmail.com</label><br>
-                              <label>Pablito77</label><br>
-                              <label>500</label><br>
-                            </div>
-
-                          </div>
-                          <br>
-                          <div class="row">
-                            <p>Setiap pengkonversian satu point keasramaan<br>
-                              membutuhkan 250 point akun</p>
-                          </div>
-
-                          <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button class="btn btn-outline-success btn-sm" type="button">Konversi</button>
-
-                          </div>
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="order-history table-responsive wishlist">
+                            <div class="row">
+                                <div class="col-2 text-end">
+                                    <h7><b>Konversi point</b></h7>
+                                </div>
+                                <div class="col-10">
+                                    <hr>
+                                </div>
+
+                            </div>
+
+                            <br><br>
+                            <div class="container d-grid gap-2 col-6 mx-auto table-responsive">
+                                <div class="row ">
+                                    <div class="col-md-8">
+                                        <table class="">
+                                            <tr>
+                                                <th style="text-align: left;">NAMA</th>
+                                                <th style="text-align: left;">{{ $user->fullname }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left;">NIM</th>
+                                                <th style="text-align: left;">{{ $user->idrole }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left;">Email</th>
+                                                <th style="text-align: left;">{{ $user->email }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left;">Username</th>
+                                                <th style="text-align: left;">{{ $user->username }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left;">Point</th>
+                                                <th style="text-align: left;">{{ $user->point }}</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <br>
+                                    <div class="row">
+
+
+                                        <p>Setiap pengkonversian satu point keasramaan<br>
+                                            membutuhkan 250 point akun</p>
+
+                                        @if ($message = Session::get('success'))
+                                            <p style="color: #0047FF;">{{ $message }}</p>
+                                        @endif
+                                        @if ($message = Session::get('error'))
+                                            <p style="color: #FF3636;">{{ $message }}</p>
+                                        @endif
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <a class="btn btn-outline-success btn-sm"
+                                            href="/konversi/{{ $user->id }}">Konversi</a>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Container-fluid Ends-->
-          {{-- @endsection
-        <!-- footer start-->
-        <footer class="footer" style="margin-left: -12px; margin-right: -15px; background: url(../assets/images/coming_soon_bg_1.png); margin-top: 100px;">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-9">
-                <h6><a href="#" style="color: white; font-weight: bold;">Institut Teknologi Del</h6></a>
-                <br><a href="#" style="color: white;">Jl. Sisingamangaraja, Sitoluama</a>
-                <br><a href="#" style="color: white;">Laguboti, Toba Samosir</a>
-                <br><a href="#" style="color: white;">Sumatera Utara, Indonesia</a>
-                <br><a href="#" style="color: white;">Kode Pos: 22381</a>
-                <br><a href="#" style="color: white;">Telp: +62 632 331234</a>
-                <br><a href="#" style="color: white;">Fax: +62 632 331116</a>
-              </div>
-              <div class="col-md-3">
-                <br>
-                <br><a href="about.html" style="color: white;">About</a>
-                <br><p style="color: white; margin-top: 82px;"><b>Copyright @ 2022</b></p>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
+        </div>
     </div>
-    <!-- latest jquery-->
-    <script src="../assets/js/jquery-3.5.1.min.js"></script>
-    <!-- feather icon js-->
-    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
-    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
-    <!-- Sidebar jquery-->
-    <script src="../assets/js/sidebar-menu.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <!-- Bootstrap js-->
-    <script src="../assets/js/bootstrap/popper.min.js"></script>
-    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
-    <!-- Plugins JS start-->
-    <script src="../assets/js/chart/chartjs/chart.min.js"></script>
-    <script src="../assets/js/chart/chartist/chartist.js"></script>
-    <script src="../assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-    <script src="../assets/js/chart/knob/knob.min.js"></script>
-    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
-    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
-    <script src="../assets/js/prism/prism.min.js"></script>
-    <script src="../assets/js/clipboard/clipboard.min.js"></script>
-    <script src="../assets/js/counter/jquery.waypoints.min.js"></script>
-    <script src="../assets/js/counter/jquery.counterup.min.js"></script>
-    <script src="../assets/js/counter/counter-custom.js"></script>
-    <script src="../assets/js/custom-card/custom-card.js"></script>
-    <script src="../assets/js/owlcarousel/owl.carousel.js"></script>
-    <script src="../assets/js/owlcarousel/owl-custom.js"></script>
-    <script src="../assets/js/dashboard/dashboard_2.js"></script>
-    <!-- Plugins JS Ends-->
-    <!-- Theme js-->
-    <script src="../assets/js/script.js"></script>
-
-    <!-- login js-->
-    <!-- Plugin used-->
-    <svg id="SvgjsSvg1456" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
-      <defs id="SvgjsDefs1457"></defs>
-      <polyline id="SvgjsPolyline1458" points="0,0"></polyline>
-      <path id="SvgjsPath1459" d="M-1 801.168L-1 801.168C-1 801.168 225.66796874999997 801.168 225.66796874999997 801.168C225.66796874999997 801.168 451.33593749999994 801.168 451.33593749999994 801.168C451.33593749999994 801.168 677.00390625 801.168 677.00390625 801.168C677.00390625 801.168 677.00390625 801.168 677.00390625 801.168 "></path>
-    </svg>
-
-    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
-      <defs id="SvgjsDefs1002"></defs>
-      <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
-      <path id="SvgjsPath1004" d="M0 0 "></path>
-    </svg>
-  </body>
-</html> --}}
+@endsection

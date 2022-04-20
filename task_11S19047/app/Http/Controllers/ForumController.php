@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Forum;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -64,7 +65,7 @@ class ForumController extends Controller
     {
         $forum = Forum::where('slug', $slug)->first();
 
-        if ($forum==null) {
+        if ($forum == null) {
             abort(404);
         }
 
@@ -128,11 +129,32 @@ class ForumController extends Controller
         return redirect('/forum');
     }
 
-    public function leaderboard(){
+    public function leaderboard()
+    {
         return view('forum.leaderboardforum');
     }
 
-    public function konversi(){
-        return view('forum.konversipoint');
+    public function konversi()
+    {
+        $user = Auth::user();
+        return view('forum.konversipoint', compact('user'));
+    }
+
+    public function doconversion($id)
+    {
+        $user = User::findOrFail($id);
+        if ($user->point >= 250) {
+            $user->pointconversions()->create([
+                'points' => 250
+            ]);
+            $user->point -= 250;
+            $user->update([
+                'point' => $user->point
+            ]);
+
+            return redirect('/konversi')->with(['success' => 'Permintaan konversi poin Anda telah dikirim.']);
+        } else {
+            return redirect('/konversi')->with(['error' => 'Poin anda tidak mencukupi']);
+        }
     }
 }

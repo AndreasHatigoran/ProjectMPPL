@@ -74,4 +74,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Downvote::class);
     }
+    public function pointconversions()
+    {
+        return $this->hasMany(PointConversion::class);
+    }
 }
