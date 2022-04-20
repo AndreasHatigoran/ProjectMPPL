@@ -19,7 +19,7 @@ class LabCategoryController extends Controller
         $category = Category::where('language', $language)->first();
         $daftarsoal = Soal::where('category_id', $category->id)->get();
         // dd($daftarsoal);
-        return view('LabCoding.lab.exercise.index', compact('daftarsoal'));
+        return view('LabCoding.lab.exercise.index', compact('daftarsoal', 'category'));
     }
 
     public function lab($id)

@@ -32,6 +32,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card box-shadow-title">
+                    <div class="col-sm-4 bg-dark">
+                        <b>
+                            <center>
+                                <h3>{{ $category->language }}</h3>
+                            </center>
+                        </b>
+                    </div>
                     <div class="card-body row">
                         @foreach ($daftarsoal as $daf)
                             <div class="col-sm-4">

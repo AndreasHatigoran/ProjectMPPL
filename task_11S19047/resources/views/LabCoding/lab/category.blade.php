@@ -41,6 +41,9 @@
                                             <img src="{{ asset('assets/uploads/category/' . $cate->image) }}"
                                                 alt="Category Image" class="img-90 ">
                                         </div>
+                                        <center>
+                                            <p><b>{{ $cate->language }}</p></b>
+                                        </center>
                                     </a>
                                 </div>
                             </div>
