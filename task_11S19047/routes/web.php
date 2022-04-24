@@ -10,6 +10,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\DownvoteController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LabCategoryController;
 use App\Http\Controllers\ReportCommentController;
@@ -90,6 +91,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/listpelanggaran', [ListPelanggaranController::class, 'listpelanggaran']);
         //Upvoted & Downvote
         Route::get('/upvote/{id}', [UpvoteController::class, 'upvotecomment']);
+        Route::get('/downvote/{id}', [DownvoteController::class, 'downvotecomment']);
 
         //Leaderboard
         Route::get('/leaderboard', [LeaderboardController::class, 'index']);
