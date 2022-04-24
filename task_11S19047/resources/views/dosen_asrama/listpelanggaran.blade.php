@@ -61,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                {{ $reports->links('vendor.pagination.custome') }}
+                {{ $reports->links('vendor.pagination.costume') }}
 
             </div>
         </div>
