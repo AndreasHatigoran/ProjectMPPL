@@ -137,31 +137,39 @@
 
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="pixelstrap">
-  <link rel="icon" href="{{ asset('image/icon/dc.png.png') }}" type="image/x-icon">
-  <link rel="shortcut icon" href="{{ asset('image/icon/dc.png.png') }}" type="image/x-icon">
-  <title>Daftar Akun - Del Creative</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="{{ asset('image/icon/dc.png.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('image/icon/dc.png.png') }}" type="image/x-icon">
+    <title>Daftar Akun - Del Creative</title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-   <!-- Font Awesome-->
-   <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/fontawesome.css') }}">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/fontawesome.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Background color-->
     <link rel="stylesheet" type="text/css" href="../assets/css/background.css">
-     <!-- ico-font-->
-     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/icofont.css') }}">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/icofont.css') }}">
     <!-- Themify icon-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/themify.css') }}">
-   <!-- Flag icon-->
-   <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/flag-icon.css.css') }}">
-   <!-- Feather icon-->
-   <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/feather-icon.css') }}">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/flag-icon.css.css') }}">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/feather-icon.css') }}">
     <!-- Plugins css start-->
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
@@ -172,128 +180,158 @@
 
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/responsive.css') }}">
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Loader starts-->
     <div class="loader-wrapper">
-      <div class="theme-loader">
-        <div class="loader-p"></div>
-      </div>
+        <div class="theme-loader">
+            <div class="loader-p"></div>
+        </div>
     </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <section>
-      <div class="container-fluid p-0" style="background-image: url('{{ asset('image/background/bglogin.png') }}');">
-        <div class="row">
-          <div class="col-12">
-            <div class="login-card" style="margin-top: 40px;">
-              <form class="theme-form login-form" method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
-                @csrf
-                <h4>Create Your Account</h4>
-                <h6>Enter your personal details to create your account</h6>
-                <div class="form-group">
-                      <label>Nama Lengkap</label>
-                      <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                        <input id="fullname" type="text" class="form-control @error('fullname') is-invalid @enderror" name="fullname" value="{{ old('fullname') }}" required autocomplete="fullname" autofocus placeholder="Nama Lengkap">
-                      </div>
-                </div>
-                <div class="form-group" style="margin-top: 30px;">
-                  <label>Role</label>
-                  <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                    <select style="width: 367px; height: 35px;"name="role" >
-                        <option selected disabled>Pilih role anda</option>
-                        <option value="student">Mahasiswa</option>
-                        <option value="dorm">Keasramaan</option>
-                        <option value="dosen">Dosen</option>
-                      </select>
-                 </div>
+        <div class="container-fluid p-0"
+            style="background-image: url('{{ asset('image/background/bglogin.png') }}');">
+            <div class="row">
+                <div class="col-12">
+                    <div class="login-card" style="margin-top: 40px;">
+                        <form class="theme-form login-form" method="POST" enctype="multipart/form-data"
+                            action="{{ route('register') }}">
+                            @csrf
+                            <h4>Create Your Account</h4>
+                            <h6>Enter your personal details to create your account</h6>
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <div class="input-group"><span class="input-group-text"><i
+                                            class=""></i></span>
+                                    <input id="fullname" type="text"
+                                        class="form-control @error('fullname') is-invalid @enderror" name="fullname"
+                                        value="{{ old('fullname') }}" required autocomplete="fullname" autofocus
+                                        placeholder="Nama Lengkap">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 30px;">
+                                <label>Role</label>
+                                <div class="input-group"><span class="input-group-text"><i
+                                            class=""></i></span>
+                                    <select style="width: 367px; height: 35px;" name="role">
+                                        <option selected disabled>Pilih role anda</option>
+                                        <option value="student">Mahasiswa</option>
+                                        <option value="dorm">Keasramaan</option>
+                                        <option value="dosen">Dosen</option>
+                                    </select>
+                                </div>
 
-                <div class="form-group">
-                  <label>NIM/NIDN/NIP</label>
-                  <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                    <input id="idrole" type="text" class="form-control @error('idrole') is-invalid @enderror" name="idrole" value="{{ old('idrole') }}" required autocomplete="idrole" autofocus placeholder="NIM/NIDN/NIP">
-                    @error('idrole')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                  </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label>Screenshoot Profile CIS</label>
-                        <input id="screenshoot" type="file" class="form-control @error('screenshoot') is-invalid @enderror" name="screenshoot" value="{{ old('screenshoot') }}" required autocomplete="screenshoot" autofocus>
-                        @error('screenshoot')
+                                <div class="form-group">
+                                    <label>NIM/NIDN/NIP</label>
+                                    <div class="input-group"><span class="input-group-text"><i
+                                                class=""></i></span>
+                                        <input id="idrole" type="text"
+                                            class="form-control @error('idrole') is-invalid @enderror" name="idrole"
+                                            value="{{ old('idrole') }}" required autocomplete="idrole" autofocus
+                                            placeholder="NIM/NIDN/NIP">
+                                        @error('idrole')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                        @enderror
-                        </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>Screenshoot Profile CIS</label>
+                                            <input id="screenshoot" type="file"
+                                                class="form-control @error('screenshoot') is-invalid @enderror"
+                                                name="screenshoot" value="{{ old('screenshoot') }}" required
+                                                autocomplete="screenshoot" autofocus>
+                                            @error('screenshoot')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>Email</label>
+                                            <div class="input-group"><span class="input-group-text"><i
+                                                        class=""></i></span>
+                                                <input id="email" type="email"
+                                                    class="form-control @error('email') is-invalid @enderror"
+                                                    name="email" value="{{ old('email') }}" required
+                                                    autocomplete="email" placeholder="Email">
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Username</label>
+                                            <div class="input-group"><span class="input-group-text"><i
+                                                        class=""></i></span>
+                                                <input id="username" type="text"
+                                                    class="form-control @error('username') is-invalid @enderror"
+                                                    name="username" value="{{ old('username') }}" required
+                                                    autocomplete="username" autofocus placeholder="Username">
+                                                @error('username')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Kata Sandi</label>
+                                    <div class="input-group"><span class="input-group-text"><i
+                                                class=""></i></span>
+                                        <input id="password" type="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
+                                            required autocomplete="new-password" placeholder="********">
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                        {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ulang kata sandi</label>
+                                    <div class="input-group"><span class="input-group-text"><i
+                                                class=""></i></span>
+                                        <input id="password-confirm" type="password" class="form-control"
+                                            name="password_confirmation" required autocomplete="new-password"
+                                            placeholder="********">
+                                        {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary w-100" type="submit">Register</button>
+                                </div>
+                                <p>Sudah punya akun?<a class="ms-2" href="{{ route('login') }}">Masuk</a>
+                                </p>
+                        </form>
                     </div>
                 </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <label>Email</label>
-                      <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
-                        @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                        @enderror
-                      </div>
-                    </div>
-                  <div class="col-sm-6">
-                    <label>Username</label>
-                    <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                        <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Username">
-                        @error('username')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div class="form-group">
-                  <label>Kata Sandi</label>
-                  <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="********">
-                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
-                    {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Ulang kata sandi</label>
-                  <div class="input-group"><span class="input-group-text"><i class=""></i></span>
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="********">
-                    {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
-                  </div>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-primary w-100" type="submit">Register</button>
-                </div>
-                <p>Already have account?<a class="ms-2" href="{{ route('login') }}">Sign in</a></p>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- page-wrapper end-->
     <!-- latest jquery-->
     <script src="{{ asset('js/login/jquery-3.5.1.min.js') }}"></script>
-     <!-- feather icon js-->
-     <script src="{{ asset('js/welcome/icons/feather-icon/feather.min.js') }}"></script>
-     <script src="{{ asset('js/welcome/icons/feather-icon/feather-icon.js') }}"></script>
+    <!-- feather icon js-->
+    <script src="{{ asset('js/welcome/icons/feather-icon/feather.min.js') }}"></script>
+    <script src="{{ asset('js/welcome/icons/feather-icon/feather-icon.js') }}"></script>
     <!-- Sidebar jquery-->
     <script src="{{ asset('js/welcome/sidebar-menu.js') }}"></script>
     <script src="{{ asset('js/welcome/config.js') }}"></script>
@@ -307,7 +345,7 @@
     <script src="{{ asset('js/welcome/script.js') }}"></script>
     <!-- login js-->
     <!-- Plugin used-->
-  </body>
+</body>
 
 
 </html>
