@@ -21,6 +21,6 @@ class Forum extends Model
 
     public function comments()
     {
-        return $this->hasMany(ForumComment::class)->orderBy('id', 'desc');
+        return $this->hasMany(ForumComment::class)->inRandomOrder();
     }
 }
