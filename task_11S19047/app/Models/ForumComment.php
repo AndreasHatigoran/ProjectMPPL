@@ -24,7 +24,7 @@ class ForumComment extends Model
 
     public function forum()
     {
-        return $this->belongsTo(Forum::class);
+        return $this->belongsTo(Forum::class, 'forum_id');
     }
 
     public function commentReports()
@@ -32,23 +32,13 @@ class ForumComment extends Model
         return $this->hasMany(CommentReport::class);
     }
 
-    public function isReport()
-    {
-        return $this->commentReports->where('user_id', Auth::user()->id)->count();
-    }
-
     public function upvotes()
     {
-        return $this->hasMany(Upvote::class);
+        return $this->hasMany(Upvote::class, 'comment_id');
     }
 
     public function downvotes()
     {
-        return $this->hasMany(Downvote::class);
-    }
-
-    public function isUpvote()
-    {
-        return $this->upvotes->where('user_id', Auth::user()->id)->count();
+        return $this->hasMany(Downvote::class, 'comment_id');
     }
 }
