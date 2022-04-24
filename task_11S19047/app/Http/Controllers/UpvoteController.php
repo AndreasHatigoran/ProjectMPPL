@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Downvote;
 use App\Models\ForumComment;
 use App\Models\Upvote;
 use Illuminate\Http\Request;
@@ -12,9 +13,9 @@ class UpvoteController extends Controller
 {
     public function upvotecomment($id)
     {
-
-        dd($id);
         $comment = ForumComment::findOrFail($id);
+        $downvote = Downvote::where('comment_id', $id)->where('user_id', Auth::user()->id);
+        $downvote->delete();
 
         Upvote::create([
             'comment_id' => $comment->id,
