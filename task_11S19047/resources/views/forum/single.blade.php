@@ -41,14 +41,22 @@
                 @forelse ($forum->comments as $comment)
                     <div class="media">
                         <div class="align-self-center mr-3 d-flex flex-column justify-content-center align-items-center">
-
-                            <i class="fa-solid fa-caret-up" id="upvote-btn-{{ $comment->id }}" style="font-size: 20px; "
+                            <i class="fa-solid fa-caret-up" id="upvote-btn-{{ $comment->id }}"
+                                @if (count(Auth::user()->upvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
+                                @else
+                                style="font-size: 25px;" @endif
                                 onclick="upvotes({{ $comment->id }})"></i>
 
-                            <p id="info-{{ $comment->id }}"></p>
+                            <span id="total-upvotes-{{ $comment->id }}">{{ $comment->upvotes()->count() }}</span>
+                            <span style="display: none;"
+                                id="total-downvotes-{{ $comment->id }}">{{ $comment->downvotes()->count() }}</span>
+                            <i class="fa-solid fa-caret-down" id="downvote-btn-{{ $comment->id }}"
+                                @if (count(Auth::user()->downvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
+                                    @else
+                                    style="font-size: 25px;" @endif
+                                onclick="downvotes({{ $comment->id }})"></i>
 
-                            <span>2</span>
-                            <i class="fa-solid fa-caret-down" style="font-size: 20px"></i>
+                            {{-- IS SOLVED ALGORITHM --}}
                             @if ($comment->is_solved == true)
                                 <i id="mark-{{ $comment->id }}" style="color: rgb(75, 238, 75)"
                                     class="mt-3 fa-solid fa-check fa-xl" style="color: rgb(75, 238, 75)"></i>
@@ -102,14 +110,51 @@
 
                 <script>
                     function upvotes(id) {
-
+                        el = document.getElementById('upvote-btn-' + id);
+                        el2 = document.getElementById('downvote-btn-' + id);
+                        let upvotesCount = document.getElementById('total-upvotes-' + id);
+                        // if (parseInt(upvotesCount.innerHTML) == 1) {
+                        //     console.log('udah lebih bang');
+                        //     return;
+                        // }
+                        let currentCount = 0
                         fetch('/upvote/' + id)
                             .then(response => response.json())
                             .then(data => {
-                                // if (data.status == 'upvote') {
-                                //     info.innerText = 'berhasil';
-                                // }
-                                console(data.status);
+                                el.style.color = '#136939';
+                                el2.style.color = '#000';
+                                if (data.status == 'upvote') {
+                                    currentCount = parseInt(upvotesCount.innerHTML) + 1
+                                    console.log(currentCount);
+                                    upvotesCount.innerHTML = currentCount
+
+                                }
+                            })
+                    }
+
+                    function downvotes(id) {
+                        el = document.getElementById('downvote-btn-' + id);
+                        el2 = document.getElementById('upvote-btn-' + id);
+                        let upvotesCount = document.getElementById('total-upvotes-' + id);
+                        let downvoteCount = document.getElementById('total-downvotes-' + id);
+
+                        let currentCount = 0
+                        fetch('/downvote/' + id)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (parseInt(upvotesCount.innerHTML) < 1) {
+                                    console.log('gk boleh minus bang');
+                                    el.style.color = '#136939';
+                                    return;
+                                } else if (data.status == 'downvote') {
+                                    el.style.color = '#136939';
+                                    el2.style.color = '#000';
+                                    currentCount = parseInt(upvotesCount.innerHTML) - 1
+                                    console.log(currentCount);
+                                    upvotesCount.innerHTML = currentCount
+
+                                }
+
                             })
                     }
 
