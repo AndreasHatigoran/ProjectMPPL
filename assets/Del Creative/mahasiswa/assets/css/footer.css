@@ -1,0 +1,8 @@
+footer{
+    background: url(../assets/images/coming_soon_bg_1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all. 3s;
+
+}
