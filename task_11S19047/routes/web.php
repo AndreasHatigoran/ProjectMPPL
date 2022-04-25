@@ -67,6 +67,8 @@ Route::middleware(['auth'])->group(function () {
             Route::put('update-soal/{id}', [SoalController::class, 'update']);
             Route::get('delete-soal/{id}', [SoalController::class, 'destroy']);
             Route::get('akun', [AdminController::class, 'akun']);
+            Route::get('validasipelanggaran/{id}', [AdminController::class, 'validasipelanggaran']);
+            Route::get('tolakpelanggaran/{id}', [AdminController::class, 'tolakpelanggaran']);
         });
 
         Route::get('/lab', [LabController::class, 'index']);

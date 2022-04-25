@@ -42,20 +42,20 @@
                                 @php
                                     $i = 1;
                                 @endphp
-                                @foreach ($reports as $report => $reportlist)
-                                    {{-- <p>{{ $reportlist[0][1]['fullname'] }}</p> --}}
-                                    @foreach ($reportlist as $rep)
-                                        <tr>
-                                            <th scope="row">{{ $i++ }}</th>
-                                            <td>{{ $rep->forumcomment->user->fullname }}</td>
-                                            <td>{{ $rep->forumcomment->user->idrole }}</td>
-                                            <td>{{ $reportlist->count() }}</td>
-                                            <td>{!! $rep->forumcomment->subject !!}</td>
-                                            <td><button class="btn btn-light btn-xs" type="button">Terima</button></td>
-                                            <td><button class="btn btn-danger btn-xs" type="button">Tolak</button></td>
-                                        </tr>
-                                    @endforeach
+                                @foreach ($reports as $report)
+                                    <tr>
+                                        <th scope="row">{{ $i++ }}</th>
+                                        <td>{{ $report->forumcomment->user->fullname }}</td>
+                                        <td>{{ $report->forumcomment->user->idrole }}</td>
+                                        <td>{{ $count }}</td>
+                                        <td>{!! $report->forumcomment->subject !!}</td>
+                                        <td><a class="btn btn-light btn-xs"
+                                                href="/validasipelanggaran/{{ $report->comment_id }}">Terima</a></td>
+                                        <td><a class="btn btn-danger btn-xs"
+                                                href="/tolakpelanggaran/{{ $report->comment_id }}">Tolak</a></td>
+                                    </tr>
                                 @endforeach
+
                             </tbody>
                         </table>
                     </div>

@@ -46,7 +46,7 @@
                                         <td>{!! $report->forumcomment->subject !!}</td>
                                         @if ($report->status == 0)
                                             <td style="color: #24695C;">Menunggu</td>
-                                        @elseif($repoti->status == 1)
+                                        @elseif($report->status == 1)
                                             <td style="color: #24695C;">Diterima</td>
                                         @else
                                             <td style="color: #FF0000;">Ditolak</td>
@@ -61,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                {{ $reports->links('vendor.pagination.costume') }}
+                {{ $reports->links('vendor.pagination.custome') }}
 
             </div>
         </div>

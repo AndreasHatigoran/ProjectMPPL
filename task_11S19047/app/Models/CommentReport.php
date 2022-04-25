@@ -20,6 +20,6 @@ class CommentReport extends Model
 
     public function forumcomment()
     {
-        return $this->belongsTo(ForumComment::class, 'comment_id');
+        return $this->belongsTo(ForumComment::class, 'comment_id')->withTrashed();
     }
 }
