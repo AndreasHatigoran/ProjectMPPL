@@ -27,4 +27,15 @@ class LabCategoryController extends Controller
         $soal = Soal::find($id);
         return view('LabCoding.lab.exercise.lab', compact('soal'));
     }
+    public function cek(Request $request)
+    {
+        $data = Soal::find($request->id_soal);
+        if ($data->answer == $request->jawaban) {
+            session()->flash('success', 'true');
+        } else {
+            session()->flash('false', 'false');
+        }
+
+        return back();
+    }
 }

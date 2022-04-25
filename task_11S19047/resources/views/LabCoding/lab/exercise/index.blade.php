@@ -42,12 +42,11 @@
                     <div class="card-body row">
                         @foreach ($daftarsoal as $daf)
                             <div class="col-sm-4">
-                                <div>
-                                    <a href="{{ url('view-exercise/' . $daf->id) }}">
-                                        <div class="shadow-lg shadow-showcase p-25 text-center">
-                                            <h5 class="m-0 f-18">Exercise {{ $daf->exercise }}</h5>
-                                    </a>
-                                </div>
+                                <a href="{{ url('view-exercise/' . $daf->id) }}">
+                                    <div class="shadow-lg shadow-showcase p-25 text-center">
+                                        <h5 class="m-0 f-18">Exercise {{ $daf->exercise }}</h5>
+                                    </div>
+                                </a>
                             </div>
                         @endforeach
                     </div>

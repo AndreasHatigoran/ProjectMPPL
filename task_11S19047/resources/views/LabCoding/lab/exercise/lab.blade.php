@@ -129,41 +129,53 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card box-shadow-title">
-                    <div class="card-body row">
-
-                        {{-- <img src="{{ asset('assets/uploads/soal/' . $soal->image) }}" class="w-25"
-                            alt="Category Image"> --}}
-
-                        <img style="height: 350x; width: 630px;" src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
-                        <div class="row"></div>
-                        <br>
-                        <div class="form-group row" style="font-size: 16px;">
-                            <label class="col-2 col-form-label">Your Answer:</label>
-                            <div class="col-xl-2 col-sm-4">
-                                <div class="input-group">
-                                    <input class="form-control" style="font-size: 16px;" id="exampleInputPassword2"
-                                        placeholder="Your Answer">
-                                </div>
+                    <form method="POST" action="/jawab">
+                        @csrf
+                        <div class="card-body row">
+                            <img style="height: 350x; width: 630px;"
+                                src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
+                            <div class="row"></div>
+                            <br>
+                            <div class="form-group row" style="font-size: 16px;">
+                                <label for="usr">Jawaban:</label>
+                                <input name="jawaban" type="text" class="form-control" id="usr">
+                                <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
                             </div>
                         </div>
                         <div class="btn-showcase">
-                            <button class="btn btn-pill btn-primary btn-lg" type="button">Kirim Jawaban</button>
+                            <button class="btn btn-pill btn-primary btn-lg" type="submit">Kirim
+                                Jawaban</button>
                             <label class="text-end" style="float: right;"><button
                                     class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
                                     onclick="changeVisibility();" style="visibility: visible;">Tunjukkan
                                     Jawaban</button></label>
                         </div>
-                        <div id="showans" onclick="" style="visibility:hidden">
-                            <label>Answer : <b>{{ $soal->answer }}</b></label>
-                        </div>
-                        <div class="card-body row"></div>
-                        {{-- <div class="btn-showcase">
-                            <button class="btn btn-pill btn-primary btn-lg" type="button">
-                                Close
-                                <a href={{ 'lab' }}></a></button>
-                            <label class="text-end" style="float: right;"><button
-                                    class="btn btn-pill btn-primary btn-lg" type="button">Next</button></label>
-                        </div> --}}
+                    </form>
+                    <div id="showans" onclick="" style="visibility:hidden">
+                        <label>Answer : <b>{{ $soal->answer }}</b></label>
+                    </div>
+                    <div>
+                        @if (session('success'))
+                            <div class="alert alert-success" role="alert">
+                                Hasil : Benar!
+                            </div>
+                        @endif
+                        @if (session('false'))
+                            <div class="alert alert-danger" role="alert">
+                                Hasil : Salah!
+                            </div>
+                        @endif
+                    </div>
+
+                    <div class="card-body row"></div>
+                    <div class="btn-showcase">
+                        <a href={{ url('view-exercise/' . $soal->id) }}><button class="btn btn-pill btn-primary btn-lg"
+                                type="button">Tutup</button></a>
+
+
+                        {{-- <label class="text-end" style="float: right;">
+                            <a href=""><button class="btn btn-pill btn-primary btn-lg"
+                                    type="button">Selanjutnya</button></a></label> --}}
                     </div>
                 </div>
             </div>
