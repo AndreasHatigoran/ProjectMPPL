@@ -135,7 +135,7 @@
                                     class="dot-animated"></span></div>
                             <ul class="notification-dropdown onhover-show-div">
                                 <li>
-                                    <p>New account needs to be valited</p>
+                                    <p>New account needs to be validated</p>
                                     <p class="f-w-700 mb-0"><button>View<span
                                                 class="pull-right badge badge-primary badge-pill"></span></button></p>
 
@@ -300,7 +300,7 @@
                                     <div class="card m-5">
                                         <div class="card-body" style="background-color: #fff;">
                                             <p class="text-center font-weight-bolder">
-                                                Belum diverifikasi
+                                                Belum divalidasi
                                             </p>
                                         </div>
                                     </div>
