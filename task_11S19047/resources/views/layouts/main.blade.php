@@ -298,11 +298,9 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
-                                        <div class="card-body" style="background-color: #24695c;">
+                                        <div class="card-body" style="background-color: #fff;">
                                             <p class="text-center font-weight-bolder">
-                                                Terima kasih telah mendaftarkan diri anda untuk begabung bersama Del
-                                                Creative. Mohon menunggu akun akan di verifikasi 1X24 untuk bergabung
-                                                dengan dengan Del Creative.
+                                                Belum diverifikasi
                                             </p>
                                         </div>
                                     </div>
