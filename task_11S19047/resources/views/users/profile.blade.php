@@ -19,10 +19,25 @@
                         <form method="POST" enctype="multipart/form-data" action="/user/{{ $user->username }}">
                             @csrf
                             <center>
-                                <label for="avatar" class="col-form-label text-md-end justify-content-center d-flex">Ubah Profil</label>
-                                <h5>
-                                    {{ $user->role }}
-                                </h5>
+                                <label for="avatar" class="col-form-label text-md-end justify-content-center d-flex">Ubah
+                                    Profil</label>
+                                @if ($user->isadmin == true)
+                                    <h5>
+                                        Administrator
+                                    </h5>
+                                @elseif($user->role == 'student' && $user->usadmin == false)
+                                    <h5>
+                                        Mahasiswa
+                                    </h5>
+                                @elseif($user->role == 'dorm' && $user->usadmin == false)
+                                    <h5>
+                                        Keasramaan
+                                    </h5>
+                                @elseif($user->role == 'dosen' && $user->usadmin == false)
+                                    <h5>
+                                        Dosen
+                                    </h5>
+                                @endif
                             </center>
                             @method('PUT')
                             <div class="row mb-3 justify-content-center">
