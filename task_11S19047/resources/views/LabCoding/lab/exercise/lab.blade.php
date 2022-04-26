@@ -136,8 +136,8 @@
                                 src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
                             <div class="row"></div>
                             <br>
-                            <div class="form-group row" style="font-size: 16px;">
-                                <label for="usr">Jawaban:</label>
+                            <div class="form-group row col-sm-3" style="font-size: 16px;">
+                                <label for="usr">Jawaban :</label>
                                 <input name="jawaban" type="text" class="form-control" id="usr">
                                 <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
                             </div>
@@ -169,8 +169,8 @@
 
                     <div class="card-body row"></div>
                     <div class="btn-showcase">
-                        <a href={{ url('view-exercise/' . $soal->id) }}><button class="btn btn-pill btn-primary btn-lg"
-                                type="button">Tutup</button></a>
+                        {{-- <a href={{ url('view-exercise/') }}><button class="btn btn-pill btn-primary btn-lg"
+                                type="button">Tutup</button></a> --}}
 
 
                         {{-- <label class="text-end" style="float: right;">
