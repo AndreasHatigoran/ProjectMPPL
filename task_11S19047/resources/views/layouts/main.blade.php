@@ -309,8 +309,9 @@
                         @yield('home')
                         @yield('content')
                     </div>
-                    <footer class="footer"
-                        style="margin-left: -12px; margin-right: -15px; background: url(../image/welcome/coming_soon_bg_1.png); margin-top: 100px;">
+                    </div>
+                    </div>
+                    <footer class="footer" style="background: url(../image/welcome/coming_soon_bg_1.png);">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-9">
@@ -324,8 +325,8 @@
                                     <br><a href="#" style="color: white;">Fax: +62 632 331116</a>
                                 </div>
                                 <div class="col-md-3">
-                                    <br>
-                                    <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
+                                <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
+                                <br><p style="color: white; margin-top: 82px;"><b>Copyright @ 2022</b></p>
                                 </div>
                             </div>
                         </div>

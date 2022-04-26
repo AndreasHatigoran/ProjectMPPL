@@ -16329,7 +16329,7 @@ p.data-attributes svg {
       font-size: 12px; }
 
 footer {
-  background-color: #fff;
+  background-image: url(../images/coming_soon_bg_1.png);
   -webkit-box-shadow: 0 0 20px 16px rgba(4, 122, 251, 0.04);
           box-shadow: 0 0 20px 16px rgba(4, 122, 251, 0.04);
   padding: 15px;

@@ -5241,7 +5241,7 @@ table tbody .border-bottom-warning td {
         -webkit-transition: 0.5s;
         transition: 0.5s; }
       .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav.close_icon ~ footer {
-        margin-left: 78px;
+        margin-left: 0px;
         -webkit-transition: 0.5s;
         transition: 0.5s; }
     .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .left-arrow, .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .right-arrow {
@@ -16329,7 +16329,7 @@ p.data-attributes svg {
       font-size: 12px; }
 
 footer {
-  background-color: #fff;
+  background-image: url(../images/coming_soon_bg_1.png);
   -webkit-box-shadow: 0 0 20px 16px rgba(4, 122, 251, 0.04);
           box-shadow: 0 0 20px 16px rgba(4, 122, 251, 0.04);
   padding: 15px;

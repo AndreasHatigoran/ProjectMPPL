@@ -58,12 +58,6 @@
                         <li class="onhover-dropdown p-0 ikan">
                             <b><a class="text-dark" href="{{ url('/') }}">Tentang</a></b>
                         </li>
-                        <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="information.html">Informasi</a></b>
-                        </li>
-                        <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="contact.html">Kontak</a></b>
-                        </li>
                     @auth
                         <li class="onhover-dropdown p-0 ikan">
                             <b><a class="text-dark" href="{{ url('/dashboard') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
@@ -121,14 +115,14 @@
               </div>
               <div class="row" style="margin-top: 50px;">
                 <div clas="col-lg-12">
-                  <hr><h3 style="text-align: center; margin-top: 50px;"><b>--- About Us ---</b></h3>
+                  <hr><h3 style="text-align: center; margin-top: 50px;"><b>--- Tentang Kami ---</b></h3>
                   <p style="text-align: center; margin-top: 30px;">Aplikasi berbasis web ini bertujuan untuk mengembangkan pengetahuan dan pengalaman bagi mahasiswa, dosen, dan asrama. UI yang baik akan membuat pengguna nyaman dalam menggunakan aplikasi ini. Kami dari kelompok 2 telah merancang website ini menjadi sebuah unit yang baik dan berkualitas dalam penggunaannya di Del Institute of Technology. Harapannya adalah pengguna dapat menggunakan aplikasi ini untuk menjadi pengalaman yang baik.
                   Terima kasih</p>
                 </div>
               </div>
               </div>
           </div>
-              <footer class="footer" style="margin-left: 0px; background: url({{ asset('image/welcome/coming_soon_bg_1.png') }}); margin-bottom: 0%; margin-top: -30px;">
+              <footer class="footer" style="background: url({{ asset('image/welcome/coming_soon_bg_1.png') }}); margin-left: 0px;">
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-md-9">
@@ -141,17 +135,8 @@
                       <br><a href="#" style="color: white;">Fax: +62 632 331116</a>
                     </div>
                     <div class="col-md-3">
-                      <br>
-                      {{-- <br><a href="faq.html" style="color: white;">FAQ</a> --}}
-                      <br>
-                      {{-- <br><a href="bantuan.hmtl" style="color: white;">Bantuan</a> --}}
-                      <br>
                       <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <p>Copyright @ 2022</p>
+                      <br><p style="color: white; margin-top: 82px;"><b>Copyright @ 2022</b></p>
                     </div>
                   </div>
                 </div>
