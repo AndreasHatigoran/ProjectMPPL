@@ -70,7 +70,7 @@
                                         <th scope="col">Bahasa Pemrograman</th>
                                         <th scope="col">Latihan</th>
                                         <th scope="col">Kode</th>
-                                        <th scope="col">Lunci Jawaban</th>
+                                        <th scope="col">Kunci Jawaban</th>
                                         <th scope="col">Ubah</th>
                                         <th scope="col">Hapus</th>
                                     </tr>

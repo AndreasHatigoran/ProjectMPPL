@@ -6,7 +6,7 @@
         <div class="w3-content learntocodecontent" style="max-width:1400px">
             <center>
                 <h1 style="color:white;font-size: 70px;font-weight: bold;"><b>LAB CODE</b></h1>
-                <h3 style="color: white;font-size: 25px;">Learn how to code</h3>
+                <h3 style="color: white;font-size: 25px;">Mari Belajar Mencoding</h3>
             </center>
             <br>
             <form class="example" action="/action_page.php" style="margin:auto;max-width:500px">
@@ -39,7 +39,7 @@
                 <div class="col-sm-8">
                     <div class="w3-col l6 w3-center" style="padding:3%;">
                         <p style="font-size:25px;color:black;font-weight: 600; margin-top: 60px;margin-right: 80px;">
-                            Learn with usbuild your own code and be Developer of future!</p>
+                            Mari belajar bersama kami dan bangun code mu sendiri!</p>
                     </div>
                 </div>
                 <div class="col-sm-4">

@@ -130,7 +130,7 @@
                 </div>
                 <div class="nav-right col pull-right right-menu p-0">
                     <ul class="nav-menus">
-                        <li class="onhover-dropdown">
+                        {{-- <li class="onhover-dropdown">
                             <div class="notification-box"><i data-feather="bell"></i><span
                                     class="dot-animated"></span></div>
                             <ul class="notification-dropdown onhover-show-div">
@@ -140,7 +140,7 @@
                                                 class="pull-right badge badge-primary badge-pill"></span></button></p>
 
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="onhover-dropdown p-0">
                             <button class="btn btn-primary-light" type="button">
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -170,11 +170,9 @@
                     @if (Auth::user()->isadmin)
                         <h3 class="mt-3 f-14 f-w-600">{{ Auth::user()->fullname }}</h6>
                         @else
-                            <a href="user-profile.html">
                                 <h6 class="mt-3 f-14 f-w-600">
                                     {{ Auth::user()->idrole }}/{{ Auth::user()->fullname }}
                                 </h6>
-                            </a>
                             @if (Auth::user()->role == 'student')
                                 <ul>
                                     <li>
@@ -269,7 +267,7 @@
                                                     Point</span></a>
                                             </li>
                                         @endif
-                                        
+
                                     @endif
                                 @endif
 
@@ -311,8 +309,6 @@
                         @yield('home')
                         @yield('content')
                     </div>
-                    <!-- Container-fluid Ends-->
-                    <!-- footer start-->
                     <footer class="footer"
                         style="margin-left: -12px; margin-right: -15px; background: url(../image/welcome/coming_soon_bg_1.png); margin-top: 100px;">
                         <div class="container-fluid">
@@ -329,7 +325,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <br>
-                                    <br><a href="{{ url('/') }}" style="color: white;">About</a>
+                                    <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
                                 </div>
                             </div>
                         </div>

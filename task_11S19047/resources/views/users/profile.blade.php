@@ -19,18 +19,17 @@
                         <form method="POST" enctype="multipart/form-data" action="/user/{{ $user->username }}">
                             @csrf
                             <center>
+                                <label for="avatar" class="col-form-label text-md-end justify-content-center d-flex">Ubah Profil</label>
                                 <h5>
-                                    {{$user->role}}
+                                    {{ $user->role }}
                                 </h5>
                             </center>
                             @method('PUT')
-                            <div class="row mb-3">
-                                <label for="avatar" class="col-md-4 col-form-label text-md-end">Ubah Profil</label>
+                            <div class="row mb-3 justify-content-center">
 
                                 <div class="col-md-6">
-                                    <input id="avatar" type="file"
-                                        class="form-control @error('avatar') is-invalid @enderror" name="avatar"
-                                        value="{{ old('avatar') }}" autofocus>
+                                    <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror"
+                                        name="avatar" value="{{ old('avatar') }}" autofocus>
 
                                     @error('avatar')
                                         <span class="invalid-feedback" role="alert">
@@ -41,11 +40,10 @@
                             </div>
 
                             {{-- Masih dummy ya ges --}}
-                            <div class="row mb-3">
-                                <label for="idrole"
-                                    class="col-md-4 col-form-label text-md-end">NIM/NIDN/NIP</label>
 
+                            <div class="row mb-3 justify-content-center">
                                 <div class="col-md-6">
+                                    <label for="idrole" class="col-form-label text-md-end">NIM/NIDN/NIP</label>
                                     <input id="idrole" type="text"
                                         class="form-control @error('idrole') is-invalid @enderror" name="idrole"
                                         @isset($user->idrole) value="{{ old('idrole') ? old('idrole') : $user->idrole }}")
@@ -61,11 +59,10 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label for="fullname"
-                                    class="col-md-4 col-form-label text-md-end">Nama Lengkap</label>
+                            <div class="row mb-3 justify-content-center">
 
                                 <div class="col-md-6">
+                                    <label for="fullname" class="col-form-label text-md-end">Nama Lengkap</label>
                                     <input id="fullname" type="text"
                                         class="form-control @error('fullname') is-invalid @enderror" name="fullname"
                                         @isset($user->fullname) value="{{ old('fullname') ? old('fullname') : $user->fullname }}")
@@ -82,13 +79,12 @@
                             </div>
 
                             {{-- Masih dummy ya ges --}}
-                            <div class="row mb-3">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-md-end">Email</label>
+                            <div class="row mb-3 justify-content-center">
 
                                 <div class="col-md-6">
-                                    <input id="email" type="text"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                    <label for="email" class="col-form-label text-md-end">Email</label>
+                                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror"
+                                        name="email"
                                         @isset($user->email) value="{{ old('email') ? old('email') : $user->email }}")
                             @else
                                 value="{{ old('email') }}" @endisset
@@ -102,11 +98,10 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label for="username"
-                                    class="col-md-4 col-form-label text-md-end">Nama Akun</label>
+                            <div class="row mb-3 justify-content-center">
 
                                 <div class="col-md-6">
+                                    <label for="username" class="col-form-label text-md-end">Nama Akun</label>
                                     <input id="username" type="text"
                                         class="form-control @error('username') is-invalid @enderror" name="username"
                                         @isset($user->username) value="{{ old('username') ? old('username') : $user->username }}")
