@@ -274,7 +274,7 @@
                 </nav>
             </header>
             <!-- Page Sidebar Ends-->
-            <div class="page-body" style="background: url({{ asset('image/welcome/bg01.png') }});">
+            <div class="page-body" style="background: url({{ asset('image/welcome/bg01.png') }}); background-repeat: no-repeat; background-size: cover;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">
