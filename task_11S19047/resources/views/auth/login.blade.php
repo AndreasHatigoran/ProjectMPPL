@@ -139,7 +139,7 @@
                             <h4>Del Creative</h4>
                             <h6>Welcome back! Log in to your account.</h6>
                             <div class="form-group">
-                                <label for="username">Email Address/Username</label>
+                                <label for="username">Alamat Email/Username</label>
                                 <div class="input-group"><span class="input-group-text"><i
                                             class="fa-solid fa-envelope"></i></span>
                                     <input class="form-control @error('username') is-invalid @enderror" type="username"
@@ -164,7 +164,7 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    <div class="show-hide"><span class="show"> </span></div>
+                                    <div class="show-hide"></div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -177,10 +177,10 @@
                                 </div><a class="link" href="forget-password.html">Lupa kata sandi?</a>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary w-100" type="submit">Sign in</button>
+                                <button class="btn btn-primary w-100" type="submit">Masuk</button>
                             </div>
                             <div class="login-social-title">
-                                <h5>Sign in with</h5>
+                                <h5>Masuk Dengan</h5>
                             </div>
                             <p>Tidak punya akun?<a class="ms-2" href="{{ route('register') }}">Buat
                                     akun</a></p>

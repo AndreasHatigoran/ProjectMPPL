@@ -63,7 +63,7 @@
                             <b><a class="text-dark" href="{{ url('/dashboard') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
                         </li>
                     @else
-                        <li class="onhover-dropdown p-0 ikan">
+                        <li class="onhover-dropdown p-0 ikan" style="margin-left: 10px;">
                             <b><a class="text-dark" href="{{ route('login') }}">Masuk</a></b>
                             @if (Route::has('register'))
                             <b><a class="text-dark" href="{{ route('register') }}">| Daftar</a></b>
