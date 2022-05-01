@@ -52,6 +52,7 @@ Route::middleware(['auth'])->group(function () {
         Route::middleware(['admin'])->group(function () {
             Route::get('/admin', [App\Http\Controllers\AdminController::class, 'akun'])->name('administrator.listakun');
             Route::post('/admin/{user}/make-verify', [App\Http\Controllers\AdminController::class, 'makeVerify'])->name('administrator.make-verify');
+            Route::post('/admin/{user}/reject', [App\Http\Controllers\AdminController::class, 'rejectAccount'])->name('administrator.reject');
             Route::get('/admin/listpelanggaran', [AdminController::class, 'listpelanggaran']);
             Route::get('categories', [CategoryController::class, 'index']);
             Route::get('add-categories', [CategoryController::class, 'add']);

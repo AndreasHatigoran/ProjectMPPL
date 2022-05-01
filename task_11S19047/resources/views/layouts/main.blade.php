@@ -145,7 +145,7 @@
                             <button class="btn btn-primary-light" type="button">
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    Keluar
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -170,9 +170,9 @@
                     @if (Auth::user()->isadmin)
                         <h3 class="mt-3 f-14 f-w-600">{{ Auth::user()->fullname }}</h6>
                         @else
-                                <h6 class="mt-3 f-14 f-w-600">
-                                    {{ Auth::user()->idrole }}/{{ Auth::user()->fullname }}
-                                </h6>
+                            <h6 class="mt-3 f-14 f-w-600">
+                                {{ Auth::user()->idrole }}/{{ Auth::user()->fullname }}
+                            </h6>
                             @if (Auth::user()->role == 'student')
                                 <ul>
                                     <li>
@@ -263,8 +263,9 @@
                                         </li>
                                         @if (Auth::user()->role == 'dorm')
                                             <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../asrama/konversi"><i data-feather="package"></i><span>Konversi
-                                                    Point</span></a>
+                                                    href="../asrama/konversi"><i
+                                                        data-feather="package"></i><span>Konversi
+                                                        Point</span></a>
                                             </li>
                                         @endif
 
@@ -274,7 +275,8 @@
                 </nav>
             </header>
             <!-- Page Sidebar Ends-->
-            <div class="page-body" style="background: url({{ asset('image/welcome/bg01.png') }}); background-repeat: no-repeat; background-size: cover;">
+            <div class="page-body"
+                style="background: url({{ asset('image/welcome/bg01.png') }}); background-repeat: no-repeat; background-size: cover;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">
@@ -292,7 +294,19 @@
                     </div>
                     <!-- Container-fluid starts-->
                     <div>
-                        @if (Auth::user()->isverify == false)
+                        {{-- @if (Auth::user()->isverify == false)
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-8 ">
+                                    <div class="card m-5">
+                                        <div class="card-body" style="background-color: #fff;">
+                                            <p class="text-center font-weight-bolder">
+                                                Belum divalidasi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                        @if (Auth::user()->isverify == false && Auth::user()->isrejected == false)
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
@@ -304,48 +318,61 @@
                                     </div>
                                 </div>
                             </div>
+                        @elseif(Auth::user()->isverify == false && Auth::user()->isrejected == true)
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-8 ">
+                                    <div class="card m-5">
+                                        <div class="card-body" style="background-color: #fff;">
+                                            <p class="text-center font-weight-bolder">
+                                                Validasi ditolak, harap mengganti bukti screenshot yang relevan
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @endif
 
                         @yield('home')
                         @yield('content')
                     </div>
-                    </div>
-                    </div>
-                    <footer class="footer" style="background: url(../image/welcome/coming_soon_bg_1.png);">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <h6><a href="#" style="color: white; font-weight: bold;">Institut Teknologi Del</h6>
-                                    </a>
-                                    <br><a href="#" style="color: white;">Jl. Sisingamangaraja, Sitoluama</a>
-                                    <br><a href="#" style="color: white;">Laguboti, Toba Samosir</a>
-                                    <br><a href="#" style="color: white;">Sumatera Utara, Indonesia</a>
-                                    <br><a href="#" style="color: white;">Kode Pos: 22381</a>
-                                    <br><a href="#" style="color: white;">Telp: +62 632 331234</a>
-                                    <br><a href="#" style="color: white;">Fax: +62 632 331116</a>
-                                </div>
-                                <div class="col-md-3">
-                                <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
-                                <br><p style="color: white; margin-top: 82px;"><b>Copyright @ 2022</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
                 </div>
             </div>
-            <!-- latest jquery-->
-            <script src="../js/welcome/jquery-3.5.1.min.js"></script>
-            <!-- feather icon js-->
-            <script src="../js/welcome/icons/feather-icon/feather.min.js"></script>
-            <script src="../js/welcome/icons/feather-icon/feather-icon.js"></script>
-            <!-- Sidebar jquery-->
-            <script src="../js/welcome/sidebar-menu.js"></script>
-            <script src="../js/welcome/config.js"></script>
-            <!-- Bootstrap js-->
-            <script src="../js/welcome/bootstrap/popper.min.js"></script>
-            <script src="../js/welcome/bootstrap/bootstrap.min.js"></script>
-            <!-- Plugins JS start-->
-            {{-- <script src="../js/welcome/editor/ckeditor/ckeditor.js"></script>
+            <footer class="footer" style="background: url(../image/welcome/coming_soon_bg_1.png);">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h6><a href="#" style="color: white; font-weight: bold;">Institut Teknologi Del</h6>
+                            </a>
+                            <br><a href="#" style="color: white;">Jl. Sisingamangaraja, Sitoluama</a>
+                            <br><a href="#" style="color: white;">Laguboti, Toba Samosir</a>
+                            <br><a href="#" style="color: white;">Sumatera Utara, Indonesia</a>
+                            <br><a href="#" style="color: white;">Kode Pos: 22381</a>
+                            <br><a href="#" style="color: white;">Telp: +62 632 331234</a>
+                            <br><a href="#" style="color: white;">Fax: +62 632 331116</a>
+                        </div>
+                        <div class="col-md-3">
+                            <br><a href="{{ url('/') }}" style="color: white;">Tentang</a>
+                            <br>
+                            <p style="color: white; margin-top: 82px;"><b>Copyright @ 2022</b></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../js/welcome/jquery-3.5.1.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../js/welcome/icons/feather-icon/feather.min.js"></script>
+    <script src="../js/welcome/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../js/welcome/sidebar-menu.js"></script>
+    <script src="../js/welcome/config.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../js/welcome/bootstrap/popper.min.js"></script>
+    <script src="../js/welcome/bootstrap/bootstrap.min.js"></script>
+    <!-- Plugins JS start-->
+    {{-- <script src="../js/welcome/editor/ckeditor/ckeditor.js"></script>
             <script src="../js/welcome/editor/ckeditor/adapters/jquery.js"></script>
             <script src="../js/welcome/dropzone/dropzone.js"></script>
             <script src="../js/welcome/dropzone/dropzone-script.js"></script>
@@ -353,11 +380,11 @@
             <script src="../js/welcome/select2/select2-custom.js"></script>
             <script src="../js/welcome/email-app.js"></script>
             <script src="../js/welcome/form-validation-custom.js"></script> --}}
-            <!-- Plugins JS Ends-->
-            <!-- Theme js-->
-            <script src="../js/welcome/script.js"></script>
-            <!-- login js-->
-            <!-- Plugin used-->
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="../js/welcome/script.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
 </body>
 
 

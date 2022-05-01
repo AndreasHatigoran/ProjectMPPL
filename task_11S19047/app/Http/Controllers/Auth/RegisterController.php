@@ -51,13 +51,15 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'fullname' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255','unique:users', 'alpha_dash'],
+            'username' => ['required', 'string', 'max:255', 'unique:users', 'alpha_dash'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'role' => ['required'],
             'idrole' => ['required'],
-            'screenshoot' => ['required', 'mimes:jpeg,png,jpg,gif,svg'] ,
+            'screenshoot' => ['required', 'mimes:jpeg,png,jpg,gif,svg'],
 
+        ], [
+            'fullname.required' => 'Nama lengkap tidak boleh kosong'
         ]);
     }
 
@@ -71,9 +73,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $imgName = null;
-            $imgName = $data['screenshoot']->getClientOriginalName() . '-' . time() . '-' . $data['screenshoot']->extension();
+        $imgName = $data['screenshoot']->getClientOriginalName() . '-' . time() . '-' . $data['screenshoot']->extension();
 
-            $data['screenshoot']->move(public_path('image/buktiss'), $imgName);
+        $data['screenshoot']->move(public_path('image/buktiss'), $imgName);
 
         return User::create([
             'fullname' => $data['fullname'],

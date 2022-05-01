@@ -208,8 +208,13 @@
                                             class=""></i></span>
                                     <input id="fullname" type="text"
                                         class="form-control @error('fullname') is-invalid @enderror" name="fullname"
-                                        value="{{ old('fullname') }}" required autocomplete="fullname" autofocus
+                                        value="{{ old('fullname') }}" autocomplete="fullname" autofocus
                                         placeholder="Nama Lengkap">
+                                    @error('fullname')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group" style="margin-top: 30px;">
@@ -230,7 +235,7 @@
                                                 class=""></i></span>
                                         <input id="idrole" type="text"
                                             class="form-control @error('idrole') is-invalid @enderror" name="idrole"
-                                            value="{{ old('idrole') }}" required autocomplete="idrole" autofocus
+                                            value="{{ old('idrole') }}" autocomplete="idrole" autofocus
                                             placeholder="NIM/NIDN/NIP">
                                         @error('idrole')
                                             <span class="invalid-feedback" role="alert">
@@ -245,7 +250,7 @@
                                             <label>Screenshoot Profile CIS</label>
                                             <input id="screenshoot" type="file"
                                                 class="form-control @error('screenshoot') is-invalid @enderror"
-                                                name="screenshoot" value="{{ old('screenshoot') }}" required
+                                                name="screenshoot" value="{{ old('screenshoot') }}"
                                                 autocomplete="screenshoot" autofocus>
                                             @error('screenshoot')
                                                 <span class="invalid-feedback" role="alert">
@@ -263,8 +268,8 @@
                                                         class=""></i></span>
                                                 <input id="email" type="email"
                                                     class="form-control @error('email') is-invalid @enderror"
-                                                    name="email" value="{{ old('email') }}" required
-                                                    autocomplete="email" placeholder="Email">
+                                                    name="email" value="{{ old('email') }}" autocomplete="email"
+                                                    placeholder="Email">
                                                 @error('email')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -278,7 +283,7 @@
                                                         class=""></i></span>
                                                 <input id="username" type="text"
                                                     class="form-control @error('username') is-invalid @enderror"
-                                                    name="username" value="{{ old('username') }}" required
+                                                    name="username" value="{{ old('username') }}"
                                                     autocomplete="username" autofocus placeholder="Username">
                                                 @error('username')
                                                     <span class="invalid-feedback" role="alert">
@@ -295,7 +300,7 @@
                                                 class=""></i></span>
                                         <input id="password" type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
-                                            required autocomplete="new-password" placeholder="********">
+                                            autocomplete="new-password" placeholder="********">
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -309,9 +314,15 @@
                                     <div class="input-group"><span class="input-group-text"><i
                                                 class=""></i></span>
                                         <input id="password-confirm" type="password" class="form-control"
-                                            name="password_confirmation" required autocomplete="new-password"
+                                            name="password_confirmation" autocomplete="new-password"
                                             placeholder="********">
-                                        {{-- <div class="show-hide"><span class="show">                         </span></div> --}}
+                                        @error('password_confirmation')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                        {{-- <div class="show-hide"><span class="show">              
+                                                       </span></div> --}}
                                     </div>
                                 </div>
                                 <div class="form-group">

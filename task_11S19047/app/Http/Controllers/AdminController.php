@@ -64,4 +64,12 @@ class AdminController extends Controller
         session()->flash('success', $user->fullname . ' Berhasil verifikasi');
         return redirect(route('administrator.listakun'));
     }
+
+    public function rejectAccount(User $user)
+    {
+        $user->isrejected = true;
+        $user->save();
+        session()->flash('success', 'Akun ' . $user->fullname . ' ditolak');
+        return redirect(route('administrator.listakun'));
+    }
 }

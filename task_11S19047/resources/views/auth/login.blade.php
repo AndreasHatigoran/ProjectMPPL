@@ -174,7 +174,8 @@
                                     <label class="form-check-label" for="remember">
                                         {{ __('Ingat Saya') }}
                                     </label>
-                                </div><a class="link" href="forget-password.html">Lupa kata sandi?</a>
+                                </div><a class="link" href="{{ route('password.request') }}">Lupa kata
+                                    sandi?</a>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary w-100" type="submit">Masuk</button>

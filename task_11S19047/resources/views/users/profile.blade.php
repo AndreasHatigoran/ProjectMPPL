@@ -55,6 +55,21 @@
                             </div>
 
                             {{-- Masih dummy ya ges --}}
+                            <div class="row mb-3 justify-content-center">
+
+                                <div class="col-md-6">
+                                    <label for="screemshoot" class="col-form-label text-md-end">Bukti Screenshoot</label>
+                                    <input id="screenshoot" type="file"
+                                        class="form-control @error('screenshoot') is-invalid @enderror" name="screenshoot"
+                                        value="{{ old('screenshoot') }}" autofocus>
+
+                                    @error('schreenshoot')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="row mb-3 justify-content-center">
                                 <div class="col-md-6">
