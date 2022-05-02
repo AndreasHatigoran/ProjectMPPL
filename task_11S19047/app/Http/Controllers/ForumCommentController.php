@@ -13,11 +13,13 @@ class ForumCommentController extends Controller
         $comment = ForumComment::find($id);
 
         if ($comment->is_solved) {
-            $comment->update([
-                'is_solved' => false
-            ]);
-            $msg = ['status' => 'unmark'];
         } else {
+            $newPoint = $comment->user->point;
+            $newPoint += 100;
+            $comment->user->update([
+                'point' => $newPoint,
+            ]);
+
             $comment->update([
                 'is_solved' => true
             ]);

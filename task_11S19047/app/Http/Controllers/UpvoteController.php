@@ -17,11 +17,17 @@ class UpvoteController extends Controller
         $downvote = Downvote::where('comment_id', $id)->where('user_id', Auth::user()->id);
         $downvote->delete();
 
-        Upvote::create([
-            'comment_id' => $comment->id,
-            'user_id' => Auth::user()->id
-        ]);
-        $msg = ['status' => 'upvote'];
+        $upvote = Upvote::where('comment_id', $id)->where('user_id', Auth::user()->id)->get();
+        if (count($upvote) == 1) {
+            $msg = ['status' => "has upvoted"];
+        } else {
+            Upvote::create([
+                'comment_id' => $comment->id,
+                'user_id' => Auth::user()->id
+            ]);
+            $msg = ['status' => 'upvote'];
+        }
+
         return response()->json($msg);
     }
 }

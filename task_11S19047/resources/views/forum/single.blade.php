@@ -67,7 +67,11 @@
                         <div class="media-body" style="padding-left: 10px">
                             <div>
                                 <x-avatar :object="$comment->user" size="32" />
-                                <span>{{ $comment->user->username }}</span>
+                                <span>{{ $comment->user->username }} -
+                                    @if ($comment->user->isadmin == true)
+                                        Admin
+                                    @endif
+                                </span>
                                 {!! $comment->subject !!}
                             </div>
                             @if (Auth::check())
@@ -83,7 +87,7 @@
                                     </div>
                                 @else
                                     @if (count(Auth::user()->commentReports->where('comment_id', $comment->id)) != 1)
-                                        @if (Auth::user()->role == 'dorm' || Auth::user()->role == 'dosen')
+                                        @if (Auth::user()->role == 'dorm' || Auth::user()->role == 'dosen' || Auth::user()->isverify == true)
                                             <a href="/comment/{{ $comment->id }}/report"
                                                 class="btn btn-danger btn-xs">Lapor
                                                 Pelanggaran</a>
@@ -93,9 +97,9 @@
                                         <button class="btn btn-warning btn-xs" onclick="mark({{ $comment->id }}, this)"
                                             id="solved-btn-{{ $comment->id }}">
                                             @if ($comment->is_solved == true)
-                                                unmark
+                                                Jawaban telah ditandai
                                             @else
-                                                mark
+                                                Tandai Jawaban
                                             @endif
                                         </button>
                                     @endif
@@ -165,7 +169,7 @@
                             .then(response => response.json())
                             .then(data => {
                                 if (data.status == 'mark') {
-                                    el.innerText = 'unmark'
+                                    el.innerText = 'Jawaban telah ditandai'
                                     sign.classList.add("fa-solid");
                                     sign.classList.add("fa-check");
                                     sign.classList.add("fa-xl");
