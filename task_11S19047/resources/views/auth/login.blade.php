@@ -139,7 +139,7 @@
                             <h4>Del Creative</h4>
                             <h6>Welcome back! Log in to your account.</h6>
                             <div class="form-group">
-                                <label for="username">Alamat Email/Username</label>
+                                <label for="username">Email/Nama Akun</label>
                                 <div class="input-group"><span class="input-group-text"><i
                                             class="fa-solid fa-envelope"></i></span>
                                     <input class="form-control @error('username') is-invalid @enderror" type="username"
@@ -150,6 +150,12 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                    
+                                     {{-- @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror --}}
                                 </div>
                             </div>
                             <div class="form-group">
@@ -158,7 +164,7 @@
                                             class="fa-solid fa-key"></i></span>
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        autocomplete="current-password" placeholder="*********" required>
+                                        autocomplete="current-password" placeholder="*********">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
