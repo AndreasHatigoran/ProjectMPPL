@@ -9,11 +9,25 @@
                 <div class="card">
                     <div class="card-header">
                         <h1>Edit Profil</h1>
+                        
                     </div>
 
                     <div class="card-body">
                         <center>
                             <x-avatar :object="$user" />
+                               <div class="row mb-3 justify-content-center">
+
+                                <div class="col-md-6">
+                                    <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror"
+                                        name="avatar" value="{{ old('avatar') }}" autofocus>
+
+                                    @error('avatar')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
                         </center>
 
                         <form method="POST" enctype="multipart/form-data" action="/user/{{ $user->username }}">
@@ -40,19 +54,7 @@
                                 @endif
                             </center>
                             @method('PUT')
-                            <div class="row mb-3 justify-content-center">
-
-                                <div class="col-md-6">
-                                    <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror"
-                                        name="avatar" value="{{ old('avatar') }}" autofocus>
-
-                                    @error('avatar')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
+                         
 
                             {{-- Masih dummy ya ges --}}
                             <div class="row mb-3 justify-content-center">
