@@ -64,11 +64,13 @@
                         </li>
                     @else
                         <li class="onhover-dropdown p-0 ikan" style="margin-left: 10px;">
-                            <b><a class="text-dark" href="{{ route('login') }}">Masuk</a></b>
-                            @if (Route::has('register'))
-                            <b><a class="text-dark" href="{{ route('register') }}">| Daftar</a></b>
-                            @endif
+                            <b style="padding-right: 7px"><a class="text-dark" href="{{ route('login') }}">Masuk</a></b>
                             {{-- <b><a href="Register.html">| Register</a></b> --}}
+                        </li>
+                        <li>
+                             @if (Route::has('register'))
+                            <b><a class="text-dark" href="{{ route('register') }}">Daftar</a></b>
+                            @endif
                         </li>
 
                     @endauth
