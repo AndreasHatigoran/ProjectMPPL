@@ -55,11 +55,17 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'role' => ['required'],
-            'idrole' => ['required'],
+            'idrole' => ['required', 'unique:users'],
             'screenshoot' => ['required', 'mimes:jpeg,png,jpg,gif,svg'],
 
         ], [
-            'fullname.required' => 'Nama lengkap tidak boleh kosong'
+            'fullname.required' => 'nama lengkap wajib diisi',
+            'idrole.required' => 'NIM/NIDN/NIP wajib diisi',
+            'role.required' => 'role wajib diisi',
+            'screenshoot.required' => 'screenshoot profile CIS wajib diisi',
+            'idrole.unique' => 'NIM/NIDN/NIP sudah pernah dibuat',
+            'username.unique' => 'Nama Pengguna sudah pernah dibuat',
+            'email.unique' => 'Email sudah pernah dibuat'
         ]);
     }
 

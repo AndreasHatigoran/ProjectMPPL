@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->boolean('isadmin')->default(false);
             $table->boolean('isverify')->default(false);
-            $table->string('idrole');
+            $table->string('idrole')->unique();
             $table->enum('role', ['student', 'dorm', 'dosen', 'null'])->default('null');
             $table->bigInteger('point')->default(0);
             $table->string('screenshoot');
