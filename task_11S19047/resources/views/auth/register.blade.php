@@ -202,33 +202,38 @@
                             @csrf
                             <h4>Create Your Account</h4>
                             <h6>Enter your personal details to create your account</h6>
-                            <div class="form-group">
-                                <label>Nama Lengkap</label>
-                                <div class="input-group"><span class="input-group-text"><i
-                                            class=""></i></span>
-                                    <input id="fullname" type="text"
-                                        class="form-control @error('fullname') is-invalid @enderror" name="fullname"
-                                        value="{{ old('fullname') }}" autocomplete="fullname" autofocus
-                                        placeholder="Nama Lengkap">
-                                    @error('fullname')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+                                <div class="form-group">
+                                    <label>Nama Lengkap</label>
+                                    <div class="input-group"><span class="input-group-text"><i
+                                                class=""></i></span>
+                                        <input id="fullname" type="text"
+                                            class="form-control @error('fullname') is-invalid @enderror" name="fullname"
+                                            value="{{ old('fullname') }}" autocomplete="fullname" autofocus
+                                            placeholder="Nama Lengkap">
+                                        @error('fullname')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group" style="margin-top: 30px;">
-                                <label>Role</label>
-                                <div class="input-group"><span class="input-group-text"><i
-                                            class=""></i></span>
-                                    <select style="width: 367px; height: 35px;" name="role">
-                                        <option selected disabled>Pilih role anda</option>
-                                        <option value="student">Mahasiswa</option>
-                                        <option value="dorm">Keasramaan</option>
-                                        <option value="dosen">Dosen</option>
-                                    </select>
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <div class="input-group"><span class="input-group-text"><i
+                                                class=""></i></span>
+                                        <select id="role" class="form-control" @error('role') is-invalid @enderror" name="role">
+                                            <option selected disabled>Pilih role anda</option>
+                                            <option value="student">Mahasiswa</option>
+                                            <option value="dorm">Keasramaan</option>
+                                            <option value="dosen">Dosen</option>
+                                        @error('role')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                        </select>
+                                    </div>
                                 </div>
-
                                 <div class="form-group">
                                     <label>NIM/NIDN/NIP</label>
                                     <div class="input-group"><span class="input-group-text"><i

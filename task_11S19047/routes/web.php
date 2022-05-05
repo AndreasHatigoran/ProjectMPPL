@@ -18,6 +18,7 @@ use App\Http\Controllers\ForumCommentController;
 use App\Http\Controllers\ListPelanggaranController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\UpvoteController;
+use App\Http\Controllers\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,8 @@ Route::middleware(['admin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('@{username}', [UsersController::class, 'showprofile']);
     Route::put('/user/{username}', [UsersController::class, 'update']);
+    Route::get('/{username}/password', [ChangePasswordController::class, 'edit']);
+    Route::put('/password/update', [ChangePasswordController::class, 'update']);
     Route::get('/dashboard', [FrontendController::class, 'index']);
     Route::middleware(['verify'])->group(function () {
         Route::middleware(['admin'])->group(function () {
