@@ -24,13 +24,13 @@
 
                                         <img id="output" src="{{ asset('image/avatar/' . $user->avatar) }}"
                                             class="rounded-circle mb-2" width="128" weight="128" style="    position: absolute;
-                                                width: 128px;
-                                                height: 128px;">
+                                                            width: 128px;
+                                                            height: 128px;">
                                         <input
                                             style="    width: 100%;
-                                                                                                                                                    height: 100%;
-                                                                                                                                                    position: absolute;
-                                                                                                                                                    opacity: 0;"
+                                                                                                                                                                height: 100%;
+                                                                                                                                                                position: absolute;
+                                                                                                                                                                opacity: 0;"
                                             id="avatar" type="file"
                                             class="form-control @error('avatar') is-invalid @enderror" name="avatar"
                                             value="{{ old('avatar') }}"
@@ -208,9 +208,9 @@
                             <div class="row mb-0">
                                 <div class="col-md-4 offset-md-4">
                                     <center>
-                                        <button type="submit" class="btn btn-primary">
+                                        <a href="{{ $user->username }}/password" class="btn btn-primary">
                                             Ubah Kata Sandi
-                                        </button>
+                                        </a>
                                         <br>
                                         <br>
                                         <button type="submit" class="btn btn-primary">
