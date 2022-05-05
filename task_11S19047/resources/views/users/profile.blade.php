@@ -9,29 +9,41 @@
                 <div class="card">
                     <div class="card-header">
                         <h1>Edit Profil</h1>
-                        
+
                     </div>
 
                     <div class="card-body">
-                        <center>
-                            <x-avatar :object="$user" />
-                               <div class="row mb-3 justify-content-center">
 
-                                <div class="col-md-6">
-                                    <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror"
-                                        name="avatar" value="{{ old('avatar') }}" autofocus>
-
-                                    @error('avatar')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                        </center>
 
                         <form method="POST" enctype="multipart/form-data" action="/user/{{ $user->username }}">
                             @csrf
+                            <center>
+
+                                <div class="row mb-3 justify-content-center">
+                                    <div class="col-md-6">
+
+                                        <img id="output" src="{{ asset('image/avatar/' . $user->avatar) }}"
+                                            class="rounded-circle mb-2" width="128" weight="128" style="    position: absolute;
+                                                width: 128px;
+                                                height: 128px;">
+                                        <input
+                                            style="    width: 100%;
+                                                                                                                                                    height: 100%;
+                                                                                                                                                    position: absolute;
+                                                                                                                                                    opacity: 0;"
+                                            id="avatar" type="file"
+                                            class="form-control @error('avatar') is-invalid @enderror" name="avatar"
+                                            value="{{ old('avatar') }}"
+                                            onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                                        <x-avatar :object="$user" />
+                                        @error('avatar')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </center>
                             <center>
                                 <label for="avatar" class="col-form-label text-md-end justify-content-center d-flex">Ubah
                                     Profil</label>
@@ -54,7 +66,7 @@
                                 @endif
                             </center>
                             @method('PUT')
-                         
+
 
                             {{-- Masih dummy ya ges --}}
                             <div class="row mb-3 justify-content-center">
