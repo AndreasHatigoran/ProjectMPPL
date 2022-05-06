@@ -21,9 +21,11 @@
                                 <h3><b>Semua Pertanyaan</b></h3>
                             </div>
                             <div class="col-sm-6">
-                                <a href="/forum/create"><button class="btn btn"
-                                        style="float: right; background-color: #3568D4;" type="button"><span
-                                            style="color:white"> Buat Forum</span></button></a>
+                                @if (Auth::user()->isadmin == false)
+                                    <a href="/forum/create"><button class="btn btn"
+                                            style="float: right; background-color: #3568D4;" type="button"><span
+                                                style="color:white"> Buat Forum</span></button></a>
+                                @endif
                             </div>
                         </div>
                     </div>

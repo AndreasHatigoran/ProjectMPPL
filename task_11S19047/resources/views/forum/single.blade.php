@@ -28,12 +28,14 @@
                 @endif
 
                 @if (Auth::check())
-                    <form action="/forum/{{ $forum->id }}/comments" method="POST" class="mt-4">
-                        @csrf
-                        <x-ckeditor field="subject" label="Jawaban" />
+                    @if (Auth::user()->isadmin == false && Auth::user()->role == 'student')
+                        <form action="/forum/{{ $forum->id }}/comments" method="POST" class="mt-4">
+                            @csrf
+                            <x-ckeditor field="subject" label="Jawaban" />
 
-                        <button type="submit" class="btn btn-primary btn-xs">Kirim Jawaban</button>
-                    </form>
+                            <button type="submit" class="btn btn-primary btn-xs">Kirim Jawaban</button>
+                        </form>
+                    @endif
                 @endif
 
 
@@ -41,21 +43,22 @@
                 @forelse ($forum->comments as $comment)
                     <div class="media">
                         <div class="align-self-center mr-3 d-flex flex-column justify-content-center align-items-center">
-                            <i class="fa-solid fa-caret-up" id="upvote-btn-{{ $comment->id }}"
-                                @if (count(Auth::user()->upvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
+                            @if (Auth::user()->isadmin == false && Auth::user()->role == 'student')
+                                <i class="fa-solid fa-caret-up" id="upvote-btn-{{ $comment->id }}"
+                                    @if (count(Auth::user()->upvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
                                 @else
                                 style="font-size: 25px;" @endif
-                                onclick="upvotes({{ $comment->id }})"></i>
+                                    onclick="upvotes({{ $comment->id }})"></i>
 
-                            <span id="total-upvotes-{{ $comment->id }}">{{ $comment->upvotes()->count() }}</span>
-                            <span style="display: none;"
-                                id="total-downvotes-{{ $comment->id }}">{{ $comment->downvotes()->count() }}</span>
-                            <i class="fa-solid fa-caret-down" id="downvote-btn-{{ $comment->id }}"
-                                @if (count(Auth::user()->downvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
+                                <span id="total-upvotes-{{ $comment->id }}">{{ $comment->upvotes()->count() }}</span>
+                                <span style="display: none;"
+                                    id="total-downvotes-{{ $comment->id }}">{{ $comment->downvotes()->count() }}</span>
+                                <i class="fa-solid fa-caret-down" id="downvote-btn-{{ $comment->id }}"
+                                    @if (count(Auth::user()->downvotes->where('comment_id', $comment->id)) >= 1) style="font-size: 25px; color: #136939;"
                                     @else
                                     style="font-size: 25px;" @endif
-                                onclick="downvotes({{ $comment->id }})"></i>
-
+                                    onclick="downvotes({{ $comment->id }})"></i>
+                            @endif
                             {{-- IS SOLVED ALGORITHM --}}
                             @if ($comment->is_solved == true)
                                 <i id="mark-{{ $comment->id }}" style="color: rgb(75, 238, 75)"
@@ -87,7 +90,7 @@
                                     </div>
                                 @else
                                     @if (count(Auth::user()->commentReports->where('comment_id', $comment->id)) != 1)
-                                        @if (Auth::user()->role == 'dorm' || Auth::user()->role == 'dosen' || Auth::user()->isverify == true)
+                                        @if (Auth::user()->role == 'dorm' || Auth::user()->role == 'dosen' || Auth::user()->isadmin == true)
                                             <a href="/comment/{{ $comment->id }}/report"
                                                 class="btn btn-danger btn-xs">Lapor
                                                 Pelanggaran</a>

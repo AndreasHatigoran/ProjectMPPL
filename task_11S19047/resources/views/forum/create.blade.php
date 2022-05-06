@@ -15,7 +15,7 @@
                         <form action="/forum" method="POST">
                             @csrf
 
-                            <x-input field="title" label="Judul" type="text" />
+                            <x-input field="title" label="Topik" type="text" />
 
                             <x-ckeditor field="subject" label="Subject" />
 
