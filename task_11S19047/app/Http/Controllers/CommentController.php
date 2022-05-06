@@ -40,6 +40,8 @@ class CommentController extends Controller
         // dd($request);
         $request->validate([
             'subject' => 'required|min:10',
+        ],[
+          'subject.required' => 'Jawaban masih kosong'  
         ]);
 
         $forum = Forum::find($id);
