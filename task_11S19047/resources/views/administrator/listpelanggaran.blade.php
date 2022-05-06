@@ -33,7 +33,6 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Nama Mahasiswa</th>
                                     <th scope="col">NIM</th>
-                                    <th scope="col">Jumlah Laporan</th>
                                     <th scope="col">Bukti Pelanggaran</th>
                                     <th colspan="2" style="text-align: center;">Aksi</th>
                                 </tr>
@@ -47,7 +46,6 @@
                                         <th scope="row">{{ $i++ }}</th>
                                         <td>{{ $report->forumcomment->user->fullname }}</td>
                                         <td>{{ $report->forumcomment->user->idrole }}</td>
-                                        <td>{{ $count }}</td>
                                         <td>{!! $report->forumcomment->subject !!}</td>
                                         <td><a class="btn btn-light btn-xs"
                                                 href="/validasipelanggaran/{{ $report->comment_id }}">Terima</a></td>

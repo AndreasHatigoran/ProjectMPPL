@@ -44,6 +44,9 @@ class ForumController extends Controller
         $request->validate([
             'title' => 'required|max:255|min:3',
             'subject' => 'required|min:10|',
+        ],[
+            'title.required' => 'Topik masih kosong',
+            'subject.required' => 'Pertanyaan masih kosong'
         ]);
 
         Forum::create([
