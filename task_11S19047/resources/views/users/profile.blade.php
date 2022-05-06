@@ -22,15 +22,18 @@
                                 <div class="row mb-3 justify-content-center">
                                     <div class="col-md-6">
 
-                                        <img id="output" src="{{ asset('image/avatar/' . $user->avatar) }}"
+                                        <img id="output"
+                                            @if ($user->avatar == null) src="https://ui-avatars.com/api/?name={{ $user->username }}"
+                                            @else
+                                            src="{{ asset('image/avatar/' . $user->avatar) }}" @endif
                                             class="rounded-circle mb-2" width="128" weight="128" style="    position: absolute;
-                                                            width: 128px;
-                                                            height: 128px;">
+                                                                                width: 128px;
+                                                                                height: 128px;">
                                         <input
                                             style="    width: 100%;
-                                                                                                                                                                height: 100%;
-                                                                                                                                                                position: absolute;
-                                                                                                                                                                opacity: 0;"
+                                                                                                                                                                                    height: 100%;
+                                                                                                                                                                                    position: absolute;
+                                                                                                                                                                                    opacity: 0;"
                                             id="avatar" type="file"
                                             class="form-control @error('avatar') is-invalid @enderror" name="avatar"
                                             value="{{ old('avatar') }}"
