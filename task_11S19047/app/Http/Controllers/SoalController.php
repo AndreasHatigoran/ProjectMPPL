@@ -59,6 +59,14 @@ class SoalController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'exercise' => 'required',
+            'answer' => 'required',
+
+        ], [
+            'exercise.required' => 'Tidak boleh kosong',
+            'answer.required' => 'Tidak boleh kosong',
+        ]);
 
         $soal = Soal::find($id);
         if ($request->hasFile('image')) {
