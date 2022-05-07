@@ -21,8 +21,15 @@
                     </div>
                     <div class="col-md-12">
                         <label for="">Latihan</label>
-                        <input type="text" value="{{ $soal->exercise }}" class="form-control" name="exercise">
+                        <input class="form-control @error('exercise') is-invalid @enderror" id="exercise" type="text"
+                            value="{{ $soal->exercise }}" class="form-control" name="exercise">
+                        @error('exercise')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
+
                     <label for="">Kode</label>
                     @if ($soal->image)
                         <img src="{{ asset('assets/uploads/soal/' . $soal->image) }}" class="w-25"
@@ -33,7 +40,13 @@
                     </div>
                     <div class="col-md-12">
                         <label for="">Kunci Jawaban</label>
-                        <input type="text" value="{{ $soal->answer }}" class="form-control" name="answer">
+                        <input class="form-control @error('answer') is-invalid @enderror" id="answer" type="text"
+                            value="{{ $soal->answer }}" class="form-control" name="answer">
+                        @error('answer')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Simpan</button>
