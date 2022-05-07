@@ -51,5 +51,6 @@
                 </tbody>
             </table>
         </div>
+        {{ $category->links('vendor.pagination.costume') }}
     </div>
 @endsection

@@ -99,6 +99,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        {{ $soal->links('vendor.pagination.costume') }}
                 </div>
             </div>
         </div>

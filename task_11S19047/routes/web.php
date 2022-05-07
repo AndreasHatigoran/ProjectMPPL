@@ -78,7 +78,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/lab', [LabController::class, 'index']);
         Route::get('category', [LabCategoryController::class, 'index']);
         Route::get('/view-language/{language}', [LabCategoryController::class, 'daftarsoal']);
+
         Route::get('view-exercise/{id}', [LabCategoryController::class, 'lab']);
+        // Route::get('view-exercise/{laguage}/{id}', [LabCategoryController::class, 'lab']);
         Route::post('/jawab', [LabCategoryController::class, 'cek']);
         // nested resource
         Route::resource('forum.comments', CommentController::class)->shallow();

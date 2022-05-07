@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $category = Category::all();
+        $category = Category::orderBy('language')->paginate(10);
         return view('LabCoding.Admin.Category.index', compact('category'));
     }
 

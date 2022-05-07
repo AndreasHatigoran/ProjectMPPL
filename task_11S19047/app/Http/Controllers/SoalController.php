@@ -11,7 +11,7 @@ class SoalController extends Controller
 {
     public function index()
     {
-        $soal = Soal::all();
+        $soal = Soal::orderBy('category_id', 'desc')->paginate(10);
         return view('LabCoding.Admin.Soal.index', compact('soal'));
     }
 

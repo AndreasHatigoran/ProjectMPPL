@@ -25,8 +25,10 @@ class LabCategoryController extends Controller
     public function lab($id)
     {
         $soal = Soal::find($id);
-        return view('LabCoding.lab.exercise.lab', compact('soal'));
+        $cat = Category::where('id', $soal->category_id)->first();
+        return view('LabCoding.lab.exercise.lab', compact('soal', 'cat'));
     }
+
     public function cek(Request $request)
     {
         $data = Soal::find($request->id_soal);

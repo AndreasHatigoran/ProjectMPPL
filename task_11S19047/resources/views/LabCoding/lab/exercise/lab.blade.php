@@ -125,32 +125,30 @@
             document.getElementById("submitbutton").style.visibility = "visible";
         }
     </script>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card box-shadow-title">
-                    <form method="POST" action="/jawab">
-                        @csrf
-                        <div class="card-body row">
-                            <img style="height: 350x; width: 630px;"
-                                src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
-                            <div class="row"></div>
-                            <br>
-                            <div class="form-group row col-sm-3" style="font-size: 16px;">
-                                <label for="usr">Jawaban :</label>
-                                <input name="jawaban" type="text" class="form-control" id="usr">
-                                <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
-                            </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card box-shadow-title">
+                <form method="POST" action="/jawab">
+                    @csrf
+                    <div class="card-body row">
+                        <img style="height: 350x; width: 630px;" src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
+                        <div class="row"></div>
+                        <br>
+                        <div class="form-group row col-sm-3" style="font-size: 16px;">
+                            <label for="usr">Jawaban :</label>
+                            <input name="jawaban" type="text" class="form-control" id="usr">
+                            <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
                         </div>
-                        <div class="btn-showcase">
-                            <button class="btn btn-pill btn-primary btn-lg" type="submit">Kirim
-                                Jawaban</button>
-                            <label class="text-end" style="float: right;"><button
-                                    class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
-                                    onclick="changeVisibility();" style="visibility: visible;">Tunjukkan
-                                    Jawaban</button></label>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="btn-showcase">
+                        <button class="btn btn-pill btn-primary btn-lg" type="submit">Kirim
+                            Jawaban</button>
+                        <label class="text-end" style="float: right;"><button class="btn btn-pill btn-primary btn-lg"
+                                id="showAnswer" type="button" onclick="changeVisibility();"
+                                style="visibility: visible;">Tunjukkan
+                                Jawaban</button></label>
+                    </div>
+
                     <div id="showans" onclick="" style="visibility:hidden">
                         <label>Answer : <b>{{ $soal->answer }}</b></label>
                     </div>
@@ -169,15 +167,20 @@
 
                     <div class="card-body row"></div>
                     <div class="btn-showcase">
-                        {{-- <a href={{ url('view-exercise/') }}><button class="btn btn-pill btn-primary btn-lg"
-                                type="button">Tutup</button></a> --}}
+                        <a href={{ url('view-language/' . $soal->category->language) }}><button
+                                class="btn btn-pill btn-primary btn-lg" type="button">Tutup</button></a>
 
 
-                        {{-- <label class="text-end" style="float: right;">
-                            <a href=""><button class="btn btn-pill btn-primary btn-lg"
-                                    type="button">Selanjutnya</button></a></label> --}}
+                        <label class="text-end" style="float: right;">
+                            @if ($cat->id == $soal->category_id)
+                                <a href="{{ url('view-exercise/' . $soal->exercise + 1) }}"><button
+                                        class="btn btn-pill btn-primary btn-lg" type="button">Selanjutnya</button></a>
+                        </label>
+                        @endif
+
                     </div>
-                </div>
+                    <br>
+                </form>
             </div>
         </div>
     </div>
