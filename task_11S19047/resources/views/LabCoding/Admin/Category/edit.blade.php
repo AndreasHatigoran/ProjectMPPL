@@ -14,7 +14,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <label for="">Bahasa Pemrograman</label>
-                        <input type="text" value="{{ $category->language }}" class="form-control" name="language">
+                        <input type="text" value="{{ $category->language }}" id="language"
+                            class="form-control @error('language') is-invalid @enderror" name="language">
+                        @error('language')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <label for="">Gambar</label>
                     @if ($category->image)
@@ -22,7 +28,7 @@
                             alt="category-image">
                     @endif
                     <div class="col-md-12">
-                        <input type="file" name="image" class="form-control">
+                        <input class="form-control" type="file" id="image" name="image">
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Simpan</button>

@@ -24,6 +24,16 @@ class SoalController extends Controller
 
     public function insert(Request $request)
     {
+        $request->validate([
+            'exercise' => 'required',
+            'image' => 'required',
+            'answer' => 'required',
+
+        ], [
+            'exercise.required' => 'Tidak boleh kosong',
+            'image.required' => 'Tidak boleh kosong',
+            'answer.required' => 'Tidak boleh kosong',
+        ]);
         $soal = new Soal();
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -49,6 +59,7 @@ class SoalController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $soal = Soal::find($id);
         if ($request->hasFile('image')) {
             $path = 'assets/uploads/soal/' . $soal->image;

@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Add Category</h4>
+            <h4>Tambah Bahasa Pemrograman</h4>
         </div>
         <div class="card-body">
             <div class="row">
@@ -17,7 +17,7 @@
                             type="button">Add Soal</button></a></p>
                 </div> --}}
                 <div class="col-sm-3">
-                    <p align="right"><a href="{{ url('categories') }}" button class="btn btn-light btn-sm"
+                    <p align="right"><a href="{{ url('categories') }}" button class="btn btn-outline-dark"
                             type="button">Lihat Bahasa</button></a></p>
                 </div>
             </div>
@@ -25,16 +25,35 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="">Bahasa Pemrograman</label>
-                        <input type="text" name="language" rows="3" class="form-control">
+                        <label><b>Bahasa Pemrograman<font color="ff0000">*</font></b></label>
+                        <input class="form-control @error('language') is-invalid @enderror" type="text" id="language"
+                            name="language" rows="3" class="form-control">
+                        @error('language')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                        <br>
+                        <label><b>Gambar<font color="ff0000">*</font></b></label>
+                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
+                            class="form-control">
+                        @error('image')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                        <br>
+                        <button type="submit" class="btn btn-outline-dark">Simpan</button>
+
+                        <a href="{{ url('categories') }}" button class="btn btn-light btn-sm"
+                            type="button">Batal</button></a>
+
+
                     </div>
-                    <br>
-                    <div class="col-md-12">
-                        <input type="file" name="image" class="form-control">
-                    </div>
-                    <br>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    <div>
+
                     </div>
                 </div>
             </form>

@@ -5,15 +5,15 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Category</h4>
+            <h4>Lab Code</h4>
             <hr>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-7" style="visibility: hidden">
+                <div class="col-sm-6" style="visibility: hidden">
                     <span>Search: </span><input type="text" placeholder="">
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <p align="right"><a href="{{ url('add-soal') }}" button class="btn btn-light btn-sm"
                             type="button">Tambah Soal</button></a></p>
                 </div>
@@ -22,6 +22,7 @@
                             type="button">Tambah Bahasa</button></a></p>
                 </div>
             </div>
+            <br>
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>

@@ -21,6 +21,13 @@ class CategoryController extends Controller
 
     public function insert(Request $request)
     {
+        $request->validate([
+            'language' => 'required',
+            'image' => 'required',
+        ], [
+            'language.required' => 'Tidak boleh kosong',
+            'image.required' => 'Tidak boleh kosong',
+        ]);
         $category = new Category();
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -32,7 +39,7 @@ class CategoryController extends Controller
 
         $category->language = $request->input('language');
         $category->save();
-        return redirect('categories')->with('status', "Category Added Successfully");
+        return redirect('categories');
     }
 
     public function edit($id)
@@ -43,6 +50,12 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'language' => 'required',
+        ], [
+            'language.required' => 'Tidak boleh kosong',
+
+        ]);
         $category = Category::find($id);
         if ($request->hasFile('image')) {
             $path = 'assets/uploads/category/' . $category->image;
@@ -58,7 +71,7 @@ class CategoryController extends Controller
 
         $category->language = $request->input('language');
         $category->update();
-        return redirect('categories')->with('status', "Category Updated Seccesfully");
+        return redirect('categories');
     }
 
     public function destroy($id)
@@ -71,6 +84,6 @@ class CategoryController extends Controller
             }
         }
         $category->delete();
-        return redirect('categories')->with('status', "Category Deleted Succesfully");
+        return redirect('categories');
     }
 }

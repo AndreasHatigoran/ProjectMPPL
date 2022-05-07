@@ -48,16 +48,16 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-7" style="visibility: hidden">
+                        <div class="col-sm-6" style="visibility: hidden">
                             <span>Search: </span><input type="text" placeholder="">
-                        </div>
-                        <div class="col-sm-2">
-                            <p align="right"><a href="{{ url('add-soal') }}" button class="btn btn-light btn-sm"
-                                    type="button">Tambah Soal</button></a></p>
                         </div>
                         <div class="col-sm-3">
                             <p align="right"><a href="{{ url('add-categories') }}" button class="btn btn-light btn-sm"
                                     type="button">Tambah Bahasa</button></a></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p align="right"><a href="{{ url('add-soal') }}" button class="btn btn-light btn-sm"
+                                    type="button">Tambah Latihan</button></a></p>
                         </div>
                     </div>
                     <table class="display" id="basic-key-table">
