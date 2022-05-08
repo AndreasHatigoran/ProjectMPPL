@@ -55,8 +55,8 @@
             <ul class="nav-menus">
                 @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="{{ url('/') }}">Tentang</a></b>
+                        <li  class="onhover-dropdown p-0 ikan">
+                            <b><a id="#tentang" class="text-dark" onclick="scrollToBottom()" >Tentang</a></b>
                         </li>
                     @auth
                         <li class="onhover-dropdown p-0 ikan">
@@ -160,6 +160,13 @@
               }, 2000);
           });
       });
+    </script>
+    <script>
+      function scrollToBottom() {
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+      // setTimeout(function() { scrollToBottom(); }, 100);
     </script>
     <!-- feather icon js-->
     <script src="{{ asset('js/welcome/icons/feather-icon/feather.min.js') }}"></script>
