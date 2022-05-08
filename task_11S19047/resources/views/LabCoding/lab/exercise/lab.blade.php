@@ -172,11 +172,12 @@
 
 
                         <label class="text-end" style="float: right;">
-                            @if ($cat->id == $soal->category_id)
-                                <a href="{{ url('view-exercise/' . $soal->exercise + 1) }}"><button
+                            @if ($next)
+                                <a href="{{ url('view-exercise/' . $next) }}"><button
                                         class="btn btn-pill btn-primary btn-lg" type="button">Selanjutnya</button></a>
+                             @endif
                         </label>
-                        @endif
+                       
 
                     </div>
                     <br>
