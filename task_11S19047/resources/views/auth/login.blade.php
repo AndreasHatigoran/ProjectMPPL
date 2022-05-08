@@ -137,7 +137,7 @@
                         <form class="theme-form login-form" method="POST" action="{{ route('login') }}">
                             @csrf
                             <h4>Del Creative</h4>
-                            <h6>Welcome back! Log in to your account.</h6>
+                            <h6>Selamat datang kembali! Masuk ke akun Anda.</h6>
                             <div class="form-group">
                                 <label for="username">Email/Nama Akun</label>
                                 <div class="input-group"><span class="input-group-text"><i
@@ -186,9 +186,7 @@
                             <div class="form-group">
                                 <button class="btn btn-primary w-100" type="submit">Masuk</button>
                             </div>
-                            <div class="login-social-title">
-                                <h5>Masuk Dengan</h5>
-                            </div>
+                            
                             <p>Tidak punya akun?<a class="ms-2" href="{{ route('register') }}">Buat
                                     akun</a></p>
                         </form>

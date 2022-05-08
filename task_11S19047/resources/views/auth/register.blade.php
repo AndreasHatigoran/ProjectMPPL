@@ -192,11 +192,11 @@
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <section>
-        <div class="container-fluid p-0"
-            style="background-image: url('{{ asset('image/background/bglogin.png') }}');">
+        <div class="container-fluid"
+            style="padding:50px 0; background-image: url('{{ asset('image/background/bglogin.png') }}');">
             <div class="row">
                 <div class="col-12">
-                    <div class="login-card" style="margin-top: 40px;">
+                    <div class="login-card" style="margin: 40px 0;">
                         <form class="theme-form login-form" method="POST" enctype="multipart/form-data"
                             action="{{ route('register') }}">
                             @csrf
@@ -331,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary w-100" type="submit">Register</button>
+                                    <button class="btn btn-primary w-100" type="submit">Daftar</button>
                                 </div>
                                 <p>Sudah punya akun?<a class="ms-2" href="{{ route('login') }}">Masuk</a>
                                 </p>
