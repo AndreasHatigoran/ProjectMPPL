@@ -60,7 +60,7 @@
                         </li>
                     @auth
                         <li class="onhover-dropdown p-0 ikan">
-                            <b><a class="text-dark" href="{{ url('/dashboard') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
+                            <b><a class="text-dark" style="margin-left: 10px;" href="{{ url('/dashboard') }}">Hai, {{ Auth::user()->username }} 🤗</a></b>
                         </li>
                     @else
                         <li class="onhover-dropdown p-0 ikan" style="margin-left: 10px;">
