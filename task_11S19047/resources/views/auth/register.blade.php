@@ -196,7 +196,7 @@
             style="padding:50px 0; background-image: url('{{ asset('image/background/bglogin.png') }}');">
             <div class="row">
                 <div class="col-12">
-                    <div class="login-card" style="margin: 40px 0;">
+                    {{-- <div class="login-card" style="margin: 40px 0;"> --}}
                         <form class="theme-form login-form" method="POST" enctype="multipart/form-data"
                             action="{{ route('register') }}">
                             @csrf
@@ -337,7 +337,7 @@
                                 </p>
                         </form>
                     </div>
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </section>
