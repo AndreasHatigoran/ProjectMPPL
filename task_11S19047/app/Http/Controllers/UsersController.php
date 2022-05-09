@@ -25,10 +25,12 @@ class UsersController extends Controller
         $request->validate([
             'username' => 'alpha_dash|min:3|max:15|unique:users,username,' . $user->id,
             'fullname' => 'max:30',
-            'avatar' => 'image|mimes:jpeg,jpg,png'
+            'avatar' => 'image|mimes:jpeg,jpg,png',
+            'screenshoot' => 'image|mimes:jpeg,jpg,png'
         ]);
 
         $imageName = $user->avatar;
+        $screenshootName = $user->screenshoot;
 
         if ($request->avatar) {
             $avatar_img = $request->avatar;
@@ -36,10 +38,17 @@ class UsersController extends Controller
             $avatar_img->move(public_path('image/avatar'), $imageName);
         }
 
+        if ($request->screenshoot) {
+            $screenshoot_img = $request->screenshoot;
+            $screenshootName = $user->username . '-' . time() . '.' . $screenshoot_img->extension();
+            $screenshoot_img->move(public_path('image/buktiss'), $screenshootName);
+        }
+
         $user->update([
             'username' => $request->username,
             'fullname' => $request->fullname,
-            'avatar' => $imageName
+            'avatar' => $imageName,
+            'screenshoot' => $screenshootName
         ]);
         return redirect('/@' . $user->username);
     }

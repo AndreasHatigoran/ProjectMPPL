@@ -17,7 +17,7 @@ return [
     'after'           => ':attribute harus berisi tanggal setelah :date.',
     'after_or_equal'  => ':attribute harus berisi tanggal setelah atau sama dengan :date.',
     'alpha'           => ':attribute hanya boleh berisi huruf.',
-    'alpha_dash'      => ':attribute hanya boleh berisi huruf, angka, strip, dan garis bawah.',
+    'alpha_dash'      => ':attribute hanya boleh berisi huruf, angka, dan tanda hubung.',
     'alpha_num'       => ':attribute hanya boleh berisi huruf dan angka.',
     'array'           => ':attribute harus berisi sebuah array.',
     'before'          => ':attribute harus berisi tanggal sebelum :date.',
@@ -122,7 +122,7 @@ return [
     | Baris Bahasa untuk Validasi Kustom
     |---------------------------------------------------------------------------------------
     |
-    | Di sini Anda dapat menentukan pesan validasi untuk atribut sesuai keinginan dengan menggunakan 
+    | Di sini Anda dapat menentukan pesan validasi untuk atribut sesuai keinginan dengan menggunakan
     | konvensi "attribute.rule" dalam penamaan barisnya. Hal ini mempercepat dalam menentukan
     | baris bahasa kustom yang spesifik untuk aturan atribut yang diberikan.
     |

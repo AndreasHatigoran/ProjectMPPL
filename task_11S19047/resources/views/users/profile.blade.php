@@ -75,7 +75,7 @@
                             <div class="row mb-3 justify-content-center">
 
                                 <div class="col-md-6">
-                                    <label for="screemshoot" class="col-form-label text-md-end">Bukti Screenshoot</label>
+                                    <label for="screenshoot" class="col-form-label text-md-end">Bukti Screenshoot</label>
                                     <input id="screenshoot" type="file"
                                         class="form-control @error('screenshoot') is-invalid @enderror" name="screenshoot"
                                         value="{{ old('screenshoot') }}" autofocus>

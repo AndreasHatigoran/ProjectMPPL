@@ -275,7 +275,7 @@
             </header>
             <!-- Page Sidebar Ends-->
             <div class="page-body"
-                style="background: url({{ asset('image/welcome/bg01.png') }}); background-repeat: no-repeat; background-size: cover;">
+                style="background-color: #E4EEED; background-repeat: no-repeat; background-size: cover;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">
@@ -305,31 +305,23 @@
                                     </div>
                                 </div>
                             </div> --}}
-                        @if (Auth::user()->isverify == false && Auth::user()->isrejected == false)
-                            <div class="row d-flex justify-content-center">
+                            @if (Auth::user()->isverify == false)
+                            <div class="row d-flex justify-content-center" >
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
-                                        <div class="card-body" style="background-color: #fff;">
+                                        <div class="card-body" style="background-color: #fff; box-shadow: 2px 2px #bebebe;">
                                             <p class="text-center font-weight-bolder">
-                                                Belum divalidasi
+                                                @if (\Auth::user()->isrejected == false)
+                                                    Belum divalidasi
+                                                @elseif(\Auth::user()->isrejected == true)
+                                                    Validasi ditolak, ganti bukti screenshot yg relevan
+                                                @endif
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @elseif(Auth::user()->isverify == false && Auth::user()->isrejected == true)
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-md-8 ">
-                                    <div class="card m-5">
-                                        <div class="card-body" style="background-color: #fff;">
-                                            <p class="text-center font-weight-bolder">
-                                                Validasi ditolak, harap mengganti bukti screenshot yang relevan
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
+                            @endif
 
                         @yield('home')
                         @yield('content')

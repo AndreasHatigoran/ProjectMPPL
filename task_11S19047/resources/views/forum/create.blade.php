@@ -17,11 +17,11 @@
 
                             <x-input field="title" label="Topik" type="text" />
 
-                            <x-ckeditor field="subject" label="Subject" />
+                            <x-ckeditor field="subject" label="Pertanyaan" />
 
                             {{-- <x-input field="category" label="Kategori" type="text"/> --}}
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
                         </form>
                     </div>
                 </div>

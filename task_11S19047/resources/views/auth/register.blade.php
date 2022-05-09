@@ -200,8 +200,8 @@
                         <form class="theme-form login-form" method="POST" enctype="multipart/form-data"
                             action="{{ route('register') }}">
                             @csrf
-                            <h4>Create Your Account</h4>
-                            <h6>Enter your personal details to create your account</h6>
+                            <h4>Buat Akun</h4>
+                            <h6>Masukan detail pribadi Anda untuk membuat akun</h6>
                                 <div class="form-group">
                                     <label>Nama Lengkap</label>
                                     <div class="input-group"><span class="input-group-text"><i
@@ -283,13 +283,13 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label>Username</label>
+                                            <label>Nama Akun</label>
                                             <div class="input-group"><span class="input-group-text"><i
                                                         class=""></i></span>
                                                 <input id="username" type="text"
                                                     class="form-control @error('username') is-invalid @enderror"
                                                     name="username" value="{{ old('username') }}"
-                                                    autocomplete="username" autofocus placeholder="Username">
+                                                    autocomplete="username" autofocus placeholder="Nama Akun">
                                                 @error('username')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -326,7 +326,7 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                        {{-- <div class="show-hide"><span class="show">              
+                                        {{-- <div class="show-hide"><span class="show">
                                                        </span></div> --}}
                                     </div>
                                 </div>

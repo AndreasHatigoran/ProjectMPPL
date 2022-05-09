@@ -70,11 +70,7 @@
                         <div class="media-body" style="padding-left: 10px">
                             <div>
                                 <x-avatar :object="$comment->user" size="32" />
-                                <span>{{ $comment->user->username }} -
-                                    @if ($comment->user->isadmin == true)
-                                        Admin
-                                    @endif
-                                </span>
+                                <span>{{ $comment->user->username }} </span>
                                 {!! $comment->subject !!}
                             </div>
                             @if (Auth::check())
@@ -96,14 +92,10 @@
                                                 Pelanggaran</a>
                                         @endif
                                     @endif
-                                    @if (Auth::user()->id == $comment->forum->user_id)
+                                    @if (Auth::user()->id == $comment->forum->user_id && $comment->is_solved != true)
                                         <button class="btn btn-warning btn-xs" onclick="mark({{ $comment->id }}, this)"
                                             id="solved-btn-{{ $comment->id }}">
-                                            @if ($comment->is_solved == true)
-                                                Jawaban telah ditandai
-                                            @else
-                                                Tandai Jawaban
-                                            @endif
+                                            Tandai Jawaban
                                         </button>
                                     @endif
                                 @endif

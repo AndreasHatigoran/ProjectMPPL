@@ -150,7 +150,7 @@
                     </div>
 
                     <div id="showans" onclick="" style="visibility:hidden">
-                        <label>Answer : <b>{{ $soal->answer }}</b></label>
+                        <label>Jawaban : <b>{{ $soal->answer }}</b></label>
                     </div>
                     <div>
                         @if (session('success'))
@@ -177,7 +177,7 @@
                                         class="btn btn-pill btn-primary btn-lg" type="button">Selanjutnya</button></a>
                              @endif
                         </label>
-                       
+
 
                     </div>
                     <br>

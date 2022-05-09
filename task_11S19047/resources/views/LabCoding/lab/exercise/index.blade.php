@@ -44,7 +44,7 @@
                             <div class="col-sm-4">
                                 <a href="{{ url('view-exercise/' . $daf->id) }}">
                                     <div class="shadow-lg shadow-showcase p-25 text-center">
-                                        <h5 class="m-0 f-18">Exercise {{ $daf->exercise }}</h5>
+                                        <h5 class="m-0 f-18">Latihan {{ $daf->exercise }}</h5>
                                     </div>
                                 </a>
                             </div>
