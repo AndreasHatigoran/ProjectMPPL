@@ -152,7 +152,8 @@
                             <div class="login-social-title">
                                 <h5>Masuk Dengan</h5>
                             </div>
-                            <p>Belum punya akun?<a class="ms-2" href="Register.html">Buat Akun</a></p>
+                            <p>Belum punya akun?<a class="ms-2" href="{{ route('register') }}">Buat Akun</a>
+                            </p>
                         </form>
                     </div>
                 </div>
