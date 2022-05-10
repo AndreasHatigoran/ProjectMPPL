@@ -11,7 +11,7 @@ class LeaderboardController extends Controller
 
     public function index()
     {
-        $students = User::where('role', 'student')->orderBy('point', 'desc')->paginate(10);
+        $students = User::where('role', 'student')->where('isadmin', false)->orderBy('point', 'desc')->paginate(10);
         return view('leaderboard.index', compact('students'));
     }
 
