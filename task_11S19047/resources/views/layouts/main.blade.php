@@ -215,7 +215,8 @@
                                                     Pelanggaran</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../leaderboard"><i data-feather="briefcase"></i><span>LeaderBoard</span></a>
+                                                href="../leaderboard"><i
+                                                    data-feather="briefcase"></i><span>LeaderBoard</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../forum"><i data-feather="list"></i><span>Forum
@@ -273,8 +274,7 @@
                 </nav>
             </header>
             <!-- Page Sidebar Ends-->
-            <div class="page-body"
-                style="background-repeat: no-repeat;">
+            <div class="page-body" style="background-repeat: no-repeat;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">
@@ -328,7 +328,8 @@
                     </div>
                 </div>
             </div>
-            <footer class="footer" style="background: url(../image/welcome/coming_soon_bg_1.png);">
+            <footer class="footer"
+                style="background: url({{ asset('image/welcome/coming_soon_bg_1.png') }});">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-9">
