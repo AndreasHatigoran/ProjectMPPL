@@ -134,10 +134,12 @@
                         <img style="height: 350x; width: 630px;" src="{{ asset('assets/uploads/soal/' . $soal->image) }}">
                         <div class="row"></div>
                         <br>
-                        <div class="form-group row col-sm-3" style="font-size: 16px;">
-                            <label for="usr">Jawaban :</label>
-                            <input name="jawaban" type="text" class="form-control" id="usr">
-                            <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
+                        <div class="form-group row mb-sm-3" style="font-size: 16px;">
+                            <label for="usr" class="col-sm-2 col-form-label">Jawabanmu </label>
+                            <div class="col-sm-3">
+                                <input name="jawaban" type="text" class="form-control" id="usr">
+                                <input name="id_soal" hidden type="text" class="form-control" value="{{ $soal->id }}">
+                            </div>
                         </div>
                     </div>
                     <div class="btn-showcase">
@@ -175,7 +177,7 @@
                             @if ($next)
                                 <a href="{{ url('view-exercise/' . $next) }}"><button
                                         class="btn btn-pill btn-primary btn-lg" type="button">Selanjutnya</button></a>
-                             @endif
+                            @endif
                         </label>
 
 
