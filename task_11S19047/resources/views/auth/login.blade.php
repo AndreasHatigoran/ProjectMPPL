@@ -150,8 +150,8 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    
-                                     {{-- @error('email')
+
+                                    {{-- @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -186,8 +186,8 @@
                             <div class="form-group">
                                 <button class="btn btn-primary w-100" type="submit">Masuk</button>
                             </div>
-                            
-                            <p>Tidak punya akun?<a class="ms-2" href="{{ route('register') }}">Buat
+
+                            <p>Belum punya akun?<a class="ms-2" href="{{ route('register') }}">Buat
                                     akun</a></p>
                         </form>
                     </div>

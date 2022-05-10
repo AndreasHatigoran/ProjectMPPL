@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +81,7 @@
                                             class="icon-email"></i></span>
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
+                                        value="{{ $email ?? old('email') }}" autocomplete="email" autofocus>
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -96,7 +95,7 @@
                                             class="icon-email"></i></span>
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="new-password">
+                                        autocomplete="new-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -109,7 +108,7 @@
                                 <div class="input-group"><span class="input-group-text"><i
                                             class="icon-email"></i></span>
                                     <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation" required autocomplete="new-password">
+                                        name="password_confirmation" autocomplete="new-password">
                                 </div>
                             </div>
                             <div class="form-group" style="margin-top: 200px;">
