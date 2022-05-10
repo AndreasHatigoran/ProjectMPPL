@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                    <h1><b>List Akun</b></h1>
+                    <h1><b>Daftar Akun</b></h1>
                     @if (session()->has('success'))
                         <div class="alert alert-success">
                             {{ session()->get('success') }}
@@ -92,4 +92,4 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection

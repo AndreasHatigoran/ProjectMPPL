@@ -39,7 +39,7 @@
                 @endif
 
 
-                <h4 class="mt-5">Daftar Komentar</h4>
+                <h4 class="mt-5">Daftar Jawaban</h4>
                 @forelse ($forum->comments as $comment)
                     <div class="media">
                         <div class="align-self-center mr-3 d-flex flex-column justify-content-center align-items-center">

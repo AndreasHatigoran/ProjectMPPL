@@ -224,8 +224,7 @@
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="{{ route('administrator.listakun') }}"><i
-                                                    data-feather="layers"></i></i><span>List
-                                                    Akun</span></a>
+                                                    data-feather="layers"></i></i><span>Daftar Akun</span></a>
                                         </li>
                                     @elseif(Auth::user()->role == 'student')
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"

@@ -7,7 +7,7 @@
         <form action="{{ url('insert-soal') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-header pb-0">
-                <h5><b>Tambah Soal</b></h5>
+                <h5><b>Tambah Latihan</b></h5>
             </div>
             <div class="card-body add-post">
                 <div class="col-sm-12">
