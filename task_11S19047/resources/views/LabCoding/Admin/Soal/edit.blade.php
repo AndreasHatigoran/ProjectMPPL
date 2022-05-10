@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Edit/Update Soal</h4>
+            <h4>Ubah Soal</h4>
         </div>
         <div class="card-body">
             <form action="{{ url('update-soal/' . $soal->id) }}" method="POST" enctype="multipart/form-data">
@@ -20,7 +20,7 @@
                         </select>
                     </div>
                     <div class="col-md-12">
-                        <label for="">Latihan</label>
+                        <label for="">Bahasa Pemrograman</label>
                         <input class="form-control @error('exercise') is-invalid @enderror" id="exercise" type="text"
                             value="{{ $soal->exercise }}" class="form-control" name="exercise">
                         @error('exercise')

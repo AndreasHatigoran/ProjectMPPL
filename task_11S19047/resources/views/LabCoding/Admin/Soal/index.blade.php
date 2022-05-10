@@ -87,12 +87,10 @@
                                             <td>{{ $item->answer }}</td>
                                             <td align="center">
                                                 <a href="{{ url('edit-soal/' . $item->id) }}"><button
-                                                        class="btn btn-outline-light btn-sm txt-dark"
-                                                        type="button">Ubah</button></a>
+                                                        class="btn btn-outline-primary" type="button">Ubah</button></a>
                                             </td>
                                             <td align="center"><a href="{{ url('delete-soal/' . $item->id) }}"><button
-                                                        class="btn btn-outline-danger btn-sm"
-                                                        type="button">Hapus</button></a>
+                                                        class="btn btn-outline-danger" type="button">Hapus</button></a>
                                             </td>
                                         </tr>
                                     @endforeach
