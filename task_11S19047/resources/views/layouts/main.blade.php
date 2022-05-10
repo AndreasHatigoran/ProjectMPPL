@@ -141,16 +141,16 @@
                             </ul>
                         </li> --}}
                         <li class="onhover-dropdown p-0">
-                            <button class="btn btn-primary-light" type="button">
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                    Keluar
-                                </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
-                                    @csrf </form>
-                            </button>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 5px"></i>Keluar
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                class="d-none">
+                                @csrf </form>
+
                         </li>
                     </ul>
                 </div>
