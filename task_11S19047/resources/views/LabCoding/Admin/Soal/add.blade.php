@@ -53,7 +53,7 @@
                         @enderror
                     </div>
                     <div class="btn-showcase">
-                        <button type="submit" class="btn btn-outline-dark">Simpan</button>
+                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
 
                         <a href="{{ url('soal') }}" button class="btn btn-light btn-sm" type="button">Batal</button></a>
                     </div>
