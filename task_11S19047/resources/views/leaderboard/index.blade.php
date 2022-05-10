@@ -16,23 +16,22 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Forum Diskusi</h5>
-                            <div class="row">
-                                <div class="col-sm-8"></div>
-                                <div class="col-sm-4">
-                                    <ul>
-                                        <li>
-                                            <form action="/leaderboard/search" method="GET">
-                                                <input class="form-control" type="text" placeholder="Search here..."
-                                                    id="search" name="query">
-                                            </form>
-                                            @if ($students->count() == 0)
-                                                <p style="color: red;">Kata kunci yang anda cari tidak tersedia</p>
-                                            @endif
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="row">
+                            <div class="col-sm-8"></div>
+                            <div class="col-sm-4">
+                                <ul>
+                                    <li>
+                                        <form action="/leaderboard/search" method="GET">
+                                            <input class="form-control" type="text" placeholder="Search here..."
+                                                id="search" name="query">
+                                        </form>
+                                        @if ($students->count() == 0)
+                                            <p style="color: red;">Kata kunci yang anda cari tidak tersedia</p>
+                                        @endif
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">

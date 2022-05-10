@@ -221,17 +221,17 @@
                                     <label>Role</label>
                                     <div class="input-group"><span class="input-group-text"><i
                                                 class=""></i></span>
-                                        <select id="role" class="form-control" @error('role') is-invalid @enderror" name="role">
+                                        <select id="role" class="form-control @error('role') is-invalid @enderror" name="role">
                                             <option selected disabled>Pilih role anda</option>
                                             <option value="student">Mahasiswa</option>
                                             <option value="dorm">Keasramaan</option>
                                             <option value="dosen">Dosen</option>
+                                        </select>
                                         @error('role')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -318,7 +318,7 @@
                                     <label>Ulang kata sandi</label>
                                     <div class="input-group"><span class="input-group-text"><i
                                                 class=""></i></span>
-                                        <input id="password-confirm" type="password" class="form-control"
+                                        <input id="password-confirm" type="password" class="form-control @error('password_confirmation') is-invalid @enderror"
                                             name="password_confirmation" autocomplete="new-password"
                                             placeholder="********">
                                         @error('password_confirmation')

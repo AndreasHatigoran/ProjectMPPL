@@ -53,7 +53,8 @@ class RegisterController extends Controller
             'fullname' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users', 'alpha_dash'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
+            'password_confirmation' => ['required', 'min:8', 'same:password'],
             'role' => ['required'],
             'idrole' => ['required', 'unique:users'],
             'screenshoot' => ['required', 'mimes:jpeg,png,jpg,gif,svg'],
@@ -65,7 +66,9 @@ class RegisterController extends Controller
             'screenshoot.required' => 'screenshoot profile CIS wajib diisi',
             'idrole.unique' => 'NIM/NIDN/NIP sudah pernah dibuat',
             'username.unique' => 'Nama Pengguna sudah pernah dibuat',
-            'email.unique' => 'Email sudah pernah dibuat'
+            'email.unique' => 'Email sudah pernah dibuat',
+            'password_confirmation.same' => 'Konfirmasi kata sandi baru tidak valid',
+            'password_confirmation.required' => 'Konfirmasi kata sandi wajib diisi',
         ]);
     }
 
