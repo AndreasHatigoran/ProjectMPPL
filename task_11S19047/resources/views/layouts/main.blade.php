@@ -97,7 +97,7 @@
 
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/style.css') }}">
-    <link id="color" rel="stylesheet href=" {{ asset('css/welcome/color-1.css') }}" media="screen">
+    <link id="color" rel="stylesheet" href="{{ asset('css/welcome/color-1.css') }}" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome/responsive.css') }}">
     <!-- Scripts -->
@@ -215,8 +215,7 @@
                                                     Pelanggaran</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../leaderboard"><i
-                                                    data-feather="briefcase"></i><span>LeaderBoard</span></a>
+                                                href="../leaderboard"><i data-feather="briefcase"></i><span>LeaderBoard</span></a>
                                         </li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../forum"><i data-feather="list"></i><span>Forum
@@ -245,7 +244,7 @@
                                                     Point</span></a>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
                                                 href="../leaderboard"><i
-                                                    data-feather="server"></i><span>LeaderBoard</span></a>
+                                                    data-feather="briefcase"></i><span>LeaderBoard</span></a>
                                             {{-- <li class="sidebar-main-title">
                                             <div>
                                                 <h6>Ask</h6>
@@ -275,7 +274,7 @@
             </header>
             <!-- Page Sidebar Ends-->
             <div class="page-body"
-                style="background-color: #E4EEED; background-repeat: no-repeat; background-size: cover;">
+                style="background-repeat: no-repeat; background-size: cover;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">

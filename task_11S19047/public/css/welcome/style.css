@@ -4318,7 +4318,8 @@ table tbody .border-bottom-warning td {
     position: relative;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    background-color: #f5f7fb; }
+    background-image: url(../../image/background/bg01.png);
+    }
   .page-wrapper .page-body-wrapper .page-header {
     padding-bottom: 30px; }
     .page-wrapper .page-body-wrapper .page-header .row {
