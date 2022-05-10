@@ -196,7 +196,7 @@
                                 @if (Auth::user()->isverify == true)
                                     <li class="sidebar-main-title">
                                         <div>
-                                            <h6>Features </h6>
+                                            <h6>Fitur </h6>
                                         </div>
                                     </li>
                                     @if (Auth::user()->isadmin == true)
@@ -305,11 +305,12 @@
                                     </div>
                                 </div>
                             </div> --}}
-                            @if (Auth::user()->isverify == false)
-                            <div class="row d-flex justify-content-center" >
+                        @if (Auth::user()->isverify == false)
+                            <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 ">
                                     <div class="card m-5">
-                                        <div class="card-body" style="background-color: #fff; box-shadow: 2px 2px #bebebe;">
+                                        <div class="card-body"
+                                            style="background-color: #fff; box-shadow: 2px 2px #bebebe;">
                                             <p class="text-center font-weight-bolder">
                                                 @if (\Auth::user()->isrejected == false)
                                                     Belum divalidasi
@@ -321,7 +322,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @endif
+                        @endif
 
                         @yield('home')
                         @yield('content')
