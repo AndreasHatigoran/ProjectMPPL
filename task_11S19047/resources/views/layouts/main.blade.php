@@ -274,7 +274,7 @@
             </header>
             <!-- Page Sidebar Ends-->
             <div class="page-body"
-                style="background-repeat: no-repeat; background-size: cover;">
+                style="background-repeat: no-repeat;">
                 <div class="container-fluid">
                     <div class="page-header">
                         <div class="row">

@@ -4319,6 +4319,7 @@ table tbody .border-bottom-warning td {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     background-image: url(../../image/background/bg01.png);
+    background-position: center;
     }
   .page-wrapper .page-body-wrapper .page-header {
     padding-bottom: 30px; }
