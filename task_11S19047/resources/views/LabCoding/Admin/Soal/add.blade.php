@@ -7,7 +7,7 @@
         <form action="{{ url('insert-soal') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-header pb-0">
-                <h5><b>Tambah Soal</b></h5>
+                <h5><b>Tambah Latihan</b></h5>
             </div>
             <div class="card-body add-post">
                 <div class="col-sm-12">
@@ -53,7 +53,7 @@
                         @enderror
                     </div>
                     <div class="btn-showcase">
-                        <button type="submit" class="btn btn-outline-dark">Simpan</button>
+                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
 
                         <a href="{{ url('soal') }}" button class="btn btn-light btn-sm" type="button">Batal</button></a>
                     </div>

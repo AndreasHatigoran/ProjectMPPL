@@ -149,9 +149,6 @@
                                 <button class="btn btn-primary btn-block" style="width: 390px;"
                                     type="submit">Kirim</button>
                             </div>
-                            <div class="login-social-title">
-                                <h5>Masuk Dengan</h5>
-                            </div>
                             <p>Belum punya akun?<a class="ms-2" href="{{ route('register') }}">Buat Akun</a>
                             </p>
                         </form>
