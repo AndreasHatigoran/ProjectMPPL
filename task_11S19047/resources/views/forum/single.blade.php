@@ -17,7 +17,7 @@
                     @if (Auth::user()->id == $forum->user_id)
                         <div class="d-flex">
                             <a href="/forum/{{ $forum->id }}/edit" class="btn btn-primary btn-xs"
-                                style="margin-right: 4px;">Edit</a>
+                                style="margin-right: 4px;">Ubah</a>
                             <form action="/forum/{{ $forum->id }}" method="post">
                                 @csrf
                                 @method('DELETE')

@@ -1,5 +1,5 @@
 <div class="mb-3">
-    <label for="{{ $field }}" class="form-label">{{ $label }}</label>
+    <label for="{{ $field }}" class="form-label"><b>{{ $label }}</b></label>
     <textarea class="ckeditor form-control @error($field) is-invalid @enderror" name="{{ $field }}"
         id="{{ $field }}">
         @isset($value)
