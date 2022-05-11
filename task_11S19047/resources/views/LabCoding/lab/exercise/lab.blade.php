@@ -144,7 +144,7 @@
                     </div>
                     <div class="btn-showcase">
                         <button class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
-                            onclick="changeVisibility();" style="visibility: visible;">Tunjukkan
+                            onclick="changeVisibility();" style="visibility: visible;">Tampilkan
                             Jawaban</button>
                         <label class="text-end" style="float: right;"><button class="btn btn-pill btn-primary btn-lg"
                                 type="submit">Kirim
@@ -169,8 +169,8 @@
 
                     <div class="card-body row"></div>
                     <div class="btn-showcase">
-                        <a href={{ url('view-language/' . $soal->category->language) }}><button
-                                class="btn btn-pill btn-primary btn-lg" type="button">Tutup</button></a>
+                        {{-- <a href={{ url('view-language/' . $soal->category->language) }}><button
+                                class="btn btn-pill btn-primary btn-lg" type="button">Tutup</button></a> --}}
 
 
                         <label class="text-end" style="float: right;">
