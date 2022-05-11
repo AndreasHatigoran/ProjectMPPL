@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="card">
                 <div class="card-header">
@@ -21,42 +21,42 @@
                                     type="button">Tambah Latihan</button></a></p>
                         </div>
                     </div>
-                    <table class="display" id="basic-key-table">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
+
+                    <div class="table-responsive" style="margin-top: 10px;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Bahasa Pemrograman</th>
+                                    <th scope="col">Latihan</th>
+                                    <th scope="col">Kode</th>
+                                    <th scope="col">Kunci Jawaban</th>
+                                    <th scope="col">Ubah</th>
+                                    <th scope="col">Hapus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($soal as $item)
                                     <tr>
-                                        <th scope="col">Bahasa Pemrograman</th>
-                                        <th scope="col">Latihan</th>
-                                        <th scope="col">Kode</th>
-                                        <th scope="col">Kunci Jawaban</th>
-                                        <th scope="col">Ubah</th>
-                                        <th scope="col">Hapus</th>
+                                        <td>{{ $item->category->language }}</td>
+                                        <td>{{ $item->exercise }}</td>
+                                        <td>
+                                            <img src="{{ asset('assets/uploads/soal/' . $item->image) }}"
+                                                class="w-25" alt="Image here">
+                                        </td>
+                                        <td>{{ $item->answer }}</td>
+                                        <td align="center">
+                                            <a href="{{ url('edit-soal/' . $item->id) }}"><button
+                                                    class="btn btn-outline-primary" type="button">Ubah</button></a>
+                                        </td>
+                                        <td align="center"><a href="{{ url('delete-soal/' . $item->id) }}"><button
+                                                    class="btn btn-danger" type="button">Hapus</button></a>
+                                        </td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($soal as $item)
-                                        <tr>
-                                            <td>{{ $item->category->language }}</td>
-                                            <td>{{ $item->exercise }}</td>
-                                            <td>
-                                                <img src="{{ asset('assets/uploads/soal/' . $item->image) }}"
-                                                    class="w-25" alt="Image here">
-                                            </td>
-                                            <td>{{ $item->answer }}</td>
-                                            <td align="center">
-                                                <a href="{{ url('edit-soal/' . $item->id) }}"><button
-                                                        class="btn btn-outline-primary" type="button">Ubah</button></a>
-                                            </td>
-                                            <td align="center"><a href="{{ url('delete-soal/' . $item->id) }}"><button
-                                                        class="btn btn-danger" type="button">Hapus</button></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        {{ $soal->links('vendor.pagination.costume') }}
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    {{ $soal->links('vendor.pagination.costume') }}
                     </table>
                 </div>
             </div>
