@@ -7,6 +7,14 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p>Forum Diskusi</p>
+                    </div>
+                    <div class="col-sm-10">
+                        <hr />
+                    </div>
+                </div>
                 <h2>{{ $forum->title }}</h2>
             </div>
             <div class="card-body">
