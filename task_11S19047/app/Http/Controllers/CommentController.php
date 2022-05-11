@@ -113,7 +113,9 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        ForumComment::find($id)->delete();
-        return redirect('/forum');
+        $comment = ForumComment::find($id);
+        $comment->delete();
+        // dd($comment);
+        return redirect('/forum/'. $comment->forum->slug);
     }
 }
