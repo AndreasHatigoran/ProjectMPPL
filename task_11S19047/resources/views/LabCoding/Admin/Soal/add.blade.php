@@ -11,7 +11,6 @@
             </div>
             <div class="card-body add-post">
                 <div class="col-sm-12">
-
                     <div class="form-group">
                         <label class="d-block"><b>Bahasa Pemrograman<font color="ff0000">*
                                 </font></b></label>
@@ -54,7 +53,6 @@
                     </div>
                     <div class="btn-showcase">
                         <button type="submit" class="btn btn-outline-primary">Simpan</button>
-
                         <a href="{{ url('soal') }}" button class="btn btn-light btn-sm" type="button">Batal</button></a>
                     </div>
                 </div>

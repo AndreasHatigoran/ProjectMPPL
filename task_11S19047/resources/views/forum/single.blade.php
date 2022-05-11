@@ -7,6 +7,14 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p>Forum Diskusi</p>
+                    </div>
+                    <div class="col-sm-10">
+                        <hr />
+                    </div>
+                </div>
                 <h2>{{ $forum->title }}</h2>
             </div>
             <div class="card-body">
@@ -17,7 +25,7 @@
                     @if (Auth::user()->id == $forum->user_id)
                         <div class="d-flex">
                             <a href="/forum/{{ $forum->id }}/edit" class="btn btn-primary btn-xs"
-                                style="margin-right: 4px;">Edit</a>
+                                style="margin-right: 4px;">Ubah</a>
                             <form action="/forum/{{ $forum->id }}" method="post">
                                 @csrf
                                 @method('DELETE')

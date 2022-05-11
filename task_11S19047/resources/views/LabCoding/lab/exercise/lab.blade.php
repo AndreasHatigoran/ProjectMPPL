@@ -143,11 +143,11 @@
                         </div>
                     </div>
                     <div class="btn-showcase">
-                        <button class="btn btn-pill btn-primary btn-lg" type="submit">Kirim
+                        <button class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
+                            onclick="changeVisibility();" style="visibility: visible;">Tampilkan
                             Jawaban</button>
                         <label class="text-end" style="float: right;"><button class="btn btn-pill btn-primary btn-lg"
-                                id="showAnswer" type="button" onclick="changeVisibility();"
-                                style="visibility: visible;">Tunjukkan
+                                type="submit">Kirim
                                 Jawaban</button></label>
                     </div>
 
@@ -169,8 +169,8 @@
 
                     <div class="card-body row"></div>
                     <div class="btn-showcase">
-                        <a href={{ url('view-language/' . $soal->category->language) }}><button
-                                class="btn btn-pill btn-primary btn-lg" type="button">Tutup</button></a>
+                        {{-- <a href={{ url('view-language/' . $soal->category->language) }}><button
+                                class="btn btn-pill btn-primary btn-lg" type="button">Tutup</button></a> --}}
 
 
                         <label class="text-end" style="float: right;">
