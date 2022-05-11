@@ -25,7 +25,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
-                        <label><b>Bahasa Pemrograman<font color="ff0000">*</font></b></label>
+                        <label><b>Bahasa Pemrograman</b></label>
                         <input class="form-control @error('language') is-invalid @enderror" type="text" id="language"
                             name="language" rows="3" class="form-control">
                         @error('language')
@@ -35,7 +35,7 @@
                         @enderror
 
                         <br>
-                        <label><b>Gambar<font color="ff0000">*</font></b></label>
+                        <label><b>Gambar</b></label>
                         <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
                             class="form-control">
                         @error('image')

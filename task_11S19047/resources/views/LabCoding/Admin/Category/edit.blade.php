@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Edit/Update category</h4>
+            <h4>Ubah Bahasa Pemrograman</h4>
         </div>
         <div class="card-body">
             <form action="{{ url('update-category/' . $category->id) }}" method="POST" enctype="multipart/form-data">
