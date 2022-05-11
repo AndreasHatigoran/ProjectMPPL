@@ -200,7 +200,7 @@
                                         </div>
                                     </li>
                                     @if (Auth::user()->isadmin == true)
-                                        <li class="dropdown"><a class="nav-link menu-title link-nav"
+                                        <li class="dropdown "><a class="nav-link menu-title link-nav"
                                                 href="../soal"><svg aria-hidden="true" weidth="24" height="24"
                                                     viewBox="0 0 16 16" version="1.1" width="16"
                                                     data-view-component="true"
