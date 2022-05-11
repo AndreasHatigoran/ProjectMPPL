@@ -143,11 +143,11 @@
                         </div>
                     </div>
                     <div class="btn-showcase">
-                        <button class="btn btn-pill btn-primary btn-lg" type="submit">Kirim
+                        <button class="btn btn-pill btn-primary btn-lg" id="showAnswer" type="button"
+                            onclick="changeVisibility();" style="visibility: visible;">Tunjukkan
                             Jawaban</button>
                         <label class="text-end" style="float: right;"><button class="btn btn-pill btn-primary btn-lg"
-                                id="showAnswer" type="button" onclick="changeVisibility();"
-                                style="visibility: visible;">Tunjukkan
+                                type="submit">Kirim
                                 Jawaban</button></label>
                     </div>
 
