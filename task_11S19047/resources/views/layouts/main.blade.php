@@ -228,7 +228,7 @@
                                         </li>
                                     @elseif(Auth::user()->role == 'student')
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../lab"><svg aria-hidden="true" weidth="24" height="24"
+                                                href="../../lab"><svg aria-hidden="true" weidth="24" height="24"
                                                     viewBox="0 0 16 16" version="1.1" width="16"
                                                     data-view-component="true"
                                                     class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
@@ -237,13 +237,13 @@
                                                     </path>
                                                 </svg><span>Lab Code</span></a></li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../forum"><i data-feather="list"></i><span>Forum
+                                                href="../../forum"><i data-feather="list"></i><span>Forum
                                                     Diskusi</span></a></li>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../konversi"><i data-feather="package"></i><span>Konversi
+                                                href="../../konversi"><i data-feather="package"></i><span>Konversi
                                                     Point</span></a>
                                         <li class="dropdown"><a class="nav-link menu-title link-nav"
-                                                href="../leaderboard"><i
+                                                href="../../leaderboard"><i
                                                     data-feather="briefcase"></i><span>LeaderBoard</span></a>
                                             {{-- <li class="sidebar-main-title">
                                             <div>
